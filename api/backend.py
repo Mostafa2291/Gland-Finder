@@ -1,19 +1,17 @@
 from fastapi import FastAPI, Depends, Query
 from fastapi.middleware.cors import CORSMiddleware
-from sqlalchemy import create_engine, Column, String, Float
+from sqlalchemy import create_engine, Column, String, Float, Integer
 from sqlalchemy.orm import declarative_base, sessionmaker, Session
 from urllib.parse import quote_plus
 import uvicorn
 
 # --- 1. Database Configuration ---
 DB_USER = "postgres"
-DB_PASSWORD = "F@ceb00k2077420"
-# Only the host address, not the full postgresql:// string
+DB_PASSWORD = "PASTE_YOUR_NEW_SUPABASE_PASSWORD_HERE"
 DB_HOST = "db.beluqoyvuchhoiyhbcfe.supabase.co"
 DB_PORT = "5432"
 DB_NAME = "postgres"
 
-# Correctly construct the URL
 encoded_password = quote_plus(DB_PASSWORD)
 SQLALCHEMY_DATABASE_URL = f"postgresql://{DB_USER}:{encoded_password}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 
@@ -24,7 +22,10 @@ Base = declarative_base()
 # --- 2. Database Model ---
 class CableGland(Base):
     __tablename__ = "cable_glands"
-    ordering_reference = Column(String, primary_key=True)
+    # Supabase table has its own auto-increment "id" primary key.
+    # ordering_reference is kept as a regular (non-primary-key) column here.
+    id = Column(Integer, primary_key=True)
+    ordering_reference = Column(String)
     manufacturer = Column(String)
     gland_model = Column(String)
     gland_size = Column(String)
@@ -49,11 +50,27 @@ app = FastAPI(title="Cable Gland Technical Office API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], 
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+def gland_to_dict(g: CableGland) -> dict:
+    return {
+        "ordering_reference": g.ordering_reference,
+        "manufacturer": g.manufacturer,
+        "gland_model": g.gland_model,
+        "gland_size": g.gland_size,
+        "entry_thread": g.entry_thread,
+        "armour_compatibility": g.armour_compatibility,
+        "environment": g.environment,
+        "min_cable_dia_mm": g.min_cable_dia_mm,
+        "max_cable_dia_mm": g.max_cable_dia_mm,
+        "max_inner_bedding_dia_mm": g.max_inner_bedding_dia_mm,
+        "min_armour_thickness_mm": g.min_armour_thickness_mm,
+        "max_armour_thickness_mm": g.max_armour_thickness_mm,
+    }
 
 @app.get("/api/search")
 def search_glands(
@@ -76,16 +93,19 @@ def search_glands(
         )
     if inner_dia is not None:
         query = query.filter(
-            (CableGland.max_inner_bedding_dia_mm >= inner_dia) | 
+            (CableGland.max_inner_bedding_dia_mm >= inner_dia) |
             (CableGland.max_inner_bedding_dia_mm.is_(None))
         )
 
     results = query.all()
     return {
         "matches_found": len(results),
-        "recommended_glands": results
+        "recommended_glands": [gland_to_dict(g) for g in results]
     }
 
+@app.get("/api/health")
+def health_check():
+    return {"status": "ok"}
+
 if __name__ == "__main__":
-    # Pointing to 'backend:app' because your file is named backend.py
-    uvicorn.run("backend:app", host="127.0.0.1", port=8000, reload=True)
+    uvicorn.run("backend:app", host="0.0.0.0", port=8000, reload=True)
