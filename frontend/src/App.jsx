@@ -27,7 +27,7 @@ export default function App() {
       if (innerDia) params.append('inner_dia', innerDia);
 
       // Call the local FastAPI server
-      const response = await fetch(`http://127.0.0.1:8000/api/search?${params.toString()}`);
+      const response = await fetch(`/api/search?${params.toString()}`);
       
       if (!response.ok) {
         throw new Error('Failed to connect to the backend database.');
