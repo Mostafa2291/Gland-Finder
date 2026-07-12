@@ -1,0 +1,50 @@
+manufacturer,gland_model,gland_size,entry_thread,armour_compatibility,environment,min_cable_dia_mm,max_cable_dia_mm,max_inner_bedding_dia_mm,min_armour_thickness_mm,max_armour_thickness_mm,ordering_reference
+CMP,A2,20S/16,M20,Unarmoured,Industrial / Safe,3.1,8.7,,,,20S16A21RA
+CMP,A2,20S,M20,Unarmoured,Industrial / Safe,6.1,11.7,,,,20SA21RA
+CMP,A2,20,M20,Unarmoured,Industrial / Safe,6.5,14.0,,,,20A21RA
+CMP,A2,25,M25,Unarmoured,Industrial / Safe,11.1,20.0,,,,25A21RA
+CMP,A2,32,M32,Unarmoured,Industrial / Safe,17.0,26.3,,,,32A21RA
+CMP,A2,40,M40,Unarmoured,Industrial / Safe,23.5,32.2,,,,40A21RA
+CMP,A2,50S,M50,Unarmoured,Industrial / Safe,31.0,38.2,,,,50SA21RA
+CMP,A2,50,M50,Unarmoured,Industrial / Safe,35.6,44.1,,,,50A21RA
+CMP,A2,63S,M63,Unarmoured,Industrial / Safe,41.5,50.0,,,,63SA21RA
+CMP,A2,63,M63,Unarmoured,Industrial / Safe,47.2,56.0,,,,63A21RA
+CMP,A2,75S,M75,Unarmoured,Industrial / Safe,54.0,62.0,,,,75SA21RA
+CMP,A2,75,M75,Unarmoured,Industrial / Safe,61.1,68.0,,,,75A21RA
+CMP,A2,90,M90,Unarmoured,Industrial / Safe,66.6,79.4,,,,90A21RA
+CMP,A2,100,M100,Unarmoured,Industrial / Safe,76.0,91.0,,,,100A21RA
+CMP,A2,115,M115,Unarmoured,Industrial / Safe,86.0,98.0,,,,115A21RA
+CMP,A2,130,M130,Unarmoured,Industrial / Safe,97.0,115.0,,,,130A21RA
+CMP,A2F,20S/16,M20,Unarmoured & Braided,Hazardous / Ex,3.2,8.7,,,,20S16A2F1RA
+CMP,A2F,20S,M20,Unarmoured & Braided,Hazardous / Ex,6.1,11.7,,,,20SA2F1RA
+CMP,A2F,20,M20,Unarmoured & Braided,Hazardous / Ex,6.5,14.0,,,,20A2F1RA
+CMP,A2F,25,M25,Unarmoured & Braided,Hazardous / Ex,11.1,20.0,,,,25A2F1RA
+CMP,A2F,32,M32,Unarmoured & Braided,Hazardous / Ex,17.0,26.3,,,,32A2F1RA
+CMP,A2F,40,M40,Unarmoured & Braided,Hazardous / Ex,23.5,32.2,,,,40A2F1RA
+CMP,A2F,50S,M50,Unarmoured & Braided,Hazardous / Ex,31.0,38.2,,,,50SA2F1RA
+CMP,A2F,50,M50,Unarmoured & Braided,Hazardous / Ex,35.6,44.1,,,,50A2F1RA
+CMP,A2F,63S,M63,Unarmoured & Braided,Hazardous / Ex,41.5,50.0,,,,63SA2F1RA
+CMP,A2F,63,M63,Unarmoured & Braided,Hazardous / Ex,47.2,56.0,,,,63A2F1RA
+CMP,A2F,75S,M75,Unarmoured & Braided,Hazardous / Ex,54.0,62.0,,,,75SA2F1RA
+CMP,A2F,75,M75,Unarmoured & Braided,Hazardous / Ex,61.1,68.0,,,,75A2F1RA
+CMP,A2F,90,M90,Unarmoured & Braided,Hazardous / Ex,66.6,80.0,,,,90A2F1RA
+CMP,A2F,100,M100,Unarmoured & Braided,Hazardous / Ex,76.0,91.0,,,,100A2F1RA
+CMP,A2F,115,M115,Unarmoured & Braided,Hazardous / Ex,86.0,98.0,,,,115A2F1RA
+CMP,A2F,130,M130,Unarmoured & Braided,Hazardous / Ex,97.0,115.0,,,,130A2F1RA
+CMP,CW,20S/16,M20,SWA,Industrial / Safe,6.1,11.5,8.7,0.9,1.0,20S16CW1RA
+CMP,CW,20S,M20,SWA,Industrial / Safe,9.5,15.9,11.7,0.9,1.25,20SCW1RA
+CMP,CW,20,M20,SWA,Industrial / Safe,12.5,20.9,14.0,0.9,1.25,20CW1RA
+CMP,CW,25S,M25,SWA,Industrial / Safe,14.0,22.0,19.9,1.25,1.6,25SCW1RA
+CMP,CW,25,M25,SWA,Industrial / Safe,18.2,26.2,20.0,1.25,1.6,25CW1RA
+CMP,CW,32,M32,SWA,Industrial / Safe,23.7,33.9,26.3,1.6,2.0,32CW1RA
+CMP,CW,40,M40,SWA,Industrial / Safe,27.9,40.4,32.2,1.6,2.0,40CW1RA
+CMP,CW,50S,M50,SWA,Industrial / Safe,35.2,46.7,38.2,2.0,2.5,50SCW1RA
+CMP,CW,50,M50,SWA,Industrial / Safe,40.4,53.1,44.1,2.0,2.5,50CW1RA
+CMP,CW,63S,M63,SWA,Industrial / Safe,45.6,59.4,50.0,2.0,2.5,63SCW1RA
+CMP,CW,63,M63,SWA,Industrial / Safe,54.6,65.9,56.0,2.0,2.5,63CW1RA
+CMP,CW,75S,M75,SWA,Industrial / Safe,59.0,72.1,62.0,2.0,2.5,75SCW1RA
+CMP,CW,75,M75,SWA,Industrial / Safe,66.7,78.5,68.0,2.0,2.5,75CW1RA
+CMP,CW,90,M90,SWA,Industrial / Safe,76.2,90.4,80.0,3.15,3.15,90CW1RA
+CMP,CW,100,M100,SWA,Industrial / Safe,89.1,101.5,91.0,3.15,4.0,100CW1RA
+CMP,CW,115,M115,SWA,Industrial / Safe,101.3,110.3,98.0,3.15,4.0,115CW1RA
+CMP,CW,130,M130,SWA,Industrial / Safe,114.0,123.3,115.0,3.15,4.0,130CW1RA
