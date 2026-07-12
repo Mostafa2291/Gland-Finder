@@ -6,7 +6,7 @@ from urllib.parse import quote_plus
 
 # --- 1. Database Configuration ---
 DB_USER = "postgres"
-DB_PASSWORD = "PASTE_YOUR_SUPABASE_PASSWORD_HERE"
+DB_PASSWORD = "F@ceb00k2077420"
 DB_HOST = "db.beluqoyvuchhoiyhbcfe.supabase.co"
 DB_PORT = "5432"
 DB_NAME = "postgres"
