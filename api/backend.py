@@ -7,11 +7,13 @@ import uvicorn
 
 # --- 1. Database Configuration ---
 DB_USER = "postgres"
-DB_PASSWORD = "P@ssw0rd"  # CHANGE THIS to your pgAdmin password!
-DB_HOST = "localhost"
+DB_PASSWORD = "F@ceb00k2077420"
+# Only the host address, not the full postgresql:// string
+DB_HOST = "db.beluqoyvuchhoiyhbcfe.supabase.co"
 DB_PORT = "5432"
-DB_NAME = "gland_db"
+DB_NAME = "postgres"
 
+# Correctly construct the URL
 encoded_password = quote_plus(DB_PASSWORD)
 SQLALCHEMY_DATABASE_URL = f"postgresql://{DB_USER}:{encoded_password}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 
@@ -45,25 +47,20 @@ def get_db():
 # --- 3. FastAPI Application ---
 app = FastAPI(title="Cable Gland Technical Office API")
 
-# ADDED: CORS Middleware to allow the React frontend to communicate with this API
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allows all origins
+    allow_origins=["*"], 
     allow_credentials=True,
-    allow_methods=["*"],  # Allows all methods (GET, POST, etc.)
-    allow_headers=["*"],  # Allows all headers
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
-
-@app.get("/")
-def read_root():
-    return {"message": "API is running! React frontend can now connect."}
 
 @app.get("/api/search")
 def search_glands(
-    armour: str = Query(None, description="e.g., SWA, Unarmoured"),
-    environment: str = Query(None, description="e.g., Industrial, Hazardous"),
-    overall_dia: float = Query(None, description="Cable Overall Diameter (mm)"),
-    inner_dia: float = Query(None, description="Cable Inner Bedding Diameter (mm) - For SWA"),
+    armour: str = Query(None),
+    environment: str = Query(None),
+    overall_dia: float = Query(None),
+    inner_dia: float = Query(None),
     db: Session = Depends(get_db)
 ):
     query = db.query(CableGland)
@@ -90,5 +87,5 @@ def search_glands(
     }
 
 if __name__ == "__main__":
-    print("Starting API Server with CORS on http://127.0.0.1:8000")
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+    # Pointing to 'backend:app' because your file is named backend.py
+    uvicorn.run("backend:app", host="127.0.0.1", port=8000, reload=True)
