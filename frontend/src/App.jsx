@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, ShieldCheck, Factory, Ruler, ChevronRight, Activity, AlertCircle, RotateCcw } from 'lucide-react';
+import { Search, ShieldCheck, Factory, Ruler, ChevronRight, Activity, AlertCircle, RotateCcw, Star } from 'lucide-react';
 
 export default function App() {
   const [armour, setArmour] = useState('');
@@ -29,7 +29,32 @@ export default function App() {
       }
 
       const data = await response.json();
-      setResults(data.recommended_glands || []);
+      let glands = data.recommended_glands || [];
+
+      // If the user gave a target diameter, find the gland whose overall
+      // range midpoint is closest to it, and surface that one as "Recommended".
+      if (overallDia) {
+        const target = parseFloat(overallDia);
+        if (!isNaN(target) && glands.length > 0) {
+          let bestIdx = 0;
+          let bestDiff = Infinity;
+          glands.forEach((g, idx) => {
+            const midpoint = (g.min_cable_dia_mm + g.max_cable_dia_mm) / 2;
+            const diff = Math.abs(midpoint - target);
+            if (diff < bestDiff) {
+              bestDiff = diff;
+              bestIdx = idx;
+            }
+          });
+          const best = glands[bestIdx];
+          glands = [
+            { ...best, __recommended: true },
+            ...glands.filter((_, idx) => idx !== bestIdx),
+          ];
+        }
+      }
+
+      setResults(glands);
     } catch (err) {
       setError("Couldn't reach the gland database right now. Please try again in a moment.");
       console.error(err);
@@ -219,9 +244,22 @@ export default function App() {
               )}
 
               {!loading && (
-                <div className="grid grid-cols-1 gap-4">
+                <div className="grid grid-cols-1 gap-4 pt-2">
                   {results.map((gland, idx) => (
-                    <div key={idx} className="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md hover:border-blue-300 transition-all group flex flex-col md:flex-row md:items-center justify-between">
+                    <div
+                      key={idx}
+                      className={
+                        gland.__recommended
+                          ? "bg-white p-5 rounded-2xl shadow-md border-2 border-blue-500 ring-2 ring-blue-100 transition-all group flex flex-col md:flex-row md:items-center justify-between relative"
+                          : "bg-white p-5 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md hover:border-blue-300 transition-all group flex flex-col md:flex-row md:items-center justify-between"
+                      }
+                    >
+                      {gland.__recommended && (
+                        <div className="absolute -top-3 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1 shadow-sm">
+                          <Star className="h-3 w-3 fill-white" />
+                          Recommended
+                        </div>
+                      )}
 
                       <div className="mb-4 md:mb-0">
                         <div className="flex items-center space-x-3 mb-1">
