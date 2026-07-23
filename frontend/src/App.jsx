@@ -1,293 +1,351 @@
-import React, { useState } from 'react';
-import { Search, ShieldCheck, Factory, Ruler, ChevronRight, Activity, AlertCircle, RotateCcw, Star } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Search, Info, Shield, Layers, Factory, Box, Ruler, CheckCircle2, XCircle, Settings2, Loader2 } from 'lucide-react';
 
 export default function App() {
-  const [armour, setArmour] = useState('');
-  const [environment, setEnvironment] = useState('');
-  const [overallDia, setOverallDia] = useState('');
+  // --- STATE ---
+  const [armourType, setArmourType] = useState('All');
+  const [sealingType, setSealingType] = useState('All');
+  const [environment, setEnvironment] = useState('All');
+  const [material, setMaterial] = useState('All');
+  const [cableOD, setCableOD] = useState('');
+  const [selectedGland, setSelectedGland] = useState(null);
 
-  const [results, setResults] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-  const [hasSearched, setHasSearched] = useState(false);
+  const [filteredGlands, setFilteredGlands] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSearch = async () => {
-    setLoading(true);
-    setError(null);
-    setHasSearched(true);
+  // --- FETCHING LOGIC FROM VERCEL API ---
+  useEffect(() => {
+    const fetchGlands = async () => {
+      setIsLoading(true);
+      try {
+        const params = new URLSearchParams();
+        
+        if (armourType !== 'All') params.append('armour', armourType);
+        if (sealingType !== 'All') params.append('sealing', sealingType);
+        if (environment !== 'All') params.append('environment', environment);
+        if (material !== 'All') params.append('material', material);
+        if (cableOD && !isNaN(parseFloat(cableOD))) params.append('overall_dia', cableOD);
 
-    try {
-      const params = new URLSearchParams();
-      if (armour) params.append('armour', armour);
-      if (environment) params.append('environment', environment);
-      if (overallDia) params.append('overall_dia', overallDia);
-
-      const response = await fetch(`/api/search?${params.toString()}`);
-
-      if (!response.ok) {
-        throw new Error('Failed to connect to the backend database.');
-      }
-
-      const data = await response.json();
-      let glands = data.recommended_glands || [];
-
-      // If the user gave a target diameter, find the gland whose overall
-      // range midpoint is closest to it, and surface that one as "Recommended".
-      if (overallDia) {
-        const target = parseFloat(overallDia);
-        if (!isNaN(target) && glands.length > 0) {
-          let bestIdx = 0;
-          let bestDiff = Infinity;
-          glands.forEach((g, idx) => {
-            const midpoint = (g.min_cable_dia_mm + g.max_cable_dia_mm) / 2;
-            const diff = Math.abs(midpoint - target);
-            if (diff < bestDiff) {
-              bestDiff = diff;
-              bestIdx = idx;
-            }
-          });
-          const best = glands[bestIdx];
-          glands = [
-            { ...best, __recommended: true },
-            ...glands.filter((_, idx) => idx !== bestIdx),
-          ];
+        // NOTE: For local testing with your Python backend, change the URL to:
+        // const response = await fetch(`http://127.0.0.1:8000/api/search?${params.toString()}`);
+        const response = await fetch(`/api/search?${params.toString()}`);
+        
+        if (!response.ok) throw new Error("Network response was not ok");
+        
+        const data = await response.json();
+        setFilteredGlands(data.recommended_glands || []);
+        
+        // Deselect gland if it's no longer in the filtered list
+        if (selectedGland && !(data.recommended_glands || []).find(g => g.ordering_reference === selectedGland.ordering_reference)) {
+            setSelectedGland(null);
         }
+      } catch (error) {
+        console.error("Failed to fetch glands:", error);
+        setFilteredGlands([]);
+      } finally {
+        setIsLoading(false);
       }
+    };
 
-      setResults(glands);
-    } catch (err) {
-      setError("Couldn't reach the gland database right now. Please try again in a moment.");
-      console.error(err);
-    } finally {
-      setLoading(false);
-    }
-  };
+    // Add a 300ms debounce so it doesn't spam Supabase on every single keystroke in the OD box
+    const delayDebounceFn = setTimeout(() => {
+      fetchGlands();
+    }, 300);
 
-  const handleReset = () => {
-    setArmour('');
-    setEnvironment('');
-    setOverallDia('');
-    setResults([]);
-    setError(null);
-    setHasSearched(false);
-  };
+    return () => clearTimeout(delayDebounceFn);
+  }, [armourType, sealingType, environment, material, cableOD]);
 
-  const handleKeyDown = (e) => {
-    if (e.key === 'Enter') handleSearch();
-  };
-
-  const hasActiveFilters = armour || environment || overallDia;
+  // Dropdown Options
+  const armourOptions = ['All', 'Unarmoured', 'SWA', 'STA', 'AWA', 'SWA & STA', 'SWA & AWA', 'Braid & STA'];
+  const sealingOptions = ['All', 'Single Seal', 'Double Seal'];
+  const envOptions = ['All', 'Industrial / Safe', 'Explosion Proof'];
+  const materialOptions = ['All', 'Brass', 'Nickel Plated Brass', 'Stainless Steel', 'Aluminium'];
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800 font-sans selection:bg-blue-200">
-
-      {/* HEADER */}
-      <header className="bg-white border-b border-slate-200 shadow-sm sticky top-0 z-10">
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-blue-100 selection:text-blue-900">
+      
+      {/* Header */}
+      <header className="bg-slate-900 text-white shadow-md sticky top-0 z-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <div className="bg-blue-600 p-2 rounded-lg shadow-inner shadow-blue-800/50">
-              <Activity className="h-6 w-6 text-white" />
+          <div className="flex items-center gap-3">
+            <div className="bg-blue-600 p-2 rounded-lg">
+              <Settings2 className="h-6 w-6 text-white" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-slate-900 leading-tight">Gland Selector Pro</h1>
-              <p className="text-xs text-slate-500 font-medium tracking-wide uppercase">Technical Office Hub</p>
+              <h1 className="text-xl font-bold tracking-tight">CMP Gland Selector</h1>
+              <p className="text-xs text-slate-400 font-medium tracking-wide uppercase">Engineering Database Engine</p>
             </div>
           </div>
-          <div className="flex space-x-2 text-sm text-slate-500 items-center font-medium">
-            <span className="flex h-3 w-3 relative">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
-            </span>
-            <span>API Online</span>
+          <div className="hidden sm:flex items-center gap-2 text-sm text-slate-300 bg-slate-800 py-1.5 px-3 rounded-full border border-slate-700">
+             <Layers className="h-4 w-4 text-blue-400" />
+             <span>Live Supabase Connection</span>
           </div>
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col lg:flex-row gap-8">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col lg:flex-row gap-8 items-start">
+        
+        {/* --- LEFT SIDEBAR: FILTERS --- */}
+        <aside className="w-full lg:w-80 flex-shrink-0 space-y-6">
+          <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 overflow-hidden relative">
+            <div className="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-blue-50 rounded-full opacity-50 pointer-events-none"></div>
 
-        {/* LEFT COLUMN: FILTERS */}
-        <div className="w-full lg:w-1/3 space-y-6">
-          <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
-            <div className="flex items-center justify-between mb-5">
-              <h2 className="text-lg font-bold text-slate-800 flex items-center">
-                <Search className="h-5 w-5 mr-2 text-blue-600" />
-                Cable Specifications
-              </h2>
-              {hasActiveFilters && (
-                <button
-                  onClick={handleReset}
-                  className="text-xs font-semibold text-slate-400 hover:text-slate-600 flex items-center gap-1 transition-colors"
-                >
-                  <RotateCcw className="h-3.5 w-3.5" />
-                  Clear
-                </button>
-              )}
-            </div>
+            <h2 className="text-lg font-bold text-slate-800 mb-6 flex items-center gap-2">
+              <Search className="h-5 w-5 text-blue-600" />
+              Filter Specifications
+            </h2>
 
-            <div className="space-y-5" onKeyDown={handleKeyDown}>
-
-              {/* Overall Diameter */}
+            <div className="space-y-5 relative z-10">
+              {/* Cable OD Input */}
               <div>
-                <label className="block text-sm font-semibold text-slate-700 mb-1 flex items-center">
+                <label className="block text-sm font-semibold text-slate-700 mb-1.5 flex items-center">
                   <Ruler className="h-4 w-4 mr-1.5 text-slate-400" />
-                  Overall Cable Diameter (mm)
+                  Cable Outer Dia. (mm)
                 </label>
-                <input
-                  type="number"
-                  value={overallDia}
-                  onChange={(e) => setOverallDia(e.target.value)}
-                  placeholder="e.g. 14.5"
-                  className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none bg-slate-50 hover:bg-white"
-                />
-                <p className="text-xs text-slate-400 mt-1">Measure the cable's outer sheath diameter.</p>
+                <div className="relative">
+                  <input 
+                    type="number" 
+                    value={cableOD}
+                    onChange={(e) => setCableOD(e.target.value)}
+                    placeholder="e.g. 14.5"
+                    className="w-full pl-4 pr-10 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none bg-slate-50 focus:bg-white"
+                  />
+                  <span className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm font-medium">mm</span>
+                </div>
               </div>
 
               {/* Armour Type */}
               <div>
-                <label className="block text-sm font-semibold text-slate-700 mb-1 flex items-center">
-                  <ShieldCheck className="h-4 w-4 mr-1.5 text-slate-400" />
+                <label className="block text-sm font-semibold text-slate-700 mb-1.5 flex items-center">
+                  <Shield className="h-4 w-4 mr-1.5 text-slate-400" />
                   Armour Type
                 </label>
-                <select
-                  value={armour}
-                  onChange={(e) => setArmour(e.target.value)}
+                <select 
+                  value={armourType}
+                  onChange={(e) => setArmourType(e.target.value)}
                   className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none bg-slate-50 hover:bg-white appearance-none cursor-pointer"
                 >
-                  <option value="">Any Armour</option>
-                  <option value="SWA">Steel Wire Armour (SWA)</option>
-                  <option value="Unarmoured">Unarmoured</option>
+                  {armourOptions.map(opt => <option key={opt} value={opt}>{opt}</option>)}
+                </select>
+              </div>
+
+              {/* Sealing Type */}
+              <div>
+                <label className="block text-sm font-semibold text-slate-700 mb-1.5 flex items-center">
+                  <Layers className="h-4 w-4 mr-1.5 text-slate-400" />
+                  Sealing Type
+                </label>
+                <select 
+                  value={sealingType}
+                  onChange={(e) => setSealingType(e.target.value)}
+                  className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none bg-slate-50 hover:bg-white appearance-none cursor-pointer"
+                >
+                  {sealingOptions.map(opt => <option key={opt} value={opt}>{opt}</option>)}
                 </select>
               </div>
 
               {/* Environment */}
               <div>
-                <label className="block text-sm font-semibold text-slate-700 mb-1 flex items-center">
+                <label className="block text-sm font-semibold text-slate-700 mb-1.5 flex items-center">
                   <Factory className="h-4 w-4 mr-1.5 text-slate-400" />
                   Environment
                 </label>
-                <select
+                <select 
                   value={environment}
                   onChange={(e) => setEnvironment(e.target.value)}
                   className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none bg-slate-50 hover:bg-white appearance-none cursor-pointer"
                 >
-                  <option value="">Any Environment</option>
-                  <option value="Industrial">Industrial / Safe</option>
-                  <option value="Hazardous">Hazardous / Ex</option>
+                  {envOptions.map(opt => <option key={opt} value={opt}>{opt}</option>)}
                 </select>
               </div>
 
-              <button
-                onClick={handleSearch}
-                disabled={loading}
-                className="w-full bg-blue-600 hover:bg-blue-700 disabled:opacity-70 disabled:cursor-not-allowed text-white font-bold py-3 px-4 rounded-xl shadow-md shadow-blue-500/30 transition-all active:scale-[0.98] flex items-center justify-center mt-4"
-              >
-                {loading ? (
-                  <span className="flex items-center">
-                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                    </svg>
-                    Searching...
-                  </span>
-                ) : (
-                  'Find Matching Glands'
-                )}
-              </button>
-
-              <p className="text-xs text-slate-400 text-center -mt-2">Press Enter to search</p>
-            </div>
-          </div>
-        </div>
-
-        {/* RIGHT COLUMN: RESULTS */}
-        <div className="w-full lg:w-2/3">
-
-          {error && (
-            <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-xl mb-6 flex shadow-sm">
-              <AlertCircle className="h-6 w-6 text-red-500 mr-3 shrink-0" />
-              <p className="text-sm text-red-700 font-medium leading-relaxed">{error}</p>
-            </div>
-          )}
-
-          {!hasSearched && !error ? (
-            <div className="h-full min-h-[400px] flex flex-col items-center justify-center text-slate-400 bg-white border border-slate-200 border-dashed rounded-2xl px-6">
-              <Search className="h-16 w-16 mb-4 text-slate-200" />
-              <p className="text-lg font-medium text-slate-500">Enter specifications to find glands</p>
-              <p className="text-sm mt-1 text-slate-400 max-w-sm text-center">
-                Fill in the cable diameter and armour requirements on the left, then search the catalog.
-              </p>
-            </div>
-          ) : (
-            <div className="space-y-4">
-              <div className="flex items-center justify-between mb-2">
-                <h3 className="text-lg font-bold text-slate-800">
-                  Recommended Glands
-                  {!loading && (
-                    <span className="ml-2 bg-blue-100 text-blue-700 py-1 px-3 rounded-full text-sm font-bold">
-                      {results.length}
-                    </span>
-                  )}
-                </h3>
+              {/* Material */}
+              <div>
+                <label className="block text-sm font-semibold text-slate-700 mb-1.5 flex items-center">
+                  <Box className="h-4 w-4 mr-1.5 text-slate-400" />
+                  Material
+                </label>
+                <select 
+                  value={material}
+                  onChange={(e) => setMaterial(e.target.value)}
+                  className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none bg-slate-50 hover:bg-white appearance-none cursor-pointer"
+                >
+                  {materialOptions.map(opt => <option key={opt} value={opt}>{opt}</option>)}
+                </select>
               </div>
 
-              {loading && (
-                <div className="p-12 bg-white rounded-2xl border border-slate-200 flex items-center justify-center text-slate-400">
-                  Searching the catalog...
+              <div className="pt-4 border-t border-slate-100">
+                <button 
+                  onClick={() => {
+                    setArmourType('All'); setSealingType('All'); setEnvironment('All'); setMaterial('All'); setCableOD(''); setSelectedGland(null);
+                  }}
+                  className="w-full py-2.5 text-sm font-semibold text-slate-600 bg-slate-100 hover:bg-slate-200 rounded-xl transition-colors"
+                >
+                  Clear All Filters
+                </button>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        {/* --- MAIN CENTER: RESULTS TABLE --- */}
+        <div className="flex-1 w-full space-y-6">
+          
+          {/* Results Summary Bar */}
+          <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-2">
+              <div className={`flex items-center justify-center h-8 w-8 rounded-full ${isLoading ? 'bg-blue-100 text-blue-600' : filteredGlands.length > 0 ? 'bg-green-100 text-green-600' : 'bg-red-100 text-red-600'}`}>
+                {isLoading ? <Loader2 className="h-5 w-5 animate-spin" /> : filteredGlands.length > 0 ? <CheckCircle2 className="h-5 w-5" /> : <XCircle className="h-5 w-5" />}
+              </div>
+              <span className="font-medium text-slate-700">
+                {isLoading ? 'Searching database...' : <>Found <strong className="text-slate-900 text-lg">{filteredGlands.length}</strong> matching glands</>}
+              </span>
+            </div>
+            
+            <div className="flex flex-wrap gap-2 justify-center">
+               {cableOD && <span className="text-xs bg-blue-50 text-blue-700 border border-blue-100 px-2 py-1 rounded-md font-medium">OD: {cableOD}mm</span>}
+               {armourType !== 'All' && <span className="text-xs bg-slate-100 text-slate-600 border border-slate-200 px-2 py-1 rounded-md">{armourType}</span>}
+               {environment !== 'All' && <span className="text-xs bg-slate-100 text-slate-600 border border-slate-200 px-2 py-1 rounded-md">{environment}</span>}
+            </div>
+          </div>
+
+          {/* Detailed Gland Card */}
+          {selectedGland && (
+            <div className="bg-white border-2 border-blue-500 rounded-2xl p-6 shadow-lg relative overflow-hidden">
+              <div className="absolute top-0 right-0 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider">
+                Selected Specification
+              </div>
+              <div className="flex justify-between items-start mb-6">
+                <div>
+                  <h3 className="text-2xl font-black text-slate-900 flex items-center gap-3">
+                    {selectedGland.ordering_reference}
+                  </h3>
+                  <p className="text-slate-500 font-medium">{selectedGland.manufacturer} {selectedGland.gland_model} Series</p>
                 </div>
-              )}
+                <button 
+                  onClick={() => setSelectedGland(null)}
+                  className="text-slate-400 hover:text-slate-600 transition-colors"
+                >
+                  <XCircle className="h-6 w-6" />
+                </button>
+              </div>
 
-              {!loading && results.length === 0 && !error && (
-                <div className="p-8 bg-amber-50 rounded-2xl border border-amber-200 text-center">
-                  <p className="text-amber-800 font-semibold">No glands found matching these specifications.</p>
-                  <p className="text-amber-600 text-sm mt-1">Try widening the diameter or checking a different armour type.</p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                <div className="bg-slate-50 rounded-xl p-3 border border-slate-100">
+                  <p className="text-xs text-slate-500 font-semibold mb-1 uppercase">Thread</p>
+                  <p className="text-lg font-bold text-slate-800">{selectedGland.entry_thread}</p>
                 </div>
-              )}
-
-              {!loading && (
-                <div className="grid grid-cols-1 gap-4 pt-2">
-                  {results.map((gland, idx) => (
-                    <div
-                      key={idx}
-                      className={
-                        gland.__recommended
-                          ? "bg-white p-5 rounded-2xl shadow-md border-2 border-blue-500 ring-2 ring-blue-100 transition-all group flex flex-col md:flex-row md:items-center justify-between relative"
-                          : "bg-white p-5 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md hover:border-blue-300 transition-all group flex flex-col md:flex-row md:items-center justify-between"
-                      }
-                    >
-                      {gland.__recommended && (
-                        <div className="absolute -top-3 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1 shadow-sm">
-                          <Star className="h-3 w-3 fill-white" />
-                          Recommended
-                        </div>
-                      )}
-
-                      <div className="mb-4 md:mb-0">
-                        <div className="flex items-center space-x-3 mb-1">
-                          <span className="font-mono text-xl font-bold text-slate-800">{gland.ordering_reference}</span>
-                          <span className="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded font-bold uppercase tracking-wider">{gland.manufacturer}</span>
-                        </div>
-                        <div className="text-sm text-slate-500 flex flex-wrap gap-y-1 gap-x-4">
-                          <span className="flex items-center"><ChevronRight className="h-3 w-3 mr-1"/> Size: <strong className="ml-1 text-slate-700">{gland.gland_size}</strong></span>
-                          <span className="flex items-center"><ChevronRight className="h-3 w-3 mr-1"/> Thread: <strong className="ml-1 text-slate-700">{gland.entry_thread}</strong></span>
-                          <span className="flex items-center"><ChevronRight className="h-3 w-3 mr-1"/> Type: <strong className="ml-1 text-slate-700">{gland.armour_compatibility}</strong></span>
-                        </div>
-                      </div>
-
-                      <div className="flex items-center md:justify-end gap-3 w-full md:w-auto">
-                        <div className="bg-blue-50 border border-blue-100 px-4 py-2 rounded-xl text-center min-w-[120px]">
-                          <p className="text-[10px] text-blue-600 font-bold uppercase tracking-wider mb-0.5">Overall Range</p>
-                          <p className="text-sm font-mono text-slate-800 font-bold">
-                            {gland.min_cable_dia_mm} - {gland.max_cable_dia_mm} <span className="text-xs text-slate-500 font-sans">mm</span>
-                          </p>
-                        </div>
-                      </div>
-
-                    </div>
-                  ))}
+                <div className="bg-slate-50 rounded-xl p-3 border border-slate-100">
+                  <p className="text-xs text-slate-500 font-semibold mb-1 uppercase">Size Ref</p>
+                  <p className="text-lg font-bold text-slate-800">{selectedGland.gland_size}</p>
                 </div>
-              )}
+                <div className="bg-slate-50 rounded-xl p-3 border border-slate-100 col-span-2 flex flex-col justify-center">
+                  <p className="text-xs text-slate-500 font-semibold mb-1 uppercase">Cable OD Range</p>
+                  <div className="flex items-center gap-2">
+                    <span className="text-lg font-bold text-blue-600">{selectedGland.min_cable_dia_mm}</span>
+                    <span className="text-slate-400 font-medium">to</span>
+                    <span className="text-lg font-bold text-blue-600">{selectedGland.max_cable_dia_mm}</span>
+                    <span className="text-sm text-slate-500 font-medium ml-1">mm</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-x-8 gap-y-3 text-sm">
+                <div className="flex justify-between border-b border-slate-100 pb-2">
+                  <span className="text-slate-500 font-medium">Material</span>
+                  <span className="font-semibold text-slate-800 text-right">{selectedGland.material}</span>
+                </div>
+                <div className="flex justify-between border-b border-slate-100 pb-2">
+                  <span className="text-slate-500 font-medium">Armour Compatibility</span>
+                  <span className="font-semibold text-slate-800 text-right">{selectedGland.armour_compatibility}</span>
+                </div>
+                <div className="flex justify-between border-b border-slate-100 pb-2">
+                  <span className="text-slate-500 font-medium">Environment</span>
+                  <span className="font-semibold text-slate-800 text-right">{selectedGland.environment}</span>
+                </div>
+              </div>
             </div>
           )}
+
+          {/* Data Table */}
+          <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+            <div className="overflow-x-auto">
+              <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr className="bg-slate-50 border-b border-slate-200 text-slate-600 text-xs uppercase tracking-wider font-semibold">
+                    <th className="px-4 py-3">Reference</th>
+                    <th className="px-4 py-3">Model</th>
+                    <th className="px-4 py-3">Thread</th>
+                    <th className="px-4 py-3">Range (mm)</th>
+                    <th className="px-4 py-3 hidden sm:table-cell">Armour</th>
+                    <th className="px-4 py-3 hidden md:table-cell">Material</th>
+                    <th className="px-4 py-3 text-right">Action</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-100 text-sm">
+                  {isLoading ? (
+                    <tr>
+                      <td colSpan="8" className="px-4 py-16 text-center">
+                        <div className="flex flex-col items-center justify-center text-slate-400">
+                          <Loader2 className="h-10 w-10 mb-3 animate-spin text-blue-500" />
+                          <p className="text-lg font-medium text-slate-600">Querying Supabase...</p>
+                        </div>
+                      </td>
+                    </tr>
+                  ) : filteredGlands.length > 0 ? (
+                    filteredGlands.map((gland, idx) => (
+                      <tr 
+                        key={idx} 
+                        className={`hover:bg-blue-50 transition-colors cursor-pointer ${selectedGland?.ordering_reference === gland.ordering_reference ? 'bg-blue-50' : ''}`}
+                        onClick={() => setSelectedGland(gland)}
+                      >
+                        <td className="px-4 py-3 font-bold text-slate-800 whitespace-nowrap">
+                          {gland.ordering_reference}
+                        </td>
+                        <td className="px-4 py-3 text-slate-600">
+                          <span className="bg-slate-100 px-2 py-0.5 rounded font-medium border border-slate-200">{gland.gland_model}</span>
+                        </td>
+                        <td className="px-4 py-3 font-medium text-slate-700">
+                          {gland.entry_thread} ({gland.gland_size})
+                        </td>
+                        <td className="px-4 py-3 font-medium">
+                          {gland.min_cable_dia_mm} - {gland.max_cable_dia_mm}
+                        </td>
+                        <td className="px-4 py-3 hidden sm:table-cell text-slate-600">
+                          {gland.armour_compatibility}
+                        </td>
+                        <td className="px-4 py-3 hidden md:table-cell text-slate-600">
+                          {gland.material}
+                        </td>
+                        <td className="px-4 py-3 text-right">
+                          <button 
+                            className="text-blue-600 hover:text-blue-800 font-semibold text-xs uppercase tracking-wide bg-blue-50 hover:bg-blue-100 px-3 py-1.5 rounded-lg transition-colors"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                setSelectedGland(gland);
+                            }}
+                          >
+                            View
+                          </button>
+                        </td>
+                      </tr>
+                    ))
+                  ) : (
+                    <tr>
+                      <td colSpan="8" className="px-4 py-12 text-center">
+                        <div className="flex flex-col items-center justify-center text-slate-400">
+                          <Search className="h-10 w-10 mb-3 opacity-20" />
+                          <p className="text-lg font-medium text-slate-600">No glands found</p>
+                          <p className="text-sm">Try adjusting your filters or cable outer diameter.</p>
+                        </div>
+                      </td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
         </div>
       </main>
     </div>

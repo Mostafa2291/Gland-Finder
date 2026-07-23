@@ -1,0 +1,889 @@
+manufacturer,gland_model,gland_size,entry_thread,sealing_type,armour_compatibility,environment,ex_rating,material,min_cable_dia_mm,max_cable_dia_mm,ordering_reference
+CMP,A2,20S16,M20,Single Seal,Unarmoured,Industrial / Safe,,Brass,3.2,8.7,20S16A21RA
+CMP,A2,20S16,M20,Single Seal,Unarmoured,Industrial / Safe,,Nickel Plated Brass,3.2,8.7,20S16A21RA5
+CMP,A2,20S16,M20,Single Seal,Unarmoured,Industrial / Safe,,Stainless Steel,3.2,8.7,20S16A21RA4
+CMP,A2,20S16,M20,Single Seal,Unarmoured,Industrial / Safe,,Aluminium,3.2,8.7,20S16A21RA1
+CMP,A2,20S,M20,Single Seal,Unarmoured,Industrial / Safe,,Brass,6.1,11.7,20SA21RA
+CMP,A2,20S,M20,Single Seal,Unarmoured,Industrial / Safe,,Nickel Plated Brass,6.1,11.7,20SA21RA5
+CMP,A2,20S,M20,Single Seal,Unarmoured,Industrial / Safe,,Stainless Steel,6.1,11.7,20SA21RA4
+CMP,A2,20S,M20,Single Seal,Unarmoured,Industrial / Safe,,Aluminium,6.1,11.7,20SA21RA1
+CMP,A2,20,M20,Single Seal,Unarmoured,Industrial / Safe,,Brass,6.5,14.0,20A21RA
+CMP,A2,20,M20,Single Seal,Unarmoured,Industrial / Safe,,Nickel Plated Brass,6.5,14.0,20A21RA5
+CMP,A2,20,M20,Single Seal,Unarmoured,Industrial / Safe,,Stainless Steel,6.5,14.0,20A21RA4
+CMP,A2,20,M20,Single Seal,Unarmoured,Industrial / Safe,,Aluminium,6.5,14.0,20A21RA1
+CMP,A2,25,M25,Single Seal,Unarmoured,Industrial / Safe,,Brass,11.1,20.0,25A21RA
+CMP,A2,25,M25,Single Seal,Unarmoured,Industrial / Safe,,Nickel Plated Brass,11.1,20.0,25A21RA5
+CMP,A2,25,M25,Single Seal,Unarmoured,Industrial / Safe,,Stainless Steel,11.1,20.0,25A21RA4
+CMP,A2,25,M25,Single Seal,Unarmoured,Industrial / Safe,,Aluminium,11.1,20.0,25A21RA1
+CMP,A2,32,M32,Single Seal,Unarmoured,Industrial / Safe,,Brass,17.0,26.3,32A21RA
+CMP,A2,32,M32,Single Seal,Unarmoured,Industrial / Safe,,Nickel Plated Brass,17.0,26.3,32A21RA5
+CMP,A2,32,M32,Single Seal,Unarmoured,Industrial / Safe,,Stainless Steel,17.0,26.3,32A21RA4
+CMP,A2,32,M32,Single Seal,Unarmoured,Industrial / Safe,,Aluminium,17.0,26.3,32A21RA1
+CMP,A2,40,M40,Single Seal,Unarmoured,Industrial / Safe,,Brass,23.5,32.2,40A21RA
+CMP,A2,40,M40,Single Seal,Unarmoured,Industrial / Safe,,Nickel Plated Brass,23.5,32.2,40A21RA5
+CMP,A2,40,M40,Single Seal,Unarmoured,Industrial / Safe,,Stainless Steel,23.5,32.2,40A21RA4
+CMP,A2,40,M40,Single Seal,Unarmoured,Industrial / Safe,,Aluminium,23.5,32.2,40A21RA1
+CMP,A2,50S,M50,Single Seal,Unarmoured,Industrial / Safe,,Brass,31.0,38.2,50SA21RA
+CMP,A2,50S,M50,Single Seal,Unarmoured,Industrial / Safe,,Nickel Plated Brass,31.0,38.2,50SA21RA5
+CMP,A2,50S,M50,Single Seal,Unarmoured,Industrial / Safe,,Stainless Steel,31.0,38.2,50SA21RA4
+CMP,A2,50S,M50,Single Seal,Unarmoured,Industrial / Safe,,Aluminium,31.0,38.2,50SA21RA1
+CMP,A2,50,M50,Single Seal,Unarmoured,Industrial / Safe,,Brass,35.6,44.0,50A21RA
+CMP,A2,50,M50,Single Seal,Unarmoured,Industrial / Safe,,Nickel Plated Brass,35.6,44.0,50A21RA5
+CMP,A2,50,M50,Single Seal,Unarmoured,Industrial / Safe,,Stainless Steel,35.6,44.0,50A21RA4
+CMP,A2,50,M50,Single Seal,Unarmoured,Industrial / Safe,,Aluminium,35.6,44.0,50A21RA1
+CMP,A2,63S,M63,Single Seal,Unarmoured,Industrial / Safe,,Brass,41.5,49.9,63SA21RA
+CMP,A2,63S,M63,Single Seal,Unarmoured,Industrial / Safe,,Nickel Plated Brass,41.5,49.9,63SA21RA5
+CMP,A2,63S,M63,Single Seal,Unarmoured,Industrial / Safe,,Stainless Steel,41.5,49.9,63SA21RA4
+CMP,A2,63S,M63,Single Seal,Unarmoured,Industrial / Safe,,Aluminium,41.5,49.9,63SA21RA1
+CMP,A2,63,M63,Single Seal,Unarmoured,Industrial / Safe,,Brass,47.2,55.9,63A21RA
+CMP,A2,63,M63,Single Seal,Unarmoured,Industrial / Safe,,Nickel Plated Brass,47.2,55.9,63A21RA5
+CMP,A2,63,M63,Single Seal,Unarmoured,Industrial / Safe,,Stainless Steel,47.2,55.9,63A21RA4
+CMP,A2,63,M63,Single Seal,Unarmoured,Industrial / Safe,,Aluminium,47.2,55.9,63A21RA1
+CMP,A2,75S,M75,Single Seal,Unarmoured,Industrial / Safe,,Brass,54.0,61.9,75SA21RA
+CMP,A2,75S,M75,Single Seal,Unarmoured,Industrial / Safe,,Nickel Plated Brass,54.0,61.9,75SA21RA5
+CMP,A2,75S,M75,Single Seal,Unarmoured,Industrial / Safe,,Stainless Steel,54.0,61.9,75SA21RA4
+CMP,A2,75S,M75,Single Seal,Unarmoured,Industrial / Safe,,Aluminium,54.0,61.9,75SA21RA1
+CMP,A2,75,M75,Single Seal,Unarmoured,Industrial / Safe,,Brass,61.1,67.9,75A21RA
+CMP,A2,75,M75,Single Seal,Unarmoured,Industrial / Safe,,Nickel Plated Brass,61.1,67.9,75A21RA5
+CMP,A2,75,M75,Single Seal,Unarmoured,Industrial / Safe,,Stainless Steel,61.1,67.9,75A21RA4
+CMP,A2,75,M75,Single Seal,Unarmoured,Industrial / Safe,,Aluminium,61.1,67.9,75A21RA1
+CMP,A2,90,M90,Single Seal,Unarmoured,Industrial / Safe,,Brass,66.6,79.9,90A21RA
+CMP,A2,90,M90,Single Seal,Unarmoured,Industrial / Safe,,Nickel Plated Brass,66.6,79.9,90A21RA5
+CMP,A2,90,M90,Single Seal,Unarmoured,Industrial / Safe,,Stainless Steel,66.6,79.9,90A21RA4
+CMP,A2,90,M90,Single Seal,Unarmoured,Industrial / Safe,,Aluminium,66.6,79.9,90A21RA1
+CMP,A2,100,M100,Single Seal,Unarmoured,Industrial / Safe,,Brass,76.0,91.0,100A21RA
+CMP,A2,100,M100,Single Seal,Unarmoured,Industrial / Safe,,Nickel Plated Brass,76.0,91.0,100A21RA5
+CMP,A2,100,M100,Single Seal,Unarmoured,Industrial / Safe,,Stainless Steel,76.0,91.0,100A21RA4
+CMP,A2,100,M100,Single Seal,Unarmoured,Industrial / Safe,,Aluminium,76.0,91.0,100A21RA1
+CMP,A2,115,M115,Single Seal,Unarmoured,Industrial / Safe,,Brass,86.0,97.9,115A21RA
+CMP,A2,115,M115,Single Seal,Unarmoured,Industrial / Safe,,Nickel Plated Brass,86.0,97.9,115A21RA5
+CMP,A2,115,M115,Single Seal,Unarmoured,Industrial / Safe,,Stainless Steel,86.0,97.9,115A21RA4
+CMP,A2,115,M115,Single Seal,Unarmoured,Industrial / Safe,,Aluminium,86.0,97.9,115A21RA1
+CMP,A2,130,M130,Single Seal,Unarmoured,Industrial / Safe,,Brass,97.0,114.9,130A21RA
+CMP,A2,130,M130,Single Seal,Unarmoured,Industrial / Safe,,Nickel Plated Brass,97.0,114.9,130A21RA5
+CMP,A2,130,M130,Single Seal,Unarmoured,Industrial / Safe,,Stainless Steel,97.0,114.9,130A21RA4
+CMP,A2,130,M130,Single Seal,Unarmoured,Industrial / Safe,,Aluminium,97.0,114.9,130A21RA1
+CMP,CW,20S16,M20,Single Seal,SWA,Industrial / Safe,,Brass,6.1,13.1,20S16CW1RA
+CMP,CW,20S16,M20,Single Seal,SWA,Industrial / Safe,,Nickel Plated Brass,6.1,13.1,20S16CW1RA5
+CMP,CW,20S16,M20,Single Seal,SWA,Industrial / Safe,,Stainless Steel,6.1,13.1,20S16CW1RA4
+CMP,CW,20S16,M20,Single Seal,SWA,Industrial / Safe,,Aluminium,6.1,13.1,20S16CW1RA1
+CMP,CW,20S,M20,Single Seal,SWA,Industrial / Safe,,Brass,9.5,15.9,20SCW1RA
+CMP,CW,20S,M20,Single Seal,SWA,Industrial / Safe,,Nickel Plated Brass,9.5,15.9,20SCW1RA5
+CMP,CW,20S,M20,Single Seal,SWA,Industrial / Safe,,Stainless Steel,9.5,15.9,20SCW1RA4
+CMP,CW,20S,M20,Single Seal,SWA,Industrial / Safe,,Aluminium,9.5,15.9,20SCW1RA1
+CMP,CW,20,M20,Single Seal,SWA,Industrial / Safe,,Brass,12.5,20.9,20CW1RA
+CMP,CW,20,M20,Single Seal,SWA,Industrial / Safe,,Nickel Plated Brass,12.5,20.9,20CW1RA5
+CMP,CW,20,M20,Single Seal,SWA,Industrial / Safe,,Stainless Steel,12.5,20.9,20CW1RA4
+CMP,CW,20,M20,Single Seal,SWA,Industrial / Safe,,Aluminium,12.5,20.9,20CW1RA1
+CMP,CW,25S,M25,Single Seal,SWA,Industrial / Safe,,Brass,14.0,22.0,25SCW1RA
+CMP,CW,25S,M25,Single Seal,SWA,Industrial / Safe,,Nickel Plated Brass,14.0,22.0,25SCW1RA5
+CMP,CW,25S,M25,Single Seal,SWA,Industrial / Safe,,Stainless Steel,14.0,22.0,25SCW1RA4
+CMP,CW,25S,M25,Single Seal,SWA,Industrial / Safe,,Aluminium,14.0,22.0,25SCW1RA1
+CMP,CW,25,M25,Single Seal,SWA,Industrial / Safe,,Brass,18.2,26.2,25CW1RA
+CMP,CW,25,M25,Single Seal,SWA,Industrial / Safe,,Nickel Plated Brass,18.2,26.2,25CW1RA5
+CMP,CW,25,M25,Single Seal,SWA,Industrial / Safe,,Stainless Steel,18.2,26.2,25CW1RA4
+CMP,CW,25,M25,Single Seal,SWA,Industrial / Safe,,Aluminium,18.2,26.2,25CW1RA1
+CMP,CW,32,M32,Single Seal,SWA,Industrial / Safe,,Brass,23.7,33.9,32CW1RA
+CMP,CW,32,M32,Single Seal,SWA,Industrial / Safe,,Nickel Plated Brass,23.7,33.9,32CW1RA5
+CMP,CW,32,M32,Single Seal,SWA,Industrial / Safe,,Stainless Steel,23.7,33.9,32CW1RA4
+CMP,CW,32,M32,Single Seal,SWA,Industrial / Safe,,Aluminium,23.7,33.9,32CW1RA1
+CMP,CW,40,M40,Single Seal,SWA,Industrial / Safe,,Brass,27.9,40.4,40CW1RA
+CMP,CW,40,M40,Single Seal,SWA,Industrial / Safe,,Nickel Plated Brass,27.9,40.4,40CW1RA5
+CMP,CW,40,M40,Single Seal,SWA,Industrial / Safe,,Stainless Steel,27.9,40.4,40CW1RA4
+CMP,CW,40,M40,Single Seal,SWA,Industrial / Safe,,Aluminium,27.9,40.4,40CW1RA1
+CMP,CW,50S,M50,Single Seal,SWA,Industrial / Safe,,Brass,35.2,46.7,50SCW1RA
+CMP,CW,50S,M50,Single Seal,SWA,Industrial / Safe,,Nickel Plated Brass,35.2,46.7,50SCW1RA5
+CMP,CW,50S,M50,Single Seal,SWA,Industrial / Safe,,Stainless Steel,35.2,46.7,50SCW1RA4
+CMP,CW,50S,M50,Single Seal,SWA,Industrial / Safe,,Aluminium,35.2,46.7,50SCW1RA1
+CMP,CW,50,M50,Single Seal,SWA,Industrial / Safe,,Brass,40.4,53.0,50CW1RA
+CMP,CW,50,M50,Single Seal,SWA,Industrial / Safe,,Nickel Plated Brass,40.4,53.0,50CW1RA5
+CMP,CW,50,M50,Single Seal,SWA,Industrial / Safe,,Stainless Steel,40.4,53.0,50CW1RA4
+CMP,CW,50,M50,Single Seal,SWA,Industrial / Safe,,Aluminium,40.4,53.0,50CW1RA1
+CMP,CW,63S,M63,Single Seal,SWA,Industrial / Safe,,Brass,45.6,59.4,63SCW1RA
+CMP,CW,63S,M63,Single Seal,SWA,Industrial / Safe,,Nickel Plated Brass,45.6,59.4,63SCW1RA5
+CMP,CW,63S,M63,Single Seal,SWA,Industrial / Safe,,Stainless Steel,45.6,59.4,63SCW1RA4
+CMP,CW,63S,M63,Single Seal,SWA,Industrial / Safe,,Aluminium,45.6,59.4,63SCW1RA1
+CMP,CW,63,M63,Single Seal,SWA,Industrial / Safe,,Brass,54.6,65.8,63CW1RA
+CMP,CW,63,M63,Single Seal,SWA,Industrial / Safe,,Nickel Plated Brass,54.6,65.8,63CW1RA5
+CMP,CW,63,M63,Single Seal,SWA,Industrial / Safe,,Stainless Steel,54.6,65.8,63CW1RA4
+CMP,CW,63,M63,Single Seal,SWA,Industrial / Safe,,Aluminium,54.6,65.8,63CW1RA1
+CMP,CW,75S,M75,Single Seal,SWA,Industrial / Safe,,Brass,59.0,72.0,75SCW1RA
+CMP,CW,75S,M75,Single Seal,SWA,Industrial / Safe,,Nickel Plated Brass,59.0,72.0,75SCW1RA5
+CMP,CW,75S,M75,Single Seal,SWA,Industrial / Safe,,Stainless Steel,59.0,72.0,75SCW1RA4
+CMP,CW,75S,M75,Single Seal,SWA,Industrial / Safe,,Aluminium,59.0,72.0,75SCW1RA1
+CMP,CW,75,M75,Single Seal,SWA,Industrial / Safe,,Brass,66.7,78.4,75CW1RA
+CMP,CW,75,M75,Single Seal,SWA,Industrial / Safe,,Nickel Plated Brass,66.7,78.4,75CW1RA5
+CMP,CW,75,M75,Single Seal,SWA,Industrial / Safe,,Stainless Steel,66.7,78.4,75CW1RA4
+CMP,CW,75,M75,Single Seal,SWA,Industrial / Safe,,Aluminium,66.7,78.4,75CW1RA1
+CMP,CW,90,M90,Single Seal,SWA,Industrial / Safe,,Brass,76.2,90.3,90CW1RA
+CMP,CW,90,M90,Single Seal,SWA,Industrial / Safe,,Nickel Plated Brass,76.2,90.3,90CW1RA5
+CMP,CW,90,M90,Single Seal,SWA,Industrial / Safe,,Stainless Steel,76.2,90.3,90CW1RA4
+CMP,CW,90,M90,Single Seal,SWA,Industrial / Safe,,Aluminium,76.2,90.3,90CW1RA1
+CMP,CW,100,M100,Single Seal,SWA,Industrial / Safe,,Brass,86.1,101.4,100CW1RA
+CMP,CW,100,M100,Single Seal,SWA,Industrial / Safe,,Nickel Plated Brass,86.1,101.4,100CW1RA5
+CMP,CW,100,M100,Single Seal,SWA,Industrial / Safe,,Stainless Steel,86.1,101.4,100CW1RA4
+CMP,CW,100,M100,Single Seal,SWA,Industrial / Safe,,Aluminium,86.1,101.4,100CW1RA1
+CMP,CW,115,M115,Single Seal,SWA,Industrial / Safe,,Brass,101.5,110.2,115CW1RA
+CMP,CW,115,M115,Single Seal,SWA,Industrial / Safe,,Nickel Plated Brass,101.5,110.2,115CW1RA5
+CMP,CW,115,M115,Single Seal,SWA,Industrial / Safe,,Stainless Steel,101.5,110.2,115CW1RA4
+CMP,CW,115,M115,Single Seal,SWA,Industrial / Safe,,Aluminium,101.5,110.2,115CW1RA1
+CMP,CW,130,M130,Single Seal,SWA,Industrial / Safe,,Brass,110.2,123.2,130CW1RA
+CMP,CW,130,M130,Single Seal,SWA,Industrial / Safe,,Nickel Plated Brass,110.2,123.2,130CW1RA5
+CMP,CW,130,M130,Single Seal,SWA,Industrial / Safe,,Stainless Steel,110.2,123.2,130CW1RA4
+CMP,CW,130,M130,Single Seal,SWA,Industrial / Safe,,Aluminium,110.2,123.2,130CW1RA1
+CMP,CX,20S16,M20,Single Seal,STA,Industrial / Safe,,Brass,6.1,13.1,20S16CX1RA
+CMP,CX,20S16,M20,Single Seal,STA,Industrial / Safe,,Nickel Plated Brass,6.1,13.1,20S16CX1RA5
+CMP,CX,20S16,M20,Single Seal,STA,Industrial / Safe,,Stainless Steel,6.1,13.1,20S16CX1RA4
+CMP,CX,20S16,M20,Single Seal,STA,Industrial / Safe,,Aluminium,6.1,13.1,20S16CX1RA1
+CMP,CX,20S,M20,Single Seal,STA,Industrial / Safe,,Brass,9.5,15.9,20SCX1RA
+CMP,CX,20S,M20,Single Seal,STA,Industrial / Safe,,Nickel Plated Brass,9.5,15.9,20SCX1RA5
+CMP,CX,20S,M20,Single Seal,STA,Industrial / Safe,,Stainless Steel,9.5,15.9,20SCX1RA4
+CMP,CX,20S,M20,Single Seal,STA,Industrial / Safe,,Aluminium,9.5,15.9,20SCX1RA1
+CMP,CX,20,M20,Single Seal,STA,Industrial / Safe,,Brass,12.5,20.9,20CX1RA
+CMP,CX,20,M20,Single Seal,STA,Industrial / Safe,,Nickel Plated Brass,12.5,20.9,20CX1RA5
+CMP,CX,20,M20,Single Seal,STA,Industrial / Safe,,Stainless Steel,12.5,20.9,20CX1RA4
+CMP,CX,20,M20,Single Seal,STA,Industrial / Safe,,Aluminium,12.5,20.9,20CX1RA1
+CMP,CX,25S,M25,Single Seal,STA,Industrial / Safe,,Brass,14.0,22.0,25SCX1RA
+CMP,CX,25S,M25,Single Seal,STA,Industrial / Safe,,Nickel Plated Brass,14.0,22.0,25SCX1RA5
+CMP,CX,25S,M25,Single Seal,STA,Industrial / Safe,,Stainless Steel,14.0,22.0,25SCX1RA4
+CMP,CX,25S,M25,Single Seal,STA,Industrial / Safe,,Aluminium,14.0,22.0,25SCX1RA1
+CMP,CX,25,M25,Single Seal,STA,Industrial / Safe,,Brass,18.2,26.2,25CX1RA
+CMP,CX,25,M25,Single Seal,STA,Industrial / Safe,,Nickel Plated Brass,18.2,26.2,25CX1RA5
+CMP,CX,25,M25,Single Seal,STA,Industrial / Safe,,Stainless Steel,18.2,26.2,25CX1RA4
+CMP,CX,25,M25,Single Seal,STA,Industrial / Safe,,Aluminium,18.2,26.2,25CX1RA1
+CMP,CX,32,M32,Single Seal,STA,Industrial / Safe,,Brass,23.7,33.9,32CX1RA
+CMP,CX,32,M32,Single Seal,STA,Industrial / Safe,,Nickel Plated Brass,23.7,33.9,32CX1RA5
+CMP,CX,32,M32,Single Seal,STA,Industrial / Safe,,Stainless Steel,23.7,33.9,32CX1RA4
+CMP,CX,32,M32,Single Seal,STA,Industrial / Safe,,Aluminium,23.7,33.9,32CX1RA1
+CMP,CX,40,M40,Single Seal,STA,Industrial / Safe,,Brass,27.9,40.4,40CX1RA
+CMP,CX,40,M40,Single Seal,STA,Industrial / Safe,,Nickel Plated Brass,27.9,40.4,40CX1RA5
+CMP,CX,40,M40,Single Seal,STA,Industrial / Safe,,Stainless Steel,27.9,40.4,40CX1RA4
+CMP,CX,40,M40,Single Seal,STA,Industrial / Safe,,Aluminium,27.9,40.4,40CX1RA1
+CMP,CX,50S,M50,Single Seal,STA,Industrial / Safe,,Brass,35.2,46.7,50SCX1RA
+CMP,CX,50S,M50,Single Seal,STA,Industrial / Safe,,Nickel Plated Brass,35.2,46.7,50SCX1RA5
+CMP,CX,50S,M50,Single Seal,STA,Industrial / Safe,,Stainless Steel,35.2,46.7,50SCX1RA4
+CMP,CX,50S,M50,Single Seal,STA,Industrial / Safe,,Aluminium,35.2,46.7,50SCX1RA1
+CMP,CX,50,M50,Single Seal,STA,Industrial / Safe,,Brass,40.4,53.0,50CX1RA
+CMP,CX,50,M50,Single Seal,STA,Industrial / Safe,,Nickel Plated Brass,40.4,53.0,50CX1RA5
+CMP,CX,50,M50,Single Seal,STA,Industrial / Safe,,Stainless Steel,40.4,53.0,50CX1RA4
+CMP,CX,50,M50,Single Seal,STA,Industrial / Safe,,Aluminium,40.4,53.0,50CX1RA1
+CMP,CX,63S,M63,Single Seal,STA,Industrial / Safe,,Brass,45.6,59.4,63SCX1RA
+CMP,CX,63S,M63,Single Seal,STA,Industrial / Safe,,Nickel Plated Brass,45.6,59.4,63SCX1RA5
+CMP,CX,63S,M63,Single Seal,STA,Industrial / Safe,,Stainless Steel,45.6,59.4,63SCX1RA4
+CMP,CX,63S,M63,Single Seal,STA,Industrial / Safe,,Aluminium,45.6,59.4,63SCX1RA1
+CMP,CX,63,M63,Single Seal,STA,Industrial / Safe,,Brass,54.6,65.8,63CX1RA
+CMP,CX,63,M63,Single Seal,STA,Industrial / Safe,,Nickel Plated Brass,54.6,65.8,63CX1RA5
+CMP,CX,63,M63,Single Seal,STA,Industrial / Safe,,Stainless Steel,54.6,65.8,63CX1RA4
+CMP,CX,63,M63,Single Seal,STA,Industrial / Safe,,Aluminium,54.6,65.8,63CX1RA1
+CMP,CX,75S,M75,Single Seal,STA,Industrial / Safe,,Brass,59.0,72.0,75SCX1RA
+CMP,CX,75S,M75,Single Seal,STA,Industrial / Safe,,Nickel Plated Brass,59.0,72.0,75SCX1RA5
+CMP,CX,75S,M75,Single Seal,STA,Industrial / Safe,,Stainless Steel,59.0,72.0,75SCX1RA4
+CMP,CX,75S,M75,Single Seal,STA,Industrial / Safe,,Aluminium,59.0,72.0,75SCX1RA1
+CMP,CX,75,M75,Single Seal,STA,Industrial / Safe,,Brass,66.7,78.4,75CX1RA
+CMP,CX,75,M75,Single Seal,STA,Industrial / Safe,,Nickel Plated Brass,66.7,78.4,75CX1RA5
+CMP,CX,75,M75,Single Seal,STA,Industrial / Safe,,Stainless Steel,66.7,78.4,75CX1RA4
+CMP,CX,75,M75,Single Seal,STA,Industrial / Safe,,Aluminium,66.7,78.4,75CX1RA1
+CMP,CX,90,M90,Single Seal,STA,Industrial / Safe,,Brass,76.2,90.3,90CX1RA
+CMP,CX,90,M90,Single Seal,STA,Industrial / Safe,,Nickel Plated Brass,76.2,90.3,90CX1RA5
+CMP,CX,90,M90,Single Seal,STA,Industrial / Safe,,Stainless Steel,76.2,90.3,90CX1RA4
+CMP,CX,90,M90,Single Seal,STA,Industrial / Safe,,Aluminium,76.2,90.3,90CX1RA1
+CMP,CX,100,M100,Single Seal,STA,Industrial / Safe,,Brass,86.1,101.4,100CX1RA
+CMP,CX,100,M100,Single Seal,STA,Industrial / Safe,,Nickel Plated Brass,86.1,101.4,100CX1RA5
+CMP,CX,100,M100,Single Seal,STA,Industrial / Safe,,Stainless Steel,86.1,101.4,100CX1RA4
+CMP,CX,100,M100,Single Seal,STA,Industrial / Safe,,Aluminium,86.1,101.4,100CX1RA1
+CMP,CX,115,M115,Single Seal,STA,Industrial / Safe,,Brass,101.5,110.2,115CX1RA
+CMP,CX,115,M115,Single Seal,STA,Industrial / Safe,,Nickel Plated Brass,101.5,110.2,115CX1RA5
+CMP,CX,115,M115,Single Seal,STA,Industrial / Safe,,Stainless Steel,101.5,110.2,115CX1RA4
+CMP,CX,115,M115,Single Seal,STA,Industrial / Safe,,Aluminium,101.5,110.2,115CX1RA1
+CMP,CX,130,M130,Single Seal,STA,Industrial / Safe,,Brass,110.2,123.2,130CX1RA
+CMP,CX,130,M130,Single Seal,STA,Industrial / Safe,,Nickel Plated Brass,110.2,123.2,130CX1RA5
+CMP,CX,130,M130,Single Seal,STA,Industrial / Safe,,Stainless Steel,110.2,123.2,130CX1RA4
+CMP,CX,130,M130,Single Seal,STA,Industrial / Safe,,Aluminium,110.2,123.2,130CX1RA1
+CMP,E1X,20S16,M20,Double Seal,STA,Industrial / Safe,,Brass,6.1,13.1,20S16E1X1RA
+CMP,E1X,20S16,M20,Double Seal,STA,Industrial / Safe,,Nickel Plated Brass,6.1,13.1,20S16E1X1RA5
+CMP,E1X,20S16,M20,Double Seal,STA,Industrial / Safe,,Stainless Steel,6.1,13.1,20S16E1X1RA4
+CMP,E1X,20S16,M20,Double Seal,STA,Industrial / Safe,,Aluminium,6.1,13.1,20S16E1X1RA1
+CMP,E1X,20S,M20,Double Seal,STA,Industrial / Safe,,Brass,9.5,15.9,20SE1X1RA
+CMP,E1X,20S,M20,Double Seal,STA,Industrial / Safe,,Nickel Plated Brass,9.5,15.9,20SE1X1RA5
+CMP,E1X,20S,M20,Double Seal,STA,Industrial / Safe,,Stainless Steel,9.5,15.9,20SE1X1RA4
+CMP,E1X,20S,M20,Double Seal,STA,Industrial / Safe,,Aluminium,9.5,15.9,20SE1X1RA1
+CMP,E1X,20,M20,Double Seal,STA,Industrial / Safe,,Brass,12.5,20.9,20E1X1RA
+CMP,E1X,20,M20,Double Seal,STA,Industrial / Safe,,Nickel Plated Brass,12.5,20.9,20E1X1RA5
+CMP,E1X,20,M20,Double Seal,STA,Industrial / Safe,,Stainless Steel,12.5,20.9,20E1X1RA4
+CMP,E1X,20,M20,Double Seal,STA,Industrial / Safe,,Aluminium,12.5,20.9,20E1X1RA1
+CMP,E1X,25S,M25,Double Seal,STA,Industrial / Safe,,Brass,14.0,22.0,25SE1X1RA
+CMP,E1X,25S,M25,Double Seal,STA,Industrial / Safe,,Nickel Plated Brass,14.0,22.0,25SE1X1RA5
+CMP,E1X,25S,M25,Double Seal,STA,Industrial / Safe,,Stainless Steel,14.0,22.0,25SE1X1RA4
+CMP,E1X,25S,M25,Double Seal,STA,Industrial / Safe,,Aluminium,14.0,22.0,25SE1X1RA1
+CMP,E1X,25,M25,Double Seal,STA,Industrial / Safe,,Brass,18.2,26.2,25E1X1RA
+CMP,E1X,25,M25,Double Seal,STA,Industrial / Safe,,Nickel Plated Brass,18.2,26.2,25E1X1RA5
+CMP,E1X,25,M25,Double Seal,STA,Industrial / Safe,,Stainless Steel,18.2,26.2,25E1X1RA4
+CMP,E1X,25,M25,Double Seal,STA,Industrial / Safe,,Aluminium,18.2,26.2,25E1X1RA1
+CMP,E1X,32,M32,Double Seal,STA,Industrial / Safe,,Brass,23.7,33.9,32E1X1RA
+CMP,E1X,32,M32,Double Seal,STA,Industrial / Safe,,Nickel Plated Brass,23.7,33.9,32E1X1RA5
+CMP,E1X,32,M32,Double Seal,STA,Industrial / Safe,,Stainless Steel,23.7,33.9,32E1X1RA4
+CMP,E1X,32,M32,Double Seal,STA,Industrial / Safe,,Aluminium,23.7,33.9,32E1X1RA1
+CMP,E1X,40,M40,Double Seal,STA,Industrial / Safe,,Brass,27.9,40.4,40E1X1RA
+CMP,E1X,40,M40,Double Seal,STA,Industrial / Safe,,Nickel Plated Brass,27.9,40.4,40E1X1RA5
+CMP,E1X,40,M40,Double Seal,STA,Industrial / Safe,,Stainless Steel,27.9,40.4,40E1X1RA4
+CMP,E1X,40,M40,Double Seal,STA,Industrial / Safe,,Aluminium,27.9,40.4,40E1X1RA1
+CMP,E1X,50S,M50,Double Seal,STA,Industrial / Safe,,Brass,35.2,46.7,50SE1X1RA
+CMP,E1X,50S,M50,Double Seal,STA,Industrial / Safe,,Nickel Plated Brass,35.2,46.7,50SE1X1RA5
+CMP,E1X,50S,M50,Double Seal,STA,Industrial / Safe,,Stainless Steel,35.2,46.7,50SE1X1RA4
+CMP,E1X,50S,M50,Double Seal,STA,Industrial / Safe,,Aluminium,35.2,46.7,50SE1X1RA1
+CMP,E1X,50,M50,Double Seal,STA,Industrial / Safe,,Brass,40.4,53.0,50E1X1RA
+CMP,E1X,50,M50,Double Seal,STA,Industrial / Safe,,Nickel Plated Brass,40.4,53.0,50E1X1RA5
+CMP,E1X,50,M50,Double Seal,STA,Industrial / Safe,,Stainless Steel,40.4,53.0,50E1X1RA4
+CMP,E1X,50,M50,Double Seal,STA,Industrial / Safe,,Aluminium,40.4,53.0,50E1X1RA1
+CMP,E1X,63S,M63,Double Seal,STA,Industrial / Safe,,Brass,45.6,59.4,63SE1X1RA
+CMP,E1X,63S,M63,Double Seal,STA,Industrial / Safe,,Nickel Plated Brass,45.6,59.4,63SE1X1RA5
+CMP,E1X,63S,M63,Double Seal,STA,Industrial / Safe,,Stainless Steel,45.6,59.4,63SE1X1RA4
+CMP,E1X,63S,M63,Double Seal,STA,Industrial / Safe,,Aluminium,45.6,59.4,63SE1X1RA1
+CMP,E1X,63,M63,Double Seal,STA,Industrial / Safe,,Brass,54.6,65.8,63E1X1RA
+CMP,E1X,63,M63,Double Seal,STA,Industrial / Safe,,Nickel Plated Brass,54.6,65.8,63E1X1RA5
+CMP,E1X,63,M63,Double Seal,STA,Industrial / Safe,,Stainless Steel,54.6,65.8,63E1X1RA4
+CMP,E1X,63,M63,Double Seal,STA,Industrial / Safe,,Aluminium,54.6,65.8,63E1X1RA1
+CMP,E1X,75S,M75,Double Seal,STA,Industrial / Safe,,Brass,59.0,72.0,75SE1X1RA
+CMP,E1X,75S,M75,Double Seal,STA,Industrial / Safe,,Nickel Plated Brass,59.0,72.0,75SE1X1RA5
+CMP,E1X,75S,M75,Double Seal,STA,Industrial / Safe,,Stainless Steel,59.0,72.0,75SE1X1RA4
+CMP,E1X,75S,M75,Double Seal,STA,Industrial / Safe,,Aluminium,59.0,72.0,75SE1X1RA1
+CMP,E1X,75,M75,Double Seal,STA,Industrial / Safe,,Brass,66.7,78.4,75E1X1RA
+CMP,E1X,75,M75,Double Seal,STA,Industrial / Safe,,Nickel Plated Brass,66.7,78.4,75E1X1RA5
+CMP,E1X,75,M75,Double Seal,STA,Industrial / Safe,,Stainless Steel,66.7,78.4,75E1X1RA4
+CMP,E1X,75,M75,Double Seal,STA,Industrial / Safe,,Aluminium,66.7,78.4,75E1X1RA1
+CMP,E1X,90,M90,Double Seal,STA,Industrial / Safe,,Brass,76.2,90.3,90E1X1RA
+CMP,E1X,90,M90,Double Seal,STA,Industrial / Safe,,Nickel Plated Brass,76.2,90.3,90E1X1RA5
+CMP,E1X,90,M90,Double Seal,STA,Industrial / Safe,,Stainless Steel,76.2,90.3,90E1X1RA4
+CMP,E1X,90,M90,Double Seal,STA,Industrial / Safe,,Aluminium,76.2,90.3,90E1X1RA1
+CMP,E1X,100,M100,Double Seal,STA,Industrial / Safe,,Brass,86.1,101.4,100E1X1RA
+CMP,E1X,100,M100,Double Seal,STA,Industrial / Safe,,Nickel Plated Brass,86.1,101.4,100E1X1RA5
+CMP,E1X,100,M100,Double Seal,STA,Industrial / Safe,,Stainless Steel,86.1,101.4,100E1X1RA4
+CMP,E1X,100,M100,Double Seal,STA,Industrial / Safe,,Aluminium,86.1,101.4,100E1X1RA1
+CMP,E1X,115,M115,Double Seal,STA,Industrial / Safe,,Brass,101.5,110.2,115E1X1RA
+CMP,E1X,115,M115,Double Seal,STA,Industrial / Safe,,Nickel Plated Brass,101.5,110.2,115E1X1RA5
+CMP,E1X,115,M115,Double Seal,STA,Industrial / Safe,,Stainless Steel,101.5,110.2,115E1X1RA4
+CMP,E1X,115,M115,Double Seal,STA,Industrial / Safe,,Aluminium,101.5,110.2,115E1X1RA1
+CMP,E1X,130,M130,Double Seal,STA,Industrial / Safe,,Brass,110.2,123.2,130E1X1RA
+CMP,E1X,130,M130,Double Seal,STA,Industrial / Safe,,Nickel Plated Brass,110.2,123.2,130E1X1RA5
+CMP,E1X,130,M130,Double Seal,STA,Industrial / Safe,,Stainless Steel,110.2,123.2,130E1X1RA4
+CMP,E1X,130,M130,Double Seal,STA,Industrial / Safe,,Aluminium,110.2,123.2,130E1X1RA1
+CMP,E1W,20S16,M20,Double Seal,SWA & AWA,Industrial / Safe,,Brass,6.1,13.1,20S16E1W1RA
+CMP,E1W,20S16,M20,Double Seal,SWA & AWA,Industrial / Safe,,Nickel Plated Brass,6.1,13.1,20S16E1W1RA5
+CMP,E1W,20S16,M20,Double Seal,SWA & AWA,Industrial / Safe,,Stainless Steel,6.1,13.1,20S16E1W1RA4
+CMP,E1W,20S16,M20,Double Seal,SWA & AWA,Industrial / Safe,,Aluminium,6.1,13.1,20S16E1W1RA1
+CMP,E1W,20S,M20,Double Seal,SWA & AWA,Industrial / Safe,,Brass,9.5,15.9,20SE1W1RA
+CMP,E1W,20S,M20,Double Seal,SWA & AWA,Industrial / Safe,,Nickel Plated Brass,9.5,15.9,20SE1W1RA5
+CMP,E1W,20S,M20,Double Seal,SWA & AWA,Industrial / Safe,,Stainless Steel,9.5,15.9,20SE1W1RA4
+CMP,E1W,20S,M20,Double Seal,SWA & AWA,Industrial / Safe,,Aluminium,9.5,15.9,20SE1W1RA1
+CMP,E1W,20,M20,Double Seal,SWA & AWA,Industrial / Safe,,Brass,12.5,20.9,20E1W1RA
+CMP,E1W,20,M20,Double Seal,SWA & AWA,Industrial / Safe,,Nickel Plated Brass,12.5,20.9,20E1W1RA5
+CMP,E1W,20,M20,Double Seal,SWA & AWA,Industrial / Safe,,Stainless Steel,12.5,20.9,20E1W1RA4
+CMP,E1W,20,M20,Double Seal,SWA & AWA,Industrial / Safe,,Aluminium,12.5,20.9,20E1W1RA1
+CMP,E1W,25S,M25,Double Seal,SWA & AWA,Industrial / Safe,,Brass,14.0,22.0,25SE1W1RA
+CMP,E1W,25S,M25,Double Seal,SWA & AWA,Industrial / Safe,,Nickel Plated Brass,14.0,22.0,25SE1W1RA5
+CMP,E1W,25S,M25,Double Seal,SWA & AWA,Industrial / Safe,,Stainless Steel,14.0,22.0,25SE1W1RA4
+CMP,E1W,25S,M25,Double Seal,SWA & AWA,Industrial / Safe,,Aluminium,14.0,22.0,25SE1W1RA1
+CMP,E1W,25,M25,Double Seal,SWA & AWA,Industrial / Safe,,Brass,18.2,26.2,25E1W1RA
+CMP,E1W,25,M25,Double Seal,SWA & AWA,Industrial / Safe,,Nickel Plated Brass,18.2,26.2,25E1W1RA5
+CMP,E1W,25,M25,Double Seal,SWA & AWA,Industrial / Safe,,Stainless Steel,18.2,26.2,25E1W1RA4
+CMP,E1W,25,M25,Double Seal,SWA & AWA,Industrial / Safe,,Aluminium,18.2,26.2,25E1W1RA1
+CMP,E1W,32,M32,Double Seal,SWA & AWA,Industrial / Safe,,Brass,23.7,33.9,32E1W1RA
+CMP,E1W,32,M32,Double Seal,SWA & AWA,Industrial / Safe,,Nickel Plated Brass,23.7,33.9,32E1W1RA5
+CMP,E1W,32,M32,Double Seal,SWA & AWA,Industrial / Safe,,Stainless Steel,23.7,33.9,32E1W1RA4
+CMP,E1W,32,M32,Double Seal,SWA & AWA,Industrial / Safe,,Aluminium,23.7,33.9,32E1W1RA1
+CMP,E1W,40,M40,Double Seal,SWA & AWA,Industrial / Safe,,Brass,27.9,40.4,40E1W1RA
+CMP,E1W,40,M40,Double Seal,SWA & AWA,Industrial / Safe,,Nickel Plated Brass,27.9,40.4,40E1W1RA5
+CMP,E1W,40,M40,Double Seal,SWA & AWA,Industrial / Safe,,Stainless Steel,27.9,40.4,40E1W1RA4
+CMP,E1W,40,M40,Double Seal,SWA & AWA,Industrial / Safe,,Aluminium,27.9,40.4,40E1W1RA1
+CMP,E1W,50S,M50,Double Seal,SWA & AWA,Industrial / Safe,,Brass,35.2,46.7,50SE1W1RA
+CMP,E1W,50S,M50,Double Seal,SWA & AWA,Industrial / Safe,,Nickel Plated Brass,35.2,46.7,50SE1W1RA5
+CMP,E1W,50S,M50,Double Seal,SWA & AWA,Industrial / Safe,,Stainless Steel,35.2,46.7,50SE1W1RA4
+CMP,E1W,50S,M50,Double Seal,SWA & AWA,Industrial / Safe,,Aluminium,35.2,46.7,50SE1W1RA1
+CMP,E1W,50,M50,Double Seal,SWA & AWA,Industrial / Safe,,Brass,40.4,53.0,50E1W1RA
+CMP,E1W,50,M50,Double Seal,SWA & AWA,Industrial / Safe,,Nickel Plated Brass,40.4,53.0,50E1W1RA5
+CMP,E1W,50,M50,Double Seal,SWA & AWA,Industrial / Safe,,Stainless Steel,40.4,53.0,50E1W1RA4
+CMP,E1W,50,M50,Double Seal,SWA & AWA,Industrial / Safe,,Aluminium,40.4,53.0,50E1W1RA1
+CMP,E1W,63S,M63,Double Seal,SWA & AWA,Industrial / Safe,,Brass,45.6,59.4,63SE1W1RA
+CMP,E1W,63S,M63,Double Seal,SWA & AWA,Industrial / Safe,,Nickel Plated Brass,45.6,59.4,63SE1W1RA5
+CMP,E1W,63S,M63,Double Seal,SWA & AWA,Industrial / Safe,,Stainless Steel,45.6,59.4,63SE1W1RA4
+CMP,E1W,63S,M63,Double Seal,SWA & AWA,Industrial / Safe,,Aluminium,45.6,59.4,63SE1W1RA1
+CMP,E1W,63,M63,Double Seal,SWA & AWA,Industrial / Safe,,Brass,54.6,65.8,63E1W1RA
+CMP,E1W,63,M63,Double Seal,SWA & AWA,Industrial / Safe,,Nickel Plated Brass,54.6,65.8,63E1W1RA5
+CMP,E1W,63,M63,Double Seal,SWA & AWA,Industrial / Safe,,Stainless Steel,54.6,65.8,63E1W1RA4
+CMP,E1W,63,M63,Double Seal,SWA & AWA,Industrial / Safe,,Aluminium,54.6,65.8,63E1W1RA1
+CMP,E1W,75S,M75,Double Seal,SWA & AWA,Industrial / Safe,,Brass,59.0,72.0,75SE1W1RA
+CMP,E1W,75S,M75,Double Seal,SWA & AWA,Industrial / Safe,,Nickel Plated Brass,59.0,72.0,75SE1W1RA5
+CMP,E1W,75S,M75,Double Seal,SWA & AWA,Industrial / Safe,,Stainless Steel,59.0,72.0,75SE1W1RA4
+CMP,E1W,75S,M75,Double Seal,SWA & AWA,Industrial / Safe,,Aluminium,59.0,72.0,75SE1W1RA1
+CMP,E1W,75,M75,Double Seal,SWA & AWA,Industrial / Safe,,Brass,66.7,78.4,75E1W1RA
+CMP,E1W,75,M75,Double Seal,SWA & AWA,Industrial / Safe,,Nickel Plated Brass,66.7,78.4,75E1W1RA5
+CMP,E1W,75,M75,Double Seal,SWA & AWA,Industrial / Safe,,Stainless Steel,66.7,78.4,75E1W1RA4
+CMP,E1W,75,M75,Double Seal,SWA & AWA,Industrial / Safe,,Aluminium,66.7,78.4,75E1W1RA1
+CMP,E1W,90,M90,Double Seal,SWA & AWA,Industrial / Safe,,Brass,76.2,90.3,90E1W1RA
+CMP,E1W,90,M90,Double Seal,SWA & AWA,Industrial / Safe,,Nickel Plated Brass,76.2,90.3,90E1W1RA5
+CMP,E1W,90,M90,Double Seal,SWA & AWA,Industrial / Safe,,Stainless Steel,76.2,90.3,90E1W1RA4
+CMP,E1W,90,M90,Double Seal,SWA & AWA,Industrial / Safe,,Aluminium,76.2,90.3,90E1W1RA1
+CMP,E1W,100,M100,Double Seal,SWA & AWA,Industrial / Safe,,Brass,86.1,101.4,100E1W1RA
+CMP,E1W,100,M100,Double Seal,SWA & AWA,Industrial / Safe,,Nickel Plated Brass,86.1,101.4,100E1W1RA5
+CMP,E1W,100,M100,Double Seal,SWA & AWA,Industrial / Safe,,Stainless Steel,86.1,101.4,100E1W1RA4
+CMP,E1W,100,M100,Double Seal,SWA & AWA,Industrial / Safe,,Aluminium,86.1,101.4,100E1W1RA1
+CMP,E1W,115,M115,Double Seal,SWA & AWA,Industrial / Safe,,Brass,101.5,110.2,115E1W1RA
+CMP,E1W,115,M115,Double Seal,SWA & AWA,Industrial / Safe,,Nickel Plated Brass,101.5,110.2,115E1W1RA5
+CMP,E1W,115,M115,Double Seal,SWA & AWA,Industrial / Safe,,Stainless Steel,101.5,110.2,115E1W1RA4
+CMP,E1W,115,M115,Double Seal,SWA & AWA,Industrial / Safe,,Aluminium,101.5,110.2,115E1W1RA1
+CMP,E1W,130,M130,Double Seal,SWA & AWA,Industrial / Safe,,Brass,110.2,123.2,130E1W1RA
+CMP,E1W,130,M130,Double Seal,SWA & AWA,Industrial / Safe,,Nickel Plated Brass,110.2,123.2,130E1W1RA5
+CMP,E1W,130,M130,Double Seal,SWA & AWA,Industrial / Safe,,Stainless Steel,110.2,123.2,130E1W1RA4
+CMP,E1W,130,M130,Double Seal,SWA & AWA,Industrial / Safe,,Aluminium,110.2,123.2,130E1W1RA1
+CMP,E1U,20S16,M20,Double Seal,STA,Industrial / Safe,,Brass,6.1,13.1,20S16E1U1RA
+CMP,E1U,20S16,M20,Double Seal,STA,Industrial / Safe,,Nickel Plated Brass,6.1,13.1,20S16E1U1RA5
+CMP,E1U,20S16,M20,Double Seal,STA,Industrial / Safe,,Stainless Steel,6.1,13.1,20S16E1U1RA4
+CMP,E1U,20S16,M20,Double Seal,STA,Industrial / Safe,,Aluminium,6.1,13.1,20S16E1U1RA1
+CMP,E1U,20S,M20,Double Seal,STA,Industrial / Safe,,Brass,9.5,15.9,20SE1U1RA
+CMP,E1U,20S,M20,Double Seal,STA,Industrial / Safe,,Nickel Plated Brass,9.5,15.9,20SE1U1RA5
+CMP,E1U,20S,M20,Double Seal,STA,Industrial / Safe,,Stainless Steel,9.5,15.9,20SE1U1RA4
+CMP,E1U,20S,M20,Double Seal,STA,Industrial / Safe,,Aluminium,9.5,15.9,20SE1U1RA1
+CMP,E1U,20,M20,Double Seal,STA,Industrial / Safe,,Brass,12.5,20.9,20E1U1RA
+CMP,E1U,20,M20,Double Seal,STA,Industrial / Safe,,Nickel Plated Brass,12.5,20.9,20E1U1RA5
+CMP,E1U,20,M20,Double Seal,STA,Industrial / Safe,,Stainless Steel,12.5,20.9,20E1U1RA4
+CMP,E1U,20,M20,Double Seal,STA,Industrial / Safe,,Aluminium,12.5,20.9,20E1U1RA1
+CMP,E1U,25S,M25,Double Seal,STA,Industrial / Safe,,Brass,14.0,22.0,25SE1U1RA
+CMP,E1U,25S,M25,Double Seal,STA,Industrial / Safe,,Nickel Plated Brass,14.0,22.0,25SE1U1RA5
+CMP,E1U,25S,M25,Double Seal,STA,Industrial / Safe,,Stainless Steel,14.0,22.0,25SE1U1RA4
+CMP,E1U,25S,M25,Double Seal,STA,Industrial / Safe,,Aluminium,14.0,22.0,25SE1U1RA1
+CMP,E1U,25,M25,Double Seal,STA,Industrial / Safe,,Brass,18.2,26.2,25E1U1RA
+CMP,E1U,25,M25,Double Seal,STA,Industrial / Safe,,Nickel Plated Brass,18.2,26.2,25E1U1RA5
+CMP,E1U,25,M25,Double Seal,STA,Industrial / Safe,,Stainless Steel,18.2,26.2,25E1U1RA4
+CMP,E1U,25,M25,Double Seal,STA,Industrial / Safe,,Aluminium,18.2,26.2,25E1U1RA1
+CMP,E1U,32,M32,Double Seal,STA,Industrial / Safe,,Brass,23.7,33.9,32E1U1RA
+CMP,E1U,32,M32,Double Seal,STA,Industrial / Safe,,Nickel Plated Brass,23.7,33.9,32E1U1RA5
+CMP,E1U,32,M32,Double Seal,STA,Industrial / Safe,,Stainless Steel,23.7,33.9,32E1U1RA4
+CMP,E1U,32,M32,Double Seal,STA,Industrial / Safe,,Aluminium,23.7,33.9,32E1U1RA1
+CMP,E1U,40,M40,Double Seal,STA,Industrial / Safe,,Brass,27.9,40.4,40E1U1RA
+CMP,E1U,40,M40,Double Seal,STA,Industrial / Safe,,Nickel Plated Brass,27.9,40.4,40E1U1RA5
+CMP,E1U,40,M40,Double Seal,STA,Industrial / Safe,,Stainless Steel,27.9,40.4,40E1U1RA4
+CMP,E1U,40,M40,Double Seal,STA,Industrial / Safe,,Aluminium,27.9,40.4,40E1U1RA1
+CMP,E1U,50S,M50,Double Seal,STA,Industrial / Safe,,Brass,35.2,46.7,50SE1U1RA
+CMP,E1U,50S,M50,Double Seal,STA,Industrial / Safe,,Nickel Plated Brass,35.2,46.7,50SE1U1RA5
+CMP,E1U,50S,M50,Double Seal,STA,Industrial / Safe,,Stainless Steel,35.2,46.7,50SE1U1RA4
+CMP,E1U,50S,M50,Double Seal,STA,Industrial / Safe,,Aluminium,35.2,46.7,50SE1U1RA1
+CMP,E1U,50,M50,Double Seal,STA,Industrial / Safe,,Brass,40.4,53.0,50E1U1RA
+CMP,E1U,50,M50,Double Seal,STA,Industrial / Safe,,Nickel Plated Brass,40.4,53.0,50E1U1RA5
+CMP,E1U,50,M50,Double Seal,STA,Industrial / Safe,,Stainless Steel,40.4,53.0,50E1U1RA4
+CMP,E1U,50,M50,Double Seal,STA,Industrial / Safe,,Aluminium,40.4,53.0,50E1U1RA1
+CMP,E1U,63S,M63,Double Seal,STA,Industrial / Safe,,Brass,45.6,59.4,63SE1U1RA
+CMP,E1U,63S,M63,Double Seal,STA,Industrial / Safe,,Nickel Plated Brass,45.6,59.4,63SE1U1RA5
+CMP,E1U,63S,M63,Double Seal,STA,Industrial / Safe,,Stainless Steel,45.6,59.4,63SE1U1RA4
+CMP,E1U,63S,M63,Double Seal,STA,Industrial / Safe,,Aluminium,45.6,59.4,63SE1U1RA1
+CMP,E1U,63,M63,Double Seal,STA,Industrial / Safe,,Brass,54.6,65.8,63E1U1RA
+CMP,E1U,63,M63,Double Seal,STA,Industrial / Safe,,Nickel Plated Brass,54.6,65.8,63E1U1RA5
+CMP,E1U,63,M63,Double Seal,STA,Industrial / Safe,,Stainless Steel,54.6,65.8,63E1U1RA4
+CMP,E1U,63,M63,Double Seal,STA,Industrial / Safe,,Aluminium,54.6,65.8,63E1U1RA1
+CMP,E1U,75S,M75,Double Seal,STA,Industrial / Safe,,Brass,59.0,72.0,75SE1U1RA
+CMP,E1U,75S,M75,Double Seal,STA,Industrial / Safe,,Nickel Plated Brass,59.0,72.0,75SE1U1RA5
+CMP,E1U,75S,M75,Double Seal,STA,Industrial / Safe,,Stainless Steel,59.0,72.0,75SE1U1RA4
+CMP,E1U,75S,M75,Double Seal,STA,Industrial / Safe,,Aluminium,59.0,72.0,75SE1U1RA1
+CMP,E1U,75,M75,Double Seal,STA,Industrial / Safe,,Brass,66.7,78.4,75E1U1RA
+CMP,E1U,75,M75,Double Seal,STA,Industrial / Safe,,Nickel Plated Brass,66.7,78.4,75E1U1RA5
+CMP,E1U,75,M75,Double Seal,STA,Industrial / Safe,,Stainless Steel,66.7,78.4,75E1U1RA4
+CMP,E1U,75,M75,Double Seal,STA,Industrial / Safe,,Aluminium,66.7,78.4,75E1U1RA1
+CMP,E1U,90,M90,Double Seal,STA,Industrial / Safe,,Brass,76.2,90.3,90E1U1RA
+CMP,E1U,90,M90,Double Seal,STA,Industrial / Safe,,Nickel Plated Brass,76.2,90.3,90E1U1RA5
+CMP,E1U,90,M90,Double Seal,STA,Industrial / Safe,,Stainless Steel,76.2,90.3,90E1U1RA4
+CMP,E1U,90,M90,Double Seal,STA,Industrial / Safe,,Aluminium,76.2,90.3,90E1U1RA1
+CMP,E1U,100,M100,Double Seal,STA,Industrial / Safe,,Brass,86.1,101.4,100E1U1RA
+CMP,E1U,100,M100,Double Seal,STA,Industrial / Safe,,Nickel Plated Brass,86.1,101.4,100E1U1RA5
+CMP,E1U,100,M100,Double Seal,STA,Industrial / Safe,,Stainless Steel,86.1,101.4,100E1U1RA4
+CMP,E1U,100,M100,Double Seal,STA,Industrial / Safe,,Aluminium,86.1,101.4,100E1U1RA1
+CMP,E1U,115,M115,Double Seal,STA,Industrial / Safe,,Brass,101.5,110.2,115E1U1RA
+CMP,E1U,115,M115,Double Seal,STA,Industrial / Safe,,Nickel Plated Brass,101.5,110.2,115E1U1RA5
+CMP,E1U,115,M115,Double Seal,STA,Industrial / Safe,,Stainless Steel,101.5,110.2,115E1U1RA4
+CMP,E1U,115,M115,Double Seal,STA,Industrial / Safe,,Aluminium,101.5,110.2,115E1U1RA1
+CMP,E1U,130,M130,Double Seal,STA,Industrial / Safe,,Brass,110.2,123.2,130E1U1RA
+CMP,E1U,130,M130,Double Seal,STA,Industrial / Safe,,Nickel Plated Brass,110.2,123.2,130E1U1RA5
+CMP,E1U,130,M130,Double Seal,STA,Industrial / Safe,,Stainless Steel,110.2,123.2,130E1U1RA4
+CMP,E1U,130,M130,Double Seal,STA,Industrial / Safe,,Aluminium,110.2,123.2,130E1U1RA1
+CMP,SS2KGP,16,M16,Double Seal,Unarmoured,Industrial / Safe,,Brass,3.2,8.6,16SS2KGP1RA
+CMP,SS2KGP,16,M16,Double Seal,Unarmoured,Industrial / Safe,,Nickel Plated Brass,3.2,8.6,16SS2KGP1RA5
+CMP,SS2KGP,16,M16,Double Seal,Unarmoured,Industrial / Safe,,Stainless Steel,3.2,8.6,16SS2KGP1RA4
+CMP,SS2KGP,16,M16,Double Seal,Unarmoured,Industrial / Safe,,Aluminium,3.2,8.6,16SS2KGP1RA1
+CMP,SS2KGP,20S16,M20,Double Seal,Unarmoured,Industrial / Safe,,Brass,3.2,8.6,20S16SS2KGP1RA
+CMP,SS2KGP,20S16,M20,Double Seal,Unarmoured,Industrial / Safe,,Nickel Plated Brass,3.2,8.6,20S16SS2KGP1RA5
+CMP,SS2KGP,20S16,M20,Double Seal,Unarmoured,Industrial / Safe,,Stainless Steel,3.2,8.6,20S16SS2KGP1RA4
+CMP,SS2KGP,20S16,M20,Double Seal,Unarmoured,Industrial / Safe,,Aluminium,3.2,8.6,20S16SS2KGP1RA1
+CMP,SS2KGP,20S,M20,Double Seal,Unarmoured,Industrial / Safe,,Brass,6.1,11.7,20SSS2KGP1RA
+CMP,SS2KGP,20S,M20,Double Seal,Unarmoured,Industrial / Safe,,Nickel Plated Brass,6.1,11.7,20SSS2KGP1RA5
+CMP,SS2KGP,20S,M20,Double Seal,Unarmoured,Industrial / Safe,,Stainless Steel,6.1,11.7,20SSS2KGP1RA4
+CMP,SS2KGP,20S,M20,Double Seal,Unarmoured,Industrial / Safe,,Aluminium,6.1,11.7,20SSS2KGP1RA1
+CMP,SS2KGP,20,M20,Double Seal,Unarmoured,Industrial / Safe,,Brass,6.5,14.0,20SS2KGP1RA
+CMP,SS2KGP,20,M20,Double Seal,Unarmoured,Industrial / Safe,,Nickel Plated Brass,6.5,14.0,20SS2KGP1RA5
+CMP,SS2KGP,20,M20,Double Seal,Unarmoured,Industrial / Safe,,Stainless Steel,6.5,14.0,20SS2KGP1RA4
+CMP,SS2KGP,20,M20,Double Seal,Unarmoured,Industrial / Safe,,Aluminium,6.5,14.0,20SS2KGP1RA1
+CMP,SS2KGP,25,M25,Double Seal,Unarmoured,Industrial / Safe,,Brass,11.1,20.0,25SS2KGP1RA
+CMP,SS2KGP,25,M25,Double Seal,Unarmoured,Industrial / Safe,,Nickel Plated Brass,11.1,20.0,25SS2KGP1RA5
+CMP,SS2KGP,25,M25,Double Seal,Unarmoured,Industrial / Safe,,Stainless Steel,11.1,20.0,25SS2KGP1RA4
+CMP,SS2KGP,25,M25,Double Seal,Unarmoured,Industrial / Safe,,Aluminium,11.1,20.0,25SS2KGP1RA1
+CMP,SS2KGP,32,M32,Double Seal,Unarmoured,Industrial / Safe,,Brass,17.0,26.3,32SS2KGP1RA
+CMP,SS2KGP,32,M32,Double Seal,Unarmoured,Industrial / Safe,,Nickel Plated Brass,17.0,26.3,32SS2KGP1RA5
+CMP,SS2KGP,32,M32,Double Seal,Unarmoured,Industrial / Safe,,Stainless Steel,17.0,26.3,32SS2KGP1RA4
+CMP,SS2KGP,32,M32,Double Seal,Unarmoured,Industrial / Safe,,Aluminium,17.0,26.3,32SS2KGP1RA1
+CMP,SS2KGP,40,M40,Double Seal,Unarmoured,Industrial / Safe,,Brass,23.5,32.1,40SS2KGP1RA
+CMP,SS2KGP,40,M40,Double Seal,Unarmoured,Industrial / Safe,,Nickel Plated Brass,23.5,32.1,40SS2KGP1RA5
+CMP,SS2KGP,40,M40,Double Seal,Unarmoured,Industrial / Safe,,Stainless Steel,23.5,32.1,40SS2KGP1RA4
+CMP,SS2KGP,40,M40,Double Seal,Unarmoured,Industrial / Safe,,Aluminium,23.5,32.1,40SS2KGP1RA1
+CMP,SS2KGP,50S,M50,Double Seal,Unarmoured,Industrial / Safe,,Brass,31.0,38.2,50SSS2KGP1RA
+CMP,SS2KGP,50S,M50,Double Seal,Unarmoured,Industrial / Safe,,Nickel Plated Brass,31.0,38.2,50SSS2KGP1RA5
+CMP,SS2KGP,50S,M50,Double Seal,Unarmoured,Industrial / Safe,,Stainless Steel,31.0,38.2,50SSS2KGP1RA4
+CMP,SS2KGP,50S,M50,Double Seal,Unarmoured,Industrial / Safe,,Aluminium,31.0,38.2,50SSS2KGP1RA1
+CMP,SS2KGP,50,M50,Double Seal,Unarmoured,Industrial / Safe,,Brass,35.6,44.0,50SS2KGP1RA
+CMP,SS2KGP,50,M50,Double Seal,Unarmoured,Industrial / Safe,,Nickel Plated Brass,35.6,44.0,50SS2KGP1RA5
+CMP,SS2KGP,50,M50,Double Seal,Unarmoured,Industrial / Safe,,Stainless Steel,35.6,44.0,50SS2KGP1RA4
+CMP,SS2KGP,50,M50,Double Seal,Unarmoured,Industrial / Safe,,Aluminium,35.6,44.0,50SS2KGP1RA1
+CMP,SS2KGP,63S,M63,Double Seal,Unarmoured,Industrial / Safe,,Brass,41.5,49.9,63SSS2KGP1RA
+CMP,SS2KGP,63S,M63,Double Seal,Unarmoured,Industrial / Safe,,Nickel Plated Brass,41.5,49.9,63SSS2KGP1RA5
+CMP,SS2KGP,63S,M63,Double Seal,Unarmoured,Industrial / Safe,,Stainless Steel,41.5,49.9,63SSS2KGP1RA4
+CMP,SS2KGP,63S,M63,Double Seal,Unarmoured,Industrial / Safe,,Aluminium,41.5,49.9,63SSS2KGP1RA1
+CMP,SS2KGP,63,M63,Double Seal,Unarmoured,Industrial / Safe,,Brass,47.2,55.9,63SS2KGP1RA
+CMP,SS2KGP,63,M63,Double Seal,Unarmoured,Industrial / Safe,,Nickel Plated Brass,47.2,55.9,63SS2KGP1RA5
+CMP,SS2KGP,63,M63,Double Seal,Unarmoured,Industrial / Safe,,Stainless Steel,47.2,55.9,63SS2KGP1RA4
+CMP,SS2KGP,63,M63,Double Seal,Unarmoured,Industrial / Safe,,Aluminium,47.2,55.9,63SS2KGP1RA1
+CMP,SS2KGP,75S,M75,Double Seal,Unarmoured,Industrial / Safe,,Brass,54.0,61.9,75SSS2KGP1RA
+CMP,SS2KGP,75S,M75,Double Seal,Unarmoured,Industrial / Safe,,Nickel Plated Brass,54.0,61.9,75SSS2KGP1RA5
+CMP,SS2KGP,75S,M75,Double Seal,Unarmoured,Industrial / Safe,,Stainless Steel,54.0,61.9,75SSS2KGP1RA4
+CMP,SS2KGP,75S,M75,Double Seal,Unarmoured,Industrial / Safe,,Aluminium,54.0,61.9,75SSS2KGP1RA1
+CMP,SS2KGP,75,M75,Double Seal,Unarmoured,Industrial / Safe,,Brass,67.9,65.1,75SS2KGP1RA
+CMP,SS2KGP,75,M75,Double Seal,Unarmoured,Industrial / Safe,,Nickel Plated Brass,67.9,65.1,75SS2KGP1RA5
+CMP,SS2KGP,75,M75,Double Seal,Unarmoured,Industrial / Safe,,Stainless Steel,67.9,65.1,75SS2KGP1RA4
+CMP,SS2KGP,75,M75,Double Seal,Unarmoured,Industrial / Safe,,Aluminium,67.9,65.1,75SS2KGP1RA1
+CMP,SS2KGP,90,M90,Double Seal,Unarmoured,Industrial / Safe,,Brass,66.6,79.4,90SS2KGP1RA
+CMP,SS2KGP,90,M90,Double Seal,Unarmoured,Industrial / Safe,,Nickel Plated Brass,66.6,79.4,90SS2KGP1RA5
+CMP,SS2KGP,90,M90,Double Seal,Unarmoured,Industrial / Safe,,Stainless Steel,66.6,79.4,90SS2KGP1RA4
+CMP,SS2KGP,90,M90,Double Seal,Unarmoured,Industrial / Safe,,Aluminium,66.6,79.4,90SS2KGP1RA1
+CMP,SS2KGP,100,M100,Double Seal,Unarmoured,Industrial / Safe,,Brass,76.0,90.4,100SS2KGP1RA
+CMP,SS2KGP,100,M100,Double Seal,Unarmoured,Industrial / Safe,,Nickel Plated Brass,76.0,90.4,100SS2KGP1RA5
+CMP,SS2KGP,100,M100,Double Seal,Unarmoured,Industrial / Safe,,Stainless Steel,76.0,90.4,100SS2KGP1RA4
+CMP,SS2KGP,100,M100,Double Seal,Unarmoured,Industrial / Safe,,Aluminium,76.0,90.4,100SS2KGP1RA1
+CMP,SS2KGP,115,M115,Double Seal,Unarmoured,Industrial / Safe,,Brass,86.0,97.9,115SS2KGP1RA
+CMP,SS2KGP,115,M115,Double Seal,Unarmoured,Industrial / Safe,,Nickel Plated Brass,86.0,97.9,115SS2KGP1RA5
+CMP,SS2KGP,115,M115,Double Seal,Unarmoured,Industrial / Safe,,Stainless Steel,86.0,97.9,115SS2KGP1RA4
+CMP,SS2KGP,115,M115,Double Seal,Unarmoured,Industrial / Safe,,Aluminium,86.0,97.9,115SS2KGP1RA1
+CMP,SS2KGP,130,M130,Double Seal,Unarmoured,Industrial / Safe,,Brass,97.0,114.9,130SS2KGP1RA
+CMP,SS2KGP,130,M130,Double Seal,Unarmoured,Industrial / Safe,,Nickel Plated Brass,97.0,114.9,130SS2KGP1RA5
+CMP,SS2KGP,130,M130,Double Seal,Unarmoured,Industrial / Safe,,Stainless Steel,97.0,114.9,130SS2KGP1RA4
+CMP,SS2KGP,130,M130,Double Seal,Unarmoured,Industrial / Safe,,Aluminium,97.0,114.9,130SS2KGP1RA1
+CMP,A2F,16S,M16,Single Seal,Unarmoured,Explosion Proof,Ex de,Brass,3.2,8.7,16SA2F1RA
+CMP,A2F,16S,M16,Single Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,3.2,8.7,16SA2F1RA5
+CMP,A2F,16S,M16,Single Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,3.2,8.7,16SA2F1RA4
+CMP,A2F,16S,M16,Single Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,3.2,8.7,16SA2F1RA1
+CMP,A2F,16,M16,Single Seal,Unarmoured,Explosion Proof,Ex de,Brass,3.2,8.7,16A2F1RA
+CMP,A2F,16,M16,Single Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,3.2,8.7,16A2F1RA5
+CMP,A2F,16,M16,Single Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,3.2,8.7,16A2F1RA4
+CMP,A2F,16,M16,Single Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,3.2,8.7,16A2F1RA1
+CMP,A2F,20S16,M20,Single Seal,Unarmoured,Explosion Proof,Ex de,Brass,3.2,8.7,20S16A2F1RA
+CMP,A2F,20S16,M20,Single Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,3.2,8.7,20S16A2F1RA5
+CMP,A2F,20S16,M20,Single Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,3.2,8.7,20S16A2F1RA4
+CMP,A2F,20S16,M20,Single Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,3.2,8.7,20S16A2F1RA1
+CMP,A2F,20S,M20,Single Seal,Unarmoured,Explosion Proof,Ex de,Brass,6.1,11.7,20SA2F1RA
+CMP,A2F,20S,M20,Single Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,6.1,11.7,20SA2F1RA5
+CMP,A2F,20S,M20,Single Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,6.1,11.7,20SA2F1RA4
+CMP,A2F,20S,M20,Single Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,6.1,11.7,20SA2F1RA1
+CMP,A2F,20,M20,Single Seal,Unarmoured,Explosion Proof,Ex de,Brass,6.5,14.0,20A2F1RA
+CMP,A2F,20,M20,Single Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,6.5,14.0,20A2F1RA5
+CMP,A2F,20,M20,Single Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,6.5,14.0,20A2F1RA4
+CMP,A2F,20,M20,Single Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,6.5,14.0,20A2F1RA1
+CMP,A2F,25,M25,Single Seal,Unarmoured,Explosion Proof,Ex de,Brass,11.1,20.0,25A2F1RA
+CMP,A2F,25,M25,Single Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,11.1,20.0,25A2F1RA5
+CMP,A2F,25,M25,Single Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,11.1,20.0,25A2F1RA4
+CMP,A2F,25,M25,Single Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,11.1,20.0,25A2F1RA1
+CMP,A2F,32,M32,Single Seal,Unarmoured,Explosion Proof,Ex de,Brass,17.0,26.3,32A2F1RA
+CMP,A2F,32,M32,Single Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,17.0,26.3,32A2F1RA5
+CMP,A2F,32,M32,Single Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,17.0,26.3,32A2F1RA4
+CMP,A2F,32,M32,Single Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,17.0,26.3,32A2F1RA1
+CMP,A2F,40,M40,Single Seal,Unarmoured,Explosion Proof,Ex de,Brass,23.5,32.2,40A2F1RA
+CMP,A2F,40,M40,Single Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,23.5,32.2,40A2F1RA5
+CMP,A2F,40,M40,Single Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,23.5,32.2,40A2F1RA4
+CMP,A2F,40,M40,Single Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,23.5,32.2,40A2F1RA1
+CMP,A2F,50S,M50,Single Seal,Unarmoured,Explosion Proof,Ex de,Brass,31.0,38.2,50SA2F1RA
+CMP,A2F,50S,M50,Single Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,31.0,38.2,50SA2F1RA5
+CMP,A2F,50S,M50,Single Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,31.0,38.2,50SA2F1RA4
+CMP,A2F,50S,M50,Single Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,31.0,38.2,50SA2F1RA1
+CMP,A2F,50,M50,Single Seal,Unarmoured,Explosion Proof,Ex de,Brass,35.6,44.0,50A2F1RA
+CMP,A2F,50,M50,Single Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,35.6,44.0,50A2F1RA5
+CMP,A2F,50,M50,Single Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,35.6,44.0,50A2F1RA4
+CMP,A2F,50,M50,Single Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,35.6,44.0,50A2F1RA1
+CMP,A2F,63S,M63,Single Seal,Unarmoured,Explosion Proof,Ex de,Brass,41.5,49.9,63SA2F1RA
+CMP,A2F,63S,M63,Single Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,41.5,49.9,63SA2F1RA5
+CMP,A2F,63S,M63,Single Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,41.5,49.9,63SA2F1RA4
+CMP,A2F,63S,M63,Single Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,41.5,49.9,63SA2F1RA1
+CMP,A2F,63,M63,Single Seal,Unarmoured,Explosion Proof,Ex de,Brass,47.2,55.9,63A2F1RA
+CMP,A2F,63,M63,Single Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,47.2,55.9,63A2F1RA5
+CMP,A2F,63,M63,Single Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,47.2,55.9,63A2F1RA4
+CMP,A2F,63,M63,Single Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,47.2,55.9,63A2F1RA1
+CMP,A2F,75S,M75,Single Seal,Unarmoured,Explosion Proof,Ex de,Brass,54.0,61.9,75SA2F1RA
+CMP,A2F,75S,M75,Single Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,54.0,61.9,75SA2F1RA5
+CMP,A2F,75S,M75,Single Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,54.0,61.9,75SA2F1RA4
+CMP,A2F,75S,M75,Single Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,54.0,61.9,75SA2F1RA1
+CMP,A2F,75,M75,Single Seal,Unarmoured,Explosion Proof,Ex de,Brass,61.1,67.9,75A2F1RA
+CMP,A2F,75,M75,Single Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,61.1,67.9,75A2F1RA5
+CMP,A2F,75,M75,Single Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,61.1,67.9,75A2F1RA4
+CMP,A2F,75,M75,Single Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,61.1,67.9,75A2F1RA1
+CMP,A2F,90,M90,Single Seal,Unarmoured,Explosion Proof,Ex de,Brass,66.6,79.9,90A2F1RA
+CMP,A2F,90,M90,Single Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,66.6,79.9,90A2F1RA5
+CMP,A2F,90,M90,Single Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,66.6,79.9,90A2F1RA4
+CMP,A2F,90,M90,Single Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,66.6,79.9,90A2F1RA1
+CMP,A2F,100,M100,Single Seal,Unarmoured,Explosion Proof,Ex de,Brass,76.0,91.0,100A2F1RA
+CMP,A2F,100,M100,Single Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,76.0,91.0,100A2F1RA5
+CMP,A2F,100,M100,Single Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,76.0,91.0,100A2F1RA4
+CMP,A2F,100,M100,Single Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,76.0,91.0,100A2F1RA1
+CMP,A2F,115,M115,Single Seal,Unarmoured,Explosion Proof,Ex de,Brass,86.0,97.9,115A2F1RA
+CMP,A2F,115,M115,Single Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,86.0,97.9,115A2F1RA5
+CMP,A2F,115,M115,Single Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,86.0,97.9,115A2F1RA4
+CMP,A2F,115,M115,Single Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,86.0,97.9,115A2F1RA1
+CMP,A2F,130,M130,Single Seal,Unarmoured,Explosion Proof,Ex de,Brass,97.0,114.9,130A2F1RA
+CMP,A2F,130,M130,Single Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,97.0,114.9,130A2F1RA5
+CMP,A2F,130,M130,Single Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,97.0,114.9,130A2F1RA4
+CMP,A2F,130,M130,Single Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,97.0,114.9,130A2F1RA1
+CMP,E1FU,20S16,M20,Double Seal,SWA & STA,Explosion Proof,Ex de,Brass,6.1,13.1,20S16E1FU1RA
+CMP,E1FU,20S16,M20,Double Seal,SWA & STA,Explosion Proof,Ex de,Nickel Plated Brass,6.1,13.1,20S16E1FU1RA5
+CMP,E1FU,20S16,M20,Double Seal,SWA & STA,Explosion Proof,Ex de,Stainless Steel,6.1,13.1,20S16E1FU1RA4
+CMP,E1FU,20S16,M20,Double Seal,SWA & STA,Explosion Proof,Ex de,Aluminium,6.1,13.1,20S16E1FU1RA1
+CMP,E1FU,20S,M20,Double Seal,SWA & STA,Explosion Proof,Ex de,Brass,9.5,15.9,20SE1FU1RA
+CMP,E1FU,20S,M20,Double Seal,SWA & STA,Explosion Proof,Ex de,Nickel Plated Brass,9.5,15.9,20SE1FU1RA5
+CMP,E1FU,20S,M20,Double Seal,SWA & STA,Explosion Proof,Ex de,Stainless Steel,9.5,15.9,20SE1FU1RA4
+CMP,E1FU,20S,M20,Double Seal,SWA & STA,Explosion Proof,Ex de,Aluminium,9.5,15.9,20SE1FU1RA1
+CMP,E1FU,20,M20,Double Seal,SWA & STA,Explosion Proof,Ex de,Brass,12.5,20.9,20E1FU1RA
+CMP,E1FU,20,M20,Double Seal,SWA & STA,Explosion Proof,Ex de,Nickel Plated Brass,12.5,20.9,20E1FU1RA5
+CMP,E1FU,20,M20,Double Seal,SWA & STA,Explosion Proof,Ex de,Stainless Steel,12.5,20.9,20E1FU1RA4
+CMP,E1FU,20,M20,Double Seal,SWA & STA,Explosion Proof,Ex de,Aluminium,12.5,20.9,20E1FU1RA1
+CMP,E1FU,25S,M25,Double Seal,SWA & STA,Explosion Proof,Ex de,Brass,14.0,22.0,25SE1FU1RA
+CMP,E1FU,25S,M25,Double Seal,SWA & STA,Explosion Proof,Ex de,Nickel Plated Brass,14.0,22.0,25SE1FU1RA5
+CMP,E1FU,25S,M25,Double Seal,SWA & STA,Explosion Proof,Ex de,Stainless Steel,14.0,22.0,25SE1FU1RA4
+CMP,E1FU,25S,M25,Double Seal,SWA & STA,Explosion Proof,Ex de,Aluminium,14.0,22.0,25SE1FU1RA1
+CMP,E1FU,25,M25,Double Seal,SWA & STA,Explosion Proof,Ex de,Brass,18.2,26.2,25E1FU1RA
+CMP,E1FU,25,M25,Double Seal,SWA & STA,Explosion Proof,Ex de,Nickel Plated Brass,18.2,26.2,25E1FU1RA5
+CMP,E1FU,25,M25,Double Seal,SWA & STA,Explosion Proof,Ex de,Stainless Steel,18.2,26.2,25E1FU1RA4
+CMP,E1FU,25,M25,Double Seal,SWA & STA,Explosion Proof,Ex de,Aluminium,18.2,26.2,25E1FU1RA1
+CMP,E1FU,32,M32,Double Seal,SWA & STA,Explosion Proof,Ex de,Brass,23.7,33.9,32E1FU1RA
+CMP,E1FU,32,M32,Double Seal,SWA & STA,Explosion Proof,Ex de,Nickel Plated Brass,23.7,33.9,32E1FU1RA5
+CMP,E1FU,32,M32,Double Seal,SWA & STA,Explosion Proof,Ex de,Stainless Steel,23.7,33.9,32E1FU1RA4
+CMP,E1FU,32,M32,Double Seal,SWA & STA,Explosion Proof,Ex de,Aluminium,23.7,33.9,32E1FU1RA1
+CMP,E1FU,40,M40,Double Seal,SWA & STA,Explosion Proof,Ex de,Brass,27.9,40.4,40E1FU1RA
+CMP,E1FU,40,M40,Double Seal,SWA & STA,Explosion Proof,Ex de,Nickel Plated Brass,27.9,40.4,40E1FU1RA5
+CMP,E1FU,40,M40,Double Seal,SWA & STA,Explosion Proof,Ex de,Stainless Steel,27.9,40.4,40E1FU1RA4
+CMP,E1FU,40,M40,Double Seal,SWA & STA,Explosion Proof,Ex de,Aluminium,27.9,40.4,40E1FU1RA1
+CMP,E1FU,50S,M50,Double Seal,SWA & STA,Explosion Proof,Ex de,Brass,35.2,46.7,50SE1FU1RA
+CMP,E1FU,50S,M50,Double Seal,SWA & STA,Explosion Proof,Ex de,Nickel Plated Brass,35.2,46.7,50SE1FU1RA5
+CMP,E1FU,50S,M50,Double Seal,SWA & STA,Explosion Proof,Ex de,Stainless Steel,35.2,46.7,50SE1FU1RA4
+CMP,E1FU,50S,M50,Double Seal,SWA & STA,Explosion Proof,Ex de,Aluminium,35.2,46.7,50SE1FU1RA1
+CMP,E1FU,50,M50,Double Seal,SWA & STA,Explosion Proof,Ex de,Brass,40.4,53.0,50E1FU1RA
+CMP,E1FU,50,M50,Double Seal,SWA & STA,Explosion Proof,Ex de,Nickel Plated Brass,40.4,53.0,50E1FU1RA5
+CMP,E1FU,50,M50,Double Seal,SWA & STA,Explosion Proof,Ex de,Stainless Steel,40.4,53.0,50E1FU1RA4
+CMP,E1FU,50,M50,Double Seal,SWA & STA,Explosion Proof,Ex de,Aluminium,40.4,53.0,50E1FU1RA1
+CMP,E1FU,63S,M63,Double Seal,SWA & STA,Explosion Proof,Ex de,Brass,45.6,59.4,63SE1FU1RA
+CMP,E1FU,63S,M63,Double Seal,SWA & STA,Explosion Proof,Ex de,Nickel Plated Brass,45.6,59.4,63SE1FU1RA5
+CMP,E1FU,63S,M63,Double Seal,SWA & STA,Explosion Proof,Ex de,Stainless Steel,45.6,59.4,63SE1FU1RA4
+CMP,E1FU,63S,M63,Double Seal,SWA & STA,Explosion Proof,Ex de,Aluminium,45.6,59.4,63SE1FU1RA1
+CMP,E1FU,63,M63,Double Seal,SWA & STA,Explosion Proof,Ex de,Brass,54.6,65.8,63E1FU1RA
+CMP,E1FU,63,M63,Double Seal,SWA & STA,Explosion Proof,Ex de,Nickel Plated Brass,54.6,65.8,63E1FU1RA5
+CMP,E1FU,63,M63,Double Seal,SWA & STA,Explosion Proof,Ex de,Stainless Steel,54.6,65.8,63E1FU1RA4
+CMP,E1FU,63,M63,Double Seal,SWA & STA,Explosion Proof,Ex de,Aluminium,54.6,65.8,63E1FU1RA1
+CMP,E1FU,75S,M75,Double Seal,SWA & STA,Explosion Proof,Ex de,Brass,59.0,72.0,75SE1FU1RA
+CMP,E1FU,75S,M75,Double Seal,SWA & STA,Explosion Proof,Ex de,Nickel Plated Brass,59.0,72.0,75SE1FU1RA5
+CMP,E1FU,75S,M75,Double Seal,SWA & STA,Explosion Proof,Ex de,Stainless Steel,59.0,72.0,75SE1FU1RA4
+CMP,E1FU,75S,M75,Double Seal,SWA & STA,Explosion Proof,Ex de,Aluminium,59.0,72.0,75SE1FU1RA1
+CMP,E1FU,75,M75,Double Seal,SWA & STA,Explosion Proof,Ex de,Brass,66.7,78.4,75E1FU1RA
+CMP,E1FU,75,M75,Double Seal,SWA & STA,Explosion Proof,Ex de,Nickel Plated Brass,66.7,78.4,75E1FU1RA5
+CMP,E1FU,75,M75,Double Seal,SWA & STA,Explosion Proof,Ex de,Stainless Steel,66.7,78.4,75E1FU1RA4
+CMP,E1FU,75,M75,Double Seal,SWA & STA,Explosion Proof,Ex de,Aluminium,66.7,78.4,75E1FU1RA1
+CMP,E1FU,90,M90,Double Seal,SWA & STA,Explosion Proof,Ex de,Brass,76.2,90.3,90E1FU1RA
+CMP,E1FU,90,M90,Double Seal,SWA & STA,Explosion Proof,Ex de,Nickel Plated Brass,76.2,90.3,90E1FU1RA5
+CMP,E1FU,90,M90,Double Seal,SWA & STA,Explosion Proof,Ex de,Stainless Steel,76.2,90.3,90E1FU1RA4
+CMP,E1FU,90,M90,Double Seal,SWA & STA,Explosion Proof,Ex de,Aluminium,76.2,90.3,90E1FU1RA1
+CMP,E1FU,100,M100,Double Seal,SWA & STA,Explosion Proof,Ex de,Brass,86.1,101.4,100E1FU1RA
+CMP,E1FU,100,M100,Double Seal,SWA & STA,Explosion Proof,Ex de,Nickel Plated Brass,86.1,101.4,100E1FU1RA5
+CMP,E1FU,100,M100,Double Seal,SWA & STA,Explosion Proof,Ex de,Stainless Steel,86.1,101.4,100E1FU1RA4
+CMP,E1FU,100,M100,Double Seal,SWA & STA,Explosion Proof,Ex de,Aluminium,86.1,101.4,100E1FU1RA1
+CMP,E1FU,115,M115,Double Seal,SWA & STA,Explosion Proof,Ex de,Brass,101.5,110.2,115E1FU1RA
+CMP,E1FU,115,M115,Double Seal,SWA & STA,Explosion Proof,Ex de,Nickel Plated Brass,101.5,110.2,115E1FU1RA5
+CMP,E1FU,115,M115,Double Seal,SWA & STA,Explosion Proof,Ex de,Stainless Steel,101.5,110.2,115E1FU1RA4
+CMP,E1FU,115,M115,Double Seal,SWA & STA,Explosion Proof,Ex de,Aluminium,101.5,110.2,115E1FU1RA1
+CMP,E1FU,130,M130,Double Seal,SWA & STA,Explosion Proof,Ex de,Brass,110.2,123.2,130E1FU1RA
+CMP,E1FU,130,M130,Double Seal,SWA & STA,Explosion Proof,Ex de,Nickel Plated Brass,110.2,123.2,130E1FU1RA5
+CMP,E1FU,130,M130,Double Seal,SWA & STA,Explosion Proof,Ex de,Stainless Steel,110.2,123.2,130E1FU1RA4
+CMP,E1FU,130,M130,Double Seal,SWA & STA,Explosion Proof,Ex de,Aluminium,110.2,123.2,130E1FU1RA1
+CMP,E1FW,20S16,M20,Double Seal,SWA,Explosion Proof,Ex de,Brass,6.1,13.1,20S16E1FW1RA
+CMP,E1FW,20S16,M20,Double Seal,SWA,Explosion Proof,Ex de,Nickel Plated Brass,6.1,13.1,20S16E1FW1RA5
+CMP,E1FW,20S16,M20,Double Seal,SWA,Explosion Proof,Ex de,Stainless Steel,6.1,13.1,20S16E1FW1RA4
+CMP,E1FW,20S16,M20,Double Seal,SWA,Explosion Proof,Ex de,Aluminium,6.1,13.1,20S16E1FW1RA1
+CMP,E1FW,20S,M20,Double Seal,SWA,Explosion Proof,Ex de,Brass,9.5,15.9,20SE1FW1RA
+CMP,E1FW,20S,M20,Double Seal,SWA,Explosion Proof,Ex de,Nickel Plated Brass,9.5,15.9,20SE1FW1RA5
+CMP,E1FW,20S,M20,Double Seal,SWA,Explosion Proof,Ex de,Stainless Steel,9.5,15.9,20SE1FW1RA4
+CMP,E1FW,20S,M20,Double Seal,SWA,Explosion Proof,Ex de,Aluminium,9.5,15.9,20SE1FW1RA1
+CMP,E1FW,20,M20,Double Seal,SWA,Explosion Proof,Ex de,Brass,12.5,20.9,20E1FW1RA
+CMP,E1FW,20,M20,Double Seal,SWA,Explosion Proof,Ex de,Nickel Plated Brass,12.5,20.9,20E1FW1RA5
+CMP,E1FW,20,M20,Double Seal,SWA,Explosion Proof,Ex de,Stainless Steel,12.5,20.9,20E1FW1RA4
+CMP,E1FW,20,M20,Double Seal,SWA,Explosion Proof,Ex de,Aluminium,12.5,20.9,20E1FW1RA1
+CMP,E1FW,25S,M25,Double Seal,SWA,Explosion Proof,Ex de,Brass,14.0,22.0,25SE1FW1RA
+CMP,E1FW,25S,M25,Double Seal,SWA,Explosion Proof,Ex de,Nickel Plated Brass,14.0,22.0,25SE1FW1RA5
+CMP,E1FW,25S,M25,Double Seal,SWA,Explosion Proof,Ex de,Stainless Steel,14.0,22.0,25SE1FW1RA4
+CMP,E1FW,25S,M25,Double Seal,SWA,Explosion Proof,Ex de,Aluminium,14.0,22.0,25SE1FW1RA1
+CMP,E1FW,25,M25,Double Seal,SWA,Explosion Proof,Ex de,Brass,18.2,26.2,25E1FW1RA
+CMP,E1FW,25,M25,Double Seal,SWA,Explosion Proof,Ex de,Nickel Plated Brass,18.2,26.2,25E1FW1RA5
+CMP,E1FW,25,M25,Double Seal,SWA,Explosion Proof,Ex de,Stainless Steel,18.2,26.2,25E1FW1RA4
+CMP,E1FW,25,M25,Double Seal,SWA,Explosion Proof,Ex de,Aluminium,18.2,26.2,25E1FW1RA1
+CMP,E1FW,32,M32,Double Seal,SWA,Explosion Proof,Ex de,Brass,23.7,33.9,32E1FW1RA
+CMP,E1FW,32,M32,Double Seal,SWA,Explosion Proof,Ex de,Nickel Plated Brass,23.7,33.9,32E1FW1RA5
+CMP,E1FW,32,M32,Double Seal,SWA,Explosion Proof,Ex de,Stainless Steel,23.7,33.9,32E1FW1RA4
+CMP,E1FW,32,M32,Double Seal,SWA,Explosion Proof,Ex de,Aluminium,23.7,33.9,32E1FW1RA1
+CMP,E1FW,40,M40,Double Seal,SWA,Explosion Proof,Ex de,Brass,27.9,40.4,40E1FW1RA
+CMP,E1FW,40,M40,Double Seal,SWA,Explosion Proof,Ex de,Nickel Plated Brass,27.9,40.4,40E1FW1RA5
+CMP,E1FW,40,M40,Double Seal,SWA,Explosion Proof,Ex de,Stainless Steel,27.9,40.4,40E1FW1RA4
+CMP,E1FW,40,M40,Double Seal,SWA,Explosion Proof,Ex de,Aluminium,27.9,40.4,40E1FW1RA1
+CMP,E1FW,50S,M50,Double Seal,SWA,Explosion Proof,Ex de,Brass,35.2,46.7,50SE1FW1RA
+CMP,E1FW,50S,M50,Double Seal,SWA,Explosion Proof,Ex de,Nickel Plated Brass,35.2,46.7,50SE1FW1RA5
+CMP,E1FW,50S,M50,Double Seal,SWA,Explosion Proof,Ex de,Stainless Steel,35.2,46.7,50SE1FW1RA4
+CMP,E1FW,50S,M50,Double Seal,SWA,Explosion Proof,Ex de,Aluminium,35.2,46.7,50SE1FW1RA1
+CMP,E1FW,50,M50,Double Seal,SWA,Explosion Proof,Ex de,Brass,40.4,53.0,50E1FW1RA
+CMP,E1FW,50,M50,Double Seal,SWA,Explosion Proof,Ex de,Nickel Plated Brass,40.4,53.0,50E1FW1RA5
+CMP,E1FW,50,M50,Double Seal,SWA,Explosion Proof,Ex de,Stainless Steel,40.4,53.0,50E1FW1RA4
+CMP,E1FW,50,M50,Double Seal,SWA,Explosion Proof,Ex de,Aluminium,40.4,53.0,50E1FW1RA1
+CMP,E1FW,63S,M63,Double Seal,SWA,Explosion Proof,Ex de,Brass,45.6,59.4,63SE1FW1RA
+CMP,E1FW,63S,M63,Double Seal,SWA,Explosion Proof,Ex de,Nickel Plated Brass,45.6,59.4,63SE1FW1RA5
+CMP,E1FW,63S,M63,Double Seal,SWA,Explosion Proof,Ex de,Stainless Steel,45.6,59.4,63SE1FW1RA4
+CMP,E1FW,63S,M63,Double Seal,SWA,Explosion Proof,Ex de,Aluminium,45.6,59.4,63SE1FW1RA1
+CMP,E1FW,63,M63,Double Seal,SWA,Explosion Proof,Ex de,Brass,54.6,65.8,63E1FW1RA
+CMP,E1FW,63,M63,Double Seal,SWA,Explosion Proof,Ex de,Nickel Plated Brass,54.6,65.8,63E1FW1RA5
+CMP,E1FW,63,M63,Double Seal,SWA,Explosion Proof,Ex de,Stainless Steel,54.6,65.8,63E1FW1RA4
+CMP,E1FW,63,M63,Double Seal,SWA,Explosion Proof,Ex de,Aluminium,54.6,65.8,63E1FW1RA1
+CMP,E1FW,75S,M75,Double Seal,SWA,Explosion Proof,Ex de,Brass,59.0,72.0,75SE1FW1RA
+CMP,E1FW,75S,M75,Double Seal,SWA,Explosion Proof,Ex de,Nickel Plated Brass,59.0,72.0,75SE1FW1RA5
+CMP,E1FW,75S,M75,Double Seal,SWA,Explosion Proof,Ex de,Stainless Steel,59.0,72.0,75SE1FW1RA4
+CMP,E1FW,75S,M75,Double Seal,SWA,Explosion Proof,Ex de,Aluminium,59.0,72.0,75SE1FW1RA1
+CMP,E1FW,75,M75,Double Seal,SWA,Explosion Proof,Ex de,Brass,66.7,78.4,75E1FW1RA
+CMP,E1FW,75,M75,Double Seal,SWA,Explosion Proof,Ex de,Nickel Plated Brass,66.7,78.4,75E1FW1RA5
+CMP,E1FW,75,M75,Double Seal,SWA,Explosion Proof,Ex de,Stainless Steel,66.7,78.4,75E1FW1RA4
+CMP,E1FW,75,M75,Double Seal,SWA,Explosion Proof,Ex de,Aluminium,66.7,78.4,75E1FW1RA1
+CMP,E1FW,90,M90,Double Seal,SWA,Explosion Proof,Ex de,Brass,76.2,90.3,90E1FW1RA
+CMP,E1FW,90,M90,Double Seal,SWA,Explosion Proof,Ex de,Nickel Plated Brass,76.2,90.3,90E1FW1RA5
+CMP,E1FW,90,M90,Double Seal,SWA,Explosion Proof,Ex de,Stainless Steel,76.2,90.3,90E1FW1RA4
+CMP,E1FW,90,M90,Double Seal,SWA,Explosion Proof,Ex de,Aluminium,76.2,90.3,90E1FW1RA1
+CMP,E1FW,100,M100,Double Seal,SWA,Explosion Proof,Ex de,Brass,86.1,101.4,100E1FW1RA
+CMP,E1FW,100,M100,Double Seal,SWA,Explosion Proof,Ex de,Nickel Plated Brass,86.1,101.4,100E1FW1RA5
+CMP,E1FW,100,M100,Double Seal,SWA,Explosion Proof,Ex de,Stainless Steel,86.1,101.4,100E1FW1RA4
+CMP,E1FW,100,M100,Double Seal,SWA,Explosion Proof,Ex de,Aluminium,86.1,101.4,100E1FW1RA1
+CMP,E1FW,115,M115,Double Seal,SWA,Explosion Proof,Ex de,Brass,101.5,110.2,115E1FW1RA
+CMP,E1FW,115,M115,Double Seal,SWA,Explosion Proof,Ex de,Nickel Plated Brass,101.5,110.2,115E1FW1RA5
+CMP,E1FW,115,M115,Double Seal,SWA,Explosion Proof,Ex de,Stainless Steel,101.5,110.2,115E1FW1RA4
+CMP,E1FW,115,M115,Double Seal,SWA,Explosion Proof,Ex de,Aluminium,101.5,110.2,115E1FW1RA1
+CMP,E1FW,130,M130,Double Seal,SWA,Explosion Proof,Ex de,Brass,110.2,123.2,130E1FW1RA
+CMP,E1FW,130,M130,Double Seal,SWA,Explosion Proof,Ex de,Nickel Plated Brass,110.2,123.2,130E1FW1RA5
+CMP,E1FW,130,M130,Double Seal,SWA,Explosion Proof,Ex de,Stainless Steel,110.2,123.2,130E1FW1RA4
+CMP,E1FW,130,M130,Double Seal,SWA,Explosion Proof,Ex de,Aluminium,110.2,123.2,130E1FW1RA1
+CMP,E1FX,20S16,M20,Double Seal,STA,Explosion Proof,Ex de,Brass,6.1,13.1,20S16E1FX1RA
+CMP,E1FX,20S16,M20,Double Seal,STA,Explosion Proof,Ex de,Nickel Plated Brass,6.1,13.1,20S16E1FX1RA5
+CMP,E1FX,20S16,M20,Double Seal,STA,Explosion Proof,Ex de,Stainless Steel,6.1,13.1,20S16E1FX1RA4
+CMP,E1FX,20S16,M20,Double Seal,STA,Explosion Proof,Ex de,Aluminium,6.1,13.1,20S16E1FX1RA1
+CMP,E1FX,20S,M20,Double Seal,STA,Explosion Proof,Ex de,Brass,9.5,15.9,20SE1FX1RA
+CMP,E1FX,20S,M20,Double Seal,STA,Explosion Proof,Ex de,Nickel Plated Brass,9.5,15.9,20SE1FX1RA5
+CMP,E1FX,20S,M20,Double Seal,STA,Explosion Proof,Ex de,Stainless Steel,9.5,15.9,20SE1FX1RA4
+CMP,E1FX,20S,M20,Double Seal,STA,Explosion Proof,Ex de,Aluminium,9.5,15.9,20SE1FX1RA1
+CMP,E1FX,20,M20,Double Seal,STA,Explosion Proof,Ex de,Brass,12.5,20.9,20E1FX1RA
+CMP,E1FX,20,M20,Double Seal,STA,Explosion Proof,Ex de,Nickel Plated Brass,12.5,20.9,20E1FX1RA5
+CMP,E1FX,20,M20,Double Seal,STA,Explosion Proof,Ex de,Stainless Steel,12.5,20.9,20E1FX1RA4
+CMP,E1FX,20,M20,Double Seal,STA,Explosion Proof,Ex de,Aluminium,12.5,20.9,20E1FX1RA1
+CMP,E1FX,25S,M25,Double Seal,STA,Explosion Proof,Ex de,Brass,14.0,22.0,25SE1FX1RA
+CMP,E1FX,25S,M25,Double Seal,STA,Explosion Proof,Ex de,Nickel Plated Brass,14.0,22.0,25SE1FX1RA5
+CMP,E1FX,25S,M25,Double Seal,STA,Explosion Proof,Ex de,Stainless Steel,14.0,22.0,25SE1FX1RA4
+CMP,E1FX,25S,M25,Double Seal,STA,Explosion Proof,Ex de,Aluminium,14.0,22.0,25SE1FX1RA1
+CMP,E1FX,25,M25,Double Seal,STA,Explosion Proof,Ex de,Brass,18.2,26.2,25E1FX1RA
+CMP,E1FX,25,M25,Double Seal,STA,Explosion Proof,Ex de,Nickel Plated Brass,18.2,26.2,25E1FX1RA5
+CMP,E1FX,25,M25,Double Seal,STA,Explosion Proof,Ex de,Stainless Steel,18.2,26.2,25E1FX1RA4
+CMP,E1FX,25,M25,Double Seal,STA,Explosion Proof,Ex de,Aluminium,18.2,26.2,25E1FX1RA1
+CMP,E1FX,32,M32,Double Seal,STA,Explosion Proof,Ex de,Brass,23.7,33.9,32E1FX1RA
+CMP,E1FX,32,M32,Double Seal,STA,Explosion Proof,Ex de,Nickel Plated Brass,23.7,33.9,32E1FX1RA5
+CMP,E1FX,32,M32,Double Seal,STA,Explosion Proof,Ex de,Stainless Steel,23.7,33.9,32E1FX1RA4
+CMP,E1FX,32,M32,Double Seal,STA,Explosion Proof,Ex de,Aluminium,23.7,33.9,32E1FX1RA1
+CMP,E1FX,40,M40,Double Seal,STA,Explosion Proof,Ex de,Brass,27.9,40.4,40E1FX1RA
+CMP,E1FX,40,M40,Double Seal,STA,Explosion Proof,Ex de,Nickel Plated Brass,27.9,40.4,40E1FX1RA5
+CMP,E1FX,40,M40,Double Seal,STA,Explosion Proof,Ex de,Stainless Steel,27.9,40.4,40E1FX1RA4
+CMP,E1FX,40,M40,Double Seal,STA,Explosion Proof,Ex de,Aluminium,27.9,40.4,40E1FX1RA1
+CMP,E1FX,50S,M50,Double Seal,STA,Explosion Proof,Ex de,Brass,35.2,46.7,50SE1FX1RA
+CMP,E1FX,50S,M50,Double Seal,STA,Explosion Proof,Ex de,Nickel Plated Brass,35.2,46.7,50SE1FX1RA5
+CMP,E1FX,50S,M50,Double Seal,STA,Explosion Proof,Ex de,Stainless Steel,35.2,46.7,50SE1FX1RA4
+CMP,E1FX,50S,M50,Double Seal,STA,Explosion Proof,Ex de,Aluminium,35.2,46.7,50SE1FX1RA1
+CMP,E1FX,50,M50,Double Seal,STA,Explosion Proof,Ex de,Brass,40.4,53.0,50E1FX1RA
+CMP,E1FX,50,M50,Double Seal,STA,Explosion Proof,Ex de,Nickel Plated Brass,40.4,53.0,50E1FX1RA5
+CMP,E1FX,50,M50,Double Seal,STA,Explosion Proof,Ex de,Stainless Steel,40.4,53.0,50E1FX1RA4
+CMP,E1FX,50,M50,Double Seal,STA,Explosion Proof,Ex de,Aluminium,40.4,53.0,50E1FX1RA1
+CMP,E1FX,63S,M63,Double Seal,STA,Explosion Proof,Ex de,Brass,45.6,59.4,63SE1FX1RA
+CMP,E1FX,63S,M63,Double Seal,STA,Explosion Proof,Ex de,Nickel Plated Brass,45.6,59.4,63SE1FX1RA5
+CMP,E1FX,63S,M63,Double Seal,STA,Explosion Proof,Ex de,Stainless Steel,45.6,59.4,63SE1FX1RA4
+CMP,E1FX,63S,M63,Double Seal,STA,Explosion Proof,Ex de,Aluminium,45.6,59.4,63SE1FX1RA1
+CMP,E1FX,63,M63,Double Seal,STA,Explosion Proof,Ex de,Brass,54.6,65.8,63E1FX1RA
+CMP,E1FX,63,M63,Double Seal,STA,Explosion Proof,Ex de,Nickel Plated Brass,54.6,65.8,63E1FX1RA5
+CMP,E1FX,63,M63,Double Seal,STA,Explosion Proof,Ex de,Stainless Steel,54.6,65.8,63E1FX1RA4
+CMP,E1FX,63,M63,Double Seal,STA,Explosion Proof,Ex de,Aluminium,54.6,65.8,63E1FX1RA1
+CMP,E1FX,75S,M75,Double Seal,STA,Explosion Proof,Ex de,Brass,59.0,72.0,75SE1FX1RA
+CMP,E1FX,75S,M75,Double Seal,STA,Explosion Proof,Ex de,Nickel Plated Brass,59.0,72.0,75SE1FX1RA5
+CMP,E1FX,75S,M75,Double Seal,STA,Explosion Proof,Ex de,Stainless Steel,59.0,72.0,75SE1FX1RA4
+CMP,E1FX,75S,M75,Double Seal,STA,Explosion Proof,Ex de,Aluminium,59.0,72.0,75SE1FX1RA1
+CMP,E1FX,75,M75,Double Seal,STA,Explosion Proof,Ex de,Brass,66.7,78.4,75E1FX1RA
+CMP,E1FX,75,M75,Double Seal,STA,Explosion Proof,Ex de,Nickel Plated Brass,66.7,78.4,75E1FX1RA5
+CMP,E1FX,75,M75,Double Seal,STA,Explosion Proof,Ex de,Stainless Steel,66.7,78.4,75E1FX1RA4
+CMP,E1FX,75,M75,Double Seal,STA,Explosion Proof,Ex de,Aluminium,66.7,78.4,75E1FX1RA1
+CMP,E1FX,90,M90,Double Seal,STA,Explosion Proof,Ex de,Brass,76.2,90.3,90E1FX1RA
+CMP,E1FX,90,M90,Double Seal,STA,Explosion Proof,Ex de,Nickel Plated Brass,76.2,90.3,90E1FX1RA5
+CMP,E1FX,90,M90,Double Seal,STA,Explosion Proof,Ex de,Stainless Steel,76.2,90.3,90E1FX1RA4
+CMP,E1FX,90,M90,Double Seal,STA,Explosion Proof,Ex de,Aluminium,76.2,90.3,90E1FX1RA1
+CMP,E1FX,100,M100,Double Seal,STA,Explosion Proof,Ex de,Brass,86.1,101.4,100E1FX1RA
+CMP,E1FX,100,M100,Double Seal,STA,Explosion Proof,Ex de,Nickel Plated Brass,86.1,101.4,100E1FX1RA5
+CMP,E1FX,100,M100,Double Seal,STA,Explosion Proof,Ex de,Stainless Steel,86.1,101.4,100E1FX1RA4
+CMP,E1FX,100,M100,Double Seal,STA,Explosion Proof,Ex de,Aluminium,86.1,101.4,100E1FX1RA1
+CMP,E1FX,115,M115,Double Seal,STA,Explosion Proof,Ex de,Brass,101.5,110.2,115E1FX1RA
+CMP,E1FX,115,M115,Double Seal,STA,Explosion Proof,Ex de,Nickel Plated Brass,101.5,110.2,115E1FX1RA5
+CMP,E1FX,115,M115,Double Seal,STA,Explosion Proof,Ex de,Stainless Steel,101.5,110.2,115E1FX1RA4
+CMP,E1FX,115,M115,Double Seal,STA,Explosion Proof,Ex de,Aluminium,101.5,110.2,115E1FX1RA1
+CMP,E1FX,130,M130,Double Seal,STA,Explosion Proof,Ex de,Brass,110.2,123.2,130E1FX1RA
+CMP,E1FX,130,M130,Double Seal,STA,Explosion Proof,Ex de,Nickel Plated Brass,110.2,123.2,130E1FX1RA5
+CMP,E1FX,130,M130,Double Seal,STA,Explosion Proof,Ex de,Stainless Steel,110.2,123.2,130E1FX1RA4
+CMP,E1FX,130,M130,Double Seal,STA,Explosion Proof,Ex de,Aluminium,110.2,123.2,130E1FX1RA1
+CMP,SS2K,16S,M16,Double Seal,Unarmoured,Explosion Proof,Ex de,Brass,3.2,8.7,16SSS2K1RA
+CMP,SS2K,16S,M16,Double Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,3.2,8.7,16SSS2K1RA5
+CMP,SS2K,16S,M16,Double Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,3.2,8.7,16SSS2K1RA4
+CMP,SS2K,16S,M16,Double Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,3.2,8.7,16SSS2K1RA1
+CMP,SS2K,16,M16,Double Seal,Unarmoured,Explosion Proof,Ex de,Brass,3.2,8.7,16SS2K1RA
+CMP,SS2K,16,M16,Double Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,3.2,8.7,16SS2K1RA5
+CMP,SS2K,16,M16,Double Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,3.2,8.7,16SS2K1RA4
+CMP,SS2K,16,M16,Double Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,3.2,8.7,16SS2K1RA1
+CMP,SS2K,20S16,M20,Double Seal,Unarmoured,Explosion Proof,Ex de,Brass,3.2,8.7,20S16SS2K1RA
+CMP,SS2K,20S16,M20,Double Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,3.2,8.7,20S16SS2K1RA5
+CMP,SS2K,20S16,M20,Double Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,3.2,8.7,20S16SS2K1RA4
+CMP,SS2K,20S16,M20,Double Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,3.2,8.7,20S16SS2K1RA1
+CMP,SS2K,20S,M20,Double Seal,Unarmoured,Explosion Proof,Ex de,Brass,6.1,11.7,20SSS2K1RA
+CMP,SS2K,20S,M20,Double Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,6.1,11.7,20SSS2K1RA5
+CMP,SS2K,20S,M20,Double Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,6.1,11.7,20SSS2K1RA4
+CMP,SS2K,20S,M20,Double Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,6.1,11.7,20SSS2K1RA1
+CMP,SS2K,20,M20,Double Seal,Unarmoured,Explosion Proof,Ex de,Brass,6.5,14.0,20SS2K1RA
+CMP,SS2K,20,M20,Double Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,6.5,14.0,20SS2K1RA5
+CMP,SS2K,20,M20,Double Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,6.5,14.0,20SS2K1RA4
+CMP,SS2K,20,M20,Double Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,6.5,14.0,20SS2K1RA1
+CMP,SS2K,25,M25,Double Seal,Unarmoured,Explosion Proof,Ex de,Brass,11.1,20.0,25SS2K1RA
+CMP,SS2K,25,M25,Double Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,11.1,20.0,25SS2K1RA5
+CMP,SS2K,25,M25,Double Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,11.1,20.0,25SS2K1RA4
+CMP,SS2K,25,M25,Double Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,11.1,20.0,25SS2K1RA1
+CMP,SS2K,32,M32,Double Seal,Unarmoured,Explosion Proof,Ex de,Brass,17.0,26.3,32SS2K1RA
+CMP,SS2K,32,M32,Double Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,17.0,26.3,32SS2K1RA5
+CMP,SS2K,32,M32,Double Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,17.0,26.3,32SS2K1RA4
+CMP,SS2K,32,M32,Double Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,17.0,26.3,32SS2K1RA1
+CMP,SS2K,40,M40,Double Seal,Unarmoured,Explosion Proof,Ex de,Brass,23.5,32.2,40SS2K1RA
+CMP,SS2K,40,M40,Double Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,23.5,32.2,40SS2K1RA5
+CMP,SS2K,40,M40,Double Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,23.5,32.2,40SS2K1RA4
+CMP,SS2K,40,M40,Double Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,23.5,32.2,40SS2K1RA1
+CMP,SS2K,50S,M50,Double Seal,Unarmoured,Explosion Proof,Ex de,Brass,31.0,38.2,50SSS2K1RA
+CMP,SS2K,50S,M50,Double Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,31.0,38.2,50SSS2K1RA5
+CMP,SS2K,50S,M50,Double Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,31.0,38.2,50SSS2K1RA4
+CMP,SS2K,50S,M50,Double Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,31.0,38.2,50SSS2K1RA1
+CMP,SS2K,50,M50,Double Seal,Unarmoured,Explosion Proof,Ex de,Brass,35.6,44.0,50SS2K1RA
+CMP,SS2K,50,M50,Double Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,35.6,44.0,50SS2K1RA5
+CMP,SS2K,50,M50,Double Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,35.6,44.0,50SS2K1RA4
+CMP,SS2K,50,M50,Double Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,35.6,44.0,50SS2K1RA1
+CMP,SS2K,63S,M63,Double Seal,Unarmoured,Explosion Proof,Ex de,Brass,41.5,49.9,63SSS2K1RA
+CMP,SS2K,63S,M63,Double Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,41.5,49.9,63SSS2K1RA5
+CMP,SS2K,63S,M63,Double Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,41.5,49.9,63SSS2K1RA4
+CMP,SS2K,63S,M63,Double Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,41.5,49.9,63SSS2K1RA1
+CMP,SS2K,63,M63,Double Seal,Unarmoured,Explosion Proof,Ex de,Brass,47.2,55.9,63SS2K1RA
+CMP,SS2K,63,M63,Double Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,47.2,55.9,63SS2K1RA5
+CMP,SS2K,63,M63,Double Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,47.2,55.9,63SS2K1RA4
+CMP,SS2K,63,M63,Double Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,47.2,55.9,63SS2K1RA1
+CMP,SS2K,75S,M75,Double Seal,Unarmoured,Explosion Proof,Ex de,Brass,54.0,61.9,75SSS2K1RA
+CMP,SS2K,75S,M75,Double Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,54.0,61.9,75SSS2K1RA5
+CMP,SS2K,75S,M75,Double Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,54.0,61.9,75SSS2K1RA4
+CMP,SS2K,75S,M75,Double Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,54.0,61.9,75SSS2K1RA1
+CMP,SS2K,75,M75,Double Seal,Unarmoured,Explosion Proof,Ex de,Brass,61.1,67.9,75SS2K1RA
+CMP,SS2K,75,M75,Double Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,61.1,67.9,75SS2K1RA5
+CMP,SS2K,75,M75,Double Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,61.1,67.9,75SS2K1RA4
+CMP,SS2K,75,M75,Double Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,61.1,67.9,75SS2K1RA1
+CMP,SS2K,90,M90,Double Seal,Unarmoured,Explosion Proof,Ex de,Brass,66.6,79.9,90SS2K1RA
+CMP,SS2K,90,M90,Double Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,66.6,79.9,90SS2K1RA5
+CMP,SS2K,90,M90,Double Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,66.6,79.9,90SS2K1RA4
+CMP,SS2K,90,M90,Double Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,66.6,79.9,90SS2K1RA1
+CMP,SS2K,100,M100,Double Seal,Unarmoured,Explosion Proof,Ex de,Brass,76.0,91.0,100SS2K1RA
+CMP,SS2K,100,M100,Double Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,76.0,91.0,100SS2K1RA5
+CMP,SS2K,100,M100,Double Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,76.0,91.0,100SS2K1RA4
+CMP,SS2K,100,M100,Double Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,76.0,91.0,100SS2K1RA1
+CMP,SS2K,115,M115,Double Seal,Unarmoured,Explosion Proof,Ex de,Brass,86.0,97.9,115SS2K1RA
+CMP,SS2K,115,M115,Double Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,86.0,97.9,115SS2K1RA5
+CMP,SS2K,115,M115,Double Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,86.0,97.9,115SS2K1RA4
+CMP,SS2K,115,M115,Double Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,86.0,97.9,115SS2K1RA1
+CMP,SS2K,130,M130,Double Seal,Unarmoured,Explosion Proof,Ex de,Brass,97.0,114.9,130SS2K1RA
+CMP,SS2K,130,M130,Double Seal,Unarmoured,Explosion Proof,Ex de,Nickel Plated Brass,97.0,114.9,130SS2K1RA5
+CMP,SS2K,130,M130,Double Seal,Unarmoured,Explosion Proof,Ex de,Stainless Steel,97.0,114.9,130SS2K1RA4
+CMP,SS2K,130,M130,Double Seal,Unarmoured,Explosion Proof,Ex de,Aluminium,97.0,114.9,130SS2K1RA1
+CMP,TE1FU,20S16,M20,Double Seal,SWA & STA,Explosion Proof,Ex de,Brass,6.1,13.1,20S16TE1FU1RA
+CMP,TE1FU,20S16,M20,Double Seal,SWA & STA,Explosion Proof,Ex de,Nickel Plated Brass,6.1,13.1,20S16TE1FU1RA5
+CMP,TE1FU,20S16,M20,Double Seal,SWA & STA,Explosion Proof,Ex de,Stainless Steel,6.1,13.1,20S16TE1FU1RA4
+CMP,TE1FU,20S16,M20,Double Seal,SWA & STA,Explosion Proof,Ex de,Aluminium,6.1,13.1,20S16TE1FU1RA1
+CMP,TE1FU,20S,M20,Double Seal,SWA & STA,Explosion Proof,Ex de,Brass,9.5,15.9,20STE1FU1RA
+CMP,TE1FU,20S,M20,Double Seal,SWA & STA,Explosion Proof,Ex de,Nickel Plated Brass,9.5,15.9,20STE1FU1RA5
+CMP,TE1FU,20S,M20,Double Seal,SWA & STA,Explosion Proof,Ex de,Stainless Steel,9.5,15.9,20STE1FU1RA4
+CMP,TE1FU,20S,M20,Double Seal,SWA & STA,Explosion Proof,Ex de,Aluminium,9.5,15.9,20STE1FU1RA1
+CMP,TE1FU,20,M20,Double Seal,SWA & STA,Explosion Proof,Ex de,Brass,12.5,20.9,20TE1FU1RA
+CMP,TE1FU,20,M20,Double Seal,SWA & STA,Explosion Proof,Ex de,Nickel Plated Brass,12.5,20.9,20TE1FU1RA5
+CMP,TE1FU,20,M20,Double Seal,SWA & STA,Explosion Proof,Ex de,Stainless Steel,12.5,20.9,20TE1FU1RA4
+CMP,TE1FU,20,M20,Double Seal,SWA & STA,Explosion Proof,Ex de,Aluminium,12.5,20.9,20TE1FU1RA1
+CMP,TE1FU,25S,M25,Double Seal,SWA & STA,Explosion Proof,Ex de,Brass,14.0,22.0,25STE1FU1RA
+CMP,TE1FU,25S,M25,Double Seal,SWA & STA,Explosion Proof,Ex de,Nickel Plated Brass,14.0,22.0,25STE1FU1RA5
+CMP,TE1FU,25S,M25,Double Seal,SWA & STA,Explosion Proof,Ex de,Stainless Steel,14.0,22.0,25STE1FU1RA4
+CMP,TE1FU,25S,M25,Double Seal,SWA & STA,Explosion Proof,Ex de,Aluminium,14.0,22.0,25STE1FU1RA1
+CMP,TE1FU,25,M25,Double Seal,SWA & STA,Explosion Proof,Ex de,Brass,18.2,26.2,25TE1FU1RA
+CMP,TE1FU,25,M25,Double Seal,SWA & STA,Explosion Proof,Ex de,Nickel Plated Brass,18.2,26.2,25TE1FU1RA5
+CMP,TE1FU,25,M25,Double Seal,SWA & STA,Explosion Proof,Ex de,Stainless Steel,18.2,26.2,25TE1FU1RA4
+CMP,TE1FU,25,M25,Double Seal,SWA & STA,Explosion Proof,Ex de,Aluminium,18.2,26.2,25TE1FU1RA1
+CMP,TE1FU,32,M32,Double Seal,SWA & STA,Explosion Proof,Ex de,Brass,23.7,33.9,32TE1FU1RA
+CMP,TE1FU,32,M32,Double Seal,SWA & STA,Explosion Proof,Ex de,Nickel Plated Brass,23.7,33.9,32TE1FU1RA5
+CMP,TE1FU,32,M32,Double Seal,SWA & STA,Explosion Proof,Ex de,Stainless Steel,23.7,33.9,32TE1FU1RA4
+CMP,TE1FU,32,M32,Double Seal,SWA & STA,Explosion Proof,Ex de,Aluminium,23.7,33.9,32TE1FU1RA1
+CMP,TE1FU,40,M40,Double Seal,SWA & STA,Explosion Proof,Ex de,Brass,27.9,40.4,40TE1FU1RA
+CMP,TE1FU,40,M40,Double Seal,SWA & STA,Explosion Proof,Ex de,Nickel Plated Brass,27.9,40.4,40TE1FU1RA5
+CMP,TE1FU,40,M40,Double Seal,SWA & STA,Explosion Proof,Ex de,Stainless Steel,27.9,40.4,40TE1FU1RA4
+CMP,TE1FU,40,M40,Double Seal,SWA & STA,Explosion Proof,Ex de,Aluminium,27.9,40.4,40TE1FU1RA1
+CMP,TE1FU,50S,M50,Double Seal,SWA & STA,Explosion Proof,Ex de,Brass,35.2,46.7,50STE1FU1RA
+CMP,TE1FU,50S,M50,Double Seal,SWA & STA,Explosion Proof,Ex de,Nickel Plated Brass,35.2,46.7,50STE1FU1RA5
+CMP,TE1FU,50S,M50,Double Seal,SWA & STA,Explosion Proof,Ex de,Stainless Steel,35.2,46.7,50STE1FU1RA4
+CMP,TE1FU,50S,M50,Double Seal,SWA & STA,Explosion Proof,Ex de,Aluminium,35.2,46.7,50STE1FU1RA1
+CMP,TE1FU,50,M50,Double Seal,SWA & STA,Explosion Proof,Ex de,Brass,40.4,53.0,50TE1FU1RA
+CMP,TE1FU,50,M50,Double Seal,SWA & STA,Explosion Proof,Ex de,Nickel Plated Brass,40.4,53.0,50TE1FU1RA5
+CMP,TE1FU,50,M50,Double Seal,SWA & STA,Explosion Proof,Ex de,Stainless Steel,40.4,53.0,50TE1FU1RA4
+CMP,TE1FU,50,M50,Double Seal,SWA & STA,Explosion Proof,Ex de,Aluminium,40.4,53.0,50TE1FU1RA1
+CMP,TE1FU,63S,M63,Double Seal,SWA & STA,Explosion Proof,Ex de,Brass,45.6,59.4,63STE1FU1RA
+CMP,TE1FU,63S,M63,Double Seal,SWA & STA,Explosion Proof,Ex de,Nickel Plated Brass,45.6,59.4,63STE1FU1RA5
+CMP,TE1FU,63S,M63,Double Seal,SWA & STA,Explosion Proof,Ex de,Stainless Steel,45.6,59.4,63STE1FU1RA4
+CMP,TE1FU,63S,M63,Double Seal,SWA & STA,Explosion Proof,Ex de,Aluminium,45.6,59.4,63STE1FU1RA1
+CMP,TE1FU,63,M63,Double Seal,SWA & STA,Explosion Proof,Ex de,Brass,54.6,65.8,63TE1FU1RA
+CMP,TE1FU,63,M63,Double Seal,SWA & STA,Explosion Proof,Ex de,Nickel Plated Brass,54.6,65.8,63TE1FU1RA5
+CMP,TE1FU,63,M63,Double Seal,SWA & STA,Explosion Proof,Ex de,Stainless Steel,54.6,65.8,63TE1FU1RA4
+CMP,TE1FU,63,M63,Double Seal,SWA & STA,Explosion Proof,Ex de,Aluminium,54.6,65.8,63TE1FU1RA1
+CMP,TE1FU,75S,M75,Double Seal,SWA & STA,Explosion Proof,Ex de,Brass,59.0,72.0,75STE1FU1RA
+CMP,TE1FU,75S,M75,Double Seal,SWA & STA,Explosion Proof,Ex de,Nickel Plated Brass,59.0,72.0,75STE1FU1RA5
+CMP,TE1FU,75S,M75,Double Seal,SWA & STA,Explosion Proof,Ex de,Stainless Steel,59.0,72.0,75STE1FU1RA4
+CMP,TE1FU,75S,M75,Double Seal,SWA & STA,Explosion Proof,Ex de,Aluminium,59.0,72.0,75STE1FU1RA1
+CMP,TE1FU,75,M75,Double Seal,SWA & STA,Explosion Proof,Ex de,Brass,66.7,78.4,75TE1FU1RA
+CMP,TE1FU,75,M75,Double Seal,SWA & STA,Explosion Proof,Ex de,Nickel Plated Brass,66.7,78.4,75TE1FU1RA5
+CMP,TE1FU,75,M75,Double Seal,SWA & STA,Explosion Proof,Ex de,Stainless Steel,66.7,78.4,75TE1FU1RA4
+CMP,TE1FU,75,M75,Double Seal,SWA & STA,Explosion Proof,Ex de,Aluminium,66.7,78.4,75TE1FU1RA1
+CMP,TE1FU,90,M90,Double Seal,SWA & STA,Explosion Proof,Ex de,Brass,76.2,90.3,90TE1FU1RA
+CMP,TE1FU,90,M90,Double Seal,SWA & STA,Explosion Proof,Ex de,Nickel Plated Brass,76.2,90.3,90TE1FU1RA5
+CMP,TE1FU,90,M90,Double Seal,SWA & STA,Explosion Proof,Ex de,Stainless Steel,76.2,90.3,90TE1FU1RA4
+CMP,TE1FU,90,M90,Double Seal,SWA & STA,Explosion Proof,Ex de,Aluminium,76.2,90.3,90TE1FU1RA1
+CMP,TE1FU,100,M100,Double Seal,SWA & STA,Explosion Proof,Ex de,Brass,86.1,101.4,100TE1FU1RA
+CMP,TE1FU,100,M100,Double Seal,SWA & STA,Explosion Proof,Ex de,Nickel Plated Brass,86.1,101.4,100TE1FU1RA5
+CMP,TE1FU,100,M100,Double Seal,SWA & STA,Explosion Proof,Ex de,Stainless Steel,86.1,101.4,100TE1FU1RA4
+CMP,TE1FU,100,M100,Double Seal,SWA & STA,Explosion Proof,Ex de,Aluminium,86.1,101.4,100TE1FU1RA1
+CMP,TE1FU,115,M115,Double Seal,SWA & STA,Explosion Proof,Ex de,Brass,101.5,110.2,115TE1FU1RA
+CMP,TE1FU,115,M115,Double Seal,SWA & STA,Explosion Proof,Ex de,Nickel Plated Brass,101.5,110.2,115TE1FU1RA5
+CMP,TE1FU,115,M115,Double Seal,SWA & STA,Explosion Proof,Ex de,Stainless Steel,101.5,110.2,115TE1FU1RA4
+CMP,TE1FU,115,M115,Double Seal,SWA & STA,Explosion Proof,Ex de,Aluminium,101.5,110.2,115TE1FU1RA1
+CMP,TE1FU,130,M130,Double Seal,SWA & STA,Explosion Proof,Ex de,Brass,110.2,123.2,130TE1FU1RA
+CMP,TE1FU,130,M130,Double Seal,SWA & STA,Explosion Proof,Ex de,Nickel Plated Brass,110.2,123.2,130TE1FU1RA5
+CMP,TE1FU,130,M130,Double Seal,SWA & STA,Explosion Proof,Ex de,Stainless Steel,110.2,123.2,130TE1FU1RA4
+CMP,TE1FU,130,M130,Double Seal,SWA & STA,Explosion Proof,Ex de,Aluminium,110.2,123.2,130TE1FU1RA1

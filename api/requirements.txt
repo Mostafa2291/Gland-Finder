@@ -1,0 +1,4 @@
+fastapi0.104.1
+uvicorn0.24.0
+sqlalchemy2.0.23
+psycopg2-binary2.9.9
