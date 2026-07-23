@@ -33,7 +33,31 @@ export default function App() {
         if (!response.ok) throw new Error("Network response was not ok");
 
         const data = await response.json();
-        const glands = Array.isArray(data) ? data : (data.recommended_glands || []);
+        let glands = Array.isArray(data) ? data : (data.recommended_glands || []);
+
+        // If a target diameter was given, find the gland whose overall range
+        // midpoint is closest to it and mark it as the recommended choice.
+        if (cableOD && !isNaN(parseFloat(cableOD)) && glands.length > 0) {
+          const target = parseFloat(cableOD);
+          let bestIdx = 0;
+          let bestDiff = Infinity;
+          glands.forEach((g, idx) => {
+            const midpoint = (g.min_cable_dia_mm + g.max_cable_dia_mm) / 2;
+            const diff = Math.abs(midpoint - target);
+            if (diff < bestDiff) {
+              bestDiff = diff;
+              bestIdx = idx;
+            }
+          });
+          const best = glands[bestIdx];
+          glands = [
+            { ...best, __recommended: true },
+            ...glands.filter((_, idx) => idx !== bestIdx).map(g => ({ ...g, __recommended: false })),
+          ];
+        } else {
+          glands = glands.map(g => ({ ...g, __recommended: false }));
+        }
+
         setFilteredGlands(glands);
 
         // Deselect gland if it's no longer in the filtered list
@@ -230,7 +254,7 @@ export default function App() {
           {selectedGland && (
             <div className="bg-white border-2 border-blue-500 rounded-2xl p-6 shadow-lg relative overflow-hidden">
               <div className="absolute top-0 right-0 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider">
-                Selected Specification
+                {selectedGland.__recommended ? 'Best Fit for Your Diameter' : 'Selected Specification'}
               </div>
               <div className="flex justify-between items-start mb-6">
                 <div>
@@ -321,11 +345,18 @@ export default function App() {
                     filteredGlands.map((gland, idx) => (
                       <tr
                         key={idx}
-                        className={`hover:bg-blue-50 transition-colors cursor-pointer ${selectedGland?.ordering_reference === gland.ordering_reference ? 'bg-blue-50' : ''}`}
+                        className={`hover:bg-blue-50 transition-colors cursor-pointer ${selectedGland?.ordering_reference === gland.ordering_reference ? 'bg-blue-50' : ''} ${gland.__recommended ? 'bg-amber-50' : ''}`}
                         onClick={() => setSelectedGland(gland)}
                       >
                         <td className="px-4 py-3 font-bold text-slate-800 whitespace-nowrap">
-                          {gland.ordering_reference}
+                          <div className="flex items-center gap-2">
+                            {gland.ordering_reference}
+                            {gland.__recommended && (
+                              <span className="text-[10px] bg-amber-400 text-amber-900 font-bold px-1.5 py-0.5 rounded uppercase tracking-wide">
+                                Best Fit
+                              </span>
+                            )}
+                          </div>
                         </td>
                         <td className="px-4 py-3 text-slate-600">
                           <span className="bg-slate-100 px-2 py-0.5 rounded font-medium border border-slate-200">{gland.gland_model}</span>
