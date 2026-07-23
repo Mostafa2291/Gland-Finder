@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Depends, Query
 from fastapi.middleware.cors import CORSMiddleware
-from sqlalchemy import create_engine, Column, String, Float
+from sqlalchemy import create_engine, Column, String, Float, Integer
 from sqlalchemy.orm import declarative_base, sessionmaker, Session
 from sqlalchemy.pool import NullPool
 from urllib.parse import quote_plus
@@ -15,17 +15,14 @@ DB_NAME = "postgres"
 encoded_password = quote_plus(DB_PASSWORD)
 SQLALCHEMY_DATABASE_URL = f"postgresql://{DB_USER}:{encoded_password}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 
-# NullPool is CRITICAL for Vercel. Serverless functions spin up and down constantly. 
-# This prevents them from holding open zombie connections and crashing Supabase.
 engine = create_engine(SQLALCHEMY_DATABASE_URL, poolclass=NullPool)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
 # --- 2. Database Model ---
-# This EXACTLY matches the master_gland_database.csv we created.
 class CableGland(Base):
-    __tablename__ = "glands" # Ensure this matches your Supabase table name!
-    
+    __tablename__ = "glands"
+
     ordering_reference = Column(String, primary_key=True)
     manufacturer = Column(String)
     gland_model = Column(String)
@@ -47,7 +44,7 @@ def get_db():
         db.close()
 
 # --- 3. FastAPI Application ---
-app = FastAPI(title="Cable Gland Technical Office API")
+app = FastAPI(title="Cable Gland Selector")
 
 app.add_middleware(
     CORSMiddleware,
@@ -63,34 +60,35 @@ def search_glands(
     environment: str = Query(None),
     sealing: str = Query(None),
     material: str = Query(None),
+    thread: str = Query(None),
     cable_od: float = Query(None),
     db: Session = Depends(get_db)
 ):
     query = db.query(CableGland)
 
-    # Apply filters dynamically if they are provided
     if armour and armour != "All":
         query = query.filter(CableGland.armour_compatibility.ilike(f"%{armour}%"))
-        
+
     if environment and environment != "All":
         query = query.filter(CableGland.environment.ilike(f"%{environment}%"))
-        
+
     if sealing and sealing != "All":
         query = query.filter(CableGland.sealing_type.ilike(f"%{sealing}%"))
-        
+
     if material and material != "All":
         query = query.filter(CableGland.material.ilike(f"%{material}%"))
-        
+
+    if thread and thread != "All":
+        query = query.filter(CableGland.entry_thread.ilike(f"%{thread}%"))
+
     if cable_od is not None:
-        # The Cable OD MUST be greater than or equal to the minimum, AND less than or equal to the maximum
         query = query.filter(
             CableGland.min_cable_dia_mm <= cable_od,
             CableGland.max_cable_dia_mm >= cable_od
         )
 
     results = query.all()
-    
-    # Return as JSON
+
     return [
         {
             "ordering_reference": g.ordering_reference,

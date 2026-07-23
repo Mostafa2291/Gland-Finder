@@ -7,6 +7,7 @@ export default function App() {
   const [sealingType, setSealingType] = useState('All');
   const [environment, setEnvironment] = useState('All');
   const [material, setMaterial] = useState('All');
+  const [thread, setThread] = useState('All');
   const [cableOD, setCableOD] = useState('');
   const [selectedGland, setSelectedGland] = useState(null);
 
@@ -24,6 +25,7 @@ export default function App() {
         if (sealingType !== 'All') params.append('sealing', sealingType);
         if (environment !== 'All') params.append('environment', environment);
         if (material !== 'All') params.append('material', material);
+        if (thread !== 'All') params.append('thread', thread);
         if (cableOD && !isNaN(parseFloat(cableOD))) params.append('cable_od', cableOD);
 
         const response = await fetch(`/api/search?${params.toString()}`);
@@ -52,13 +54,14 @@ export default function App() {
     }, 300);
 
     return () => clearTimeout(delayDebounceFn);
-  }, [armourType, sealingType, environment, material, cableOD]);
+  }, [armourType, sealingType, environment, material, thread, cableOD]);
 
   // Dropdown Options
-  const armourOptions = ['All', 'Unarmoured', 'SWA', 'STA', 'AWA', 'SWA & STA', 'SWA & AWA', 'Braid & STA'];
+  const armourOptions = ['All', 'Unarmoured', 'SWA', 'STA'];
   const sealingOptions = ['All', 'Single Seal', 'Double Seal'];
   const envOptions = ['All', 'Industrial / Safe', 'Explosion Proof'];
   const materialOptions = ['All', 'Brass', 'Nickel Plated Brass', 'Stainless Steel', 'Aluminium'];
+  const threadOptions = ['All', 'M16', 'M20', 'M25', 'M32', 'M40', 'M50', 'M63', 'M75', 'M90', 'M100', 'M115', 'M130'];
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-blue-100 selection:text-blue-900">
@@ -128,6 +131,21 @@ export default function App() {
                 </select>
               </div>
 
+              {/* Entry Thread */}
+              <div>
+                <label className="block text-sm font-semibold text-slate-700 mb-1.5 flex items-center">
+                  <Settings2 className="h-4 w-4 mr-1.5 text-slate-400" />
+                  Entry Thread
+                </label>
+                <select
+                  value={thread}
+                  onChange={(e) => setThread(e.target.value)}
+                  className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none bg-slate-50 hover:bg-white appearance-none cursor-pointer"
+                >
+                  {threadOptions.map(opt => <option key={opt} value={opt}>{opt}</option>)}
+                </select>
+              </div>
+
               {/* Sealing Type */}
               <div>
                 <label className="block text-sm font-semibold text-slate-700 mb-1.5 flex items-center">
@@ -176,7 +194,7 @@ export default function App() {
               <div className="pt-4 border-t border-slate-100">
                 <button
                   onClick={() => {
-                    setArmourType('All'); setSealingType('All'); setEnvironment('All'); setMaterial('All'); setCableOD(''); setSelectedGland(null);
+                    setArmourType('All'); setSealingType('All'); setEnvironment('All'); setMaterial('All'); setThread('All'); setCableOD(''); setSelectedGland(null);
                   }}
                   className="w-full py-2.5 text-sm font-semibold text-slate-600 bg-slate-100 hover:bg-slate-200 rounded-xl transition-colors"
                 >
@@ -220,6 +238,9 @@ export default function App() {
                     {selectedGland.ordering_reference}
                   </h3>
                   <p className="text-slate-500 font-medium">{selectedGland.manufacturer} {selectedGland.gland_model} Series</p>
+                  <span className="inline-block mt-1 text-xs bg-blue-50 text-blue-700 border border-blue-100 px-2 py-0.5 rounded-md font-semibold">
+                    {selectedGland.sealing_type}
+                  </span>
                 </div>
                 <button
                   onClick={() => setSelectedGland(null)}
@@ -251,6 +272,10 @@ export default function App() {
 
               <div className="grid md:grid-cols-2 gap-x-8 gap-y-3 text-sm">
                 <div className="flex justify-between border-b border-slate-100 pb-2">
+                  <span className="text-slate-500 font-medium">Sealing Type</span>
+                  <span className="font-semibold text-slate-800 text-right">{selectedGland.sealing_type}</span>
+                </div>
+                <div className="flex justify-between border-b border-slate-100 pb-2">
                   <span className="text-slate-500 font-medium">Material</span>
                   <span className="font-semibold text-slate-800 text-right">{selectedGland.material}</span>
                 </div>
@@ -277,6 +302,7 @@ export default function App() {
                     <th className="px-4 py-3">Thread</th>
                     <th className="px-4 py-3">Range (mm)</th>
                     <th className="px-4 py-3 hidden sm:table-cell">Armour</th>
+                    <th className="px-4 py-3 hidden lg:table-cell">Seal</th>
                     <th className="px-4 py-3 hidden md:table-cell">Material</th>
                     <th className="px-4 py-3 text-right">Action</th>
                   </tr>
@@ -312,6 +338,9 @@ export default function App() {
                         </td>
                         <td className="px-4 py-3 hidden sm:table-cell text-slate-600">
                           {gland.armour_compatibility}
+                        </td>
+                        <td className="px-4 py-3 hidden lg:table-cell text-slate-600">
+                          {gland.sealing_type}
                         </td>
                         <td className="px-4 py-3 hidden md:table-cell text-slate-600">
                           {gland.material}
