@@ -19,24 +19,23 @@ export default function App() {
       setIsLoading(true);
       try {
         const params = new URLSearchParams();
-        
+
         if (armourType !== 'All') params.append('armour', armourType);
         if (sealingType !== 'All') params.append('sealing', sealingType);
         if (environment !== 'All') params.append('environment', environment);
         if (material !== 'All') params.append('material', material);
-        if (cableOD && !isNaN(parseFloat(cableOD))) params.append('overall_dia', cableOD);
+        if (cableOD && !isNaN(parseFloat(cableOD))) params.append('cable_od', cableOD);
 
-        // NOTE: For local testing with your Python backend, change the URL to:
-        // const response = await fetch(`http://127.0.0.1:8000/api/search?${params.toString()}`);
         const response = await fetch(`/api/search?${params.toString()}`);
-        
+
         if (!response.ok) throw new Error("Network response was not ok");
-        
+
         const data = await response.json();
-        setFilteredGlands(data.recommended_glands || []);
-        
+        const glands = Array.isArray(data) ? data : (data.recommended_glands || []);
+        setFilteredGlands(glands);
+
         // Deselect gland if it's no longer in the filtered list
-        if (selectedGland && !(data.recommended_glands || []).find(g => g.ordering_reference === selectedGland.ordering_reference)) {
+        if (selectedGland && !glands.find(g => g.ordering_reference === selectedGland.ordering_reference)) {
             setSelectedGland(null);
         }
       } catch (error) {
@@ -63,7 +62,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-blue-100 selection:text-blue-900">
-      
+
       {/* Header */}
       <header className="bg-slate-900 text-white shadow-md sticky top-0 z-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
@@ -84,7 +83,7 @@ export default function App() {
       </header>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col lg:flex-row gap-8 items-start">
-        
+
         {/* --- LEFT SIDEBAR: FILTERS --- */}
         <aside className="w-full lg:w-80 flex-shrink-0 space-y-6">
           <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 overflow-hidden relative">
@@ -103,8 +102,8 @@ export default function App() {
                   Cable Outer Dia. (mm)
                 </label>
                 <div className="relative">
-                  <input 
-                    type="number" 
+                  <input
+                    type="number"
                     value={cableOD}
                     onChange={(e) => setCableOD(e.target.value)}
                     placeholder="e.g. 14.5"
@@ -120,7 +119,7 @@ export default function App() {
                   <Shield className="h-4 w-4 mr-1.5 text-slate-400" />
                   Armour Type
                 </label>
-                <select 
+                <select
                   value={armourType}
                   onChange={(e) => setArmourType(e.target.value)}
                   className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none bg-slate-50 hover:bg-white appearance-none cursor-pointer"
@@ -135,7 +134,7 @@ export default function App() {
                   <Layers className="h-4 w-4 mr-1.5 text-slate-400" />
                   Sealing Type
                 </label>
-                <select 
+                <select
                   value={sealingType}
                   onChange={(e) => setSealingType(e.target.value)}
                   className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none bg-slate-50 hover:bg-white appearance-none cursor-pointer"
@@ -150,7 +149,7 @@ export default function App() {
                   <Factory className="h-4 w-4 mr-1.5 text-slate-400" />
                   Environment
                 </label>
-                <select 
+                <select
                   value={environment}
                   onChange={(e) => setEnvironment(e.target.value)}
                   className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none bg-slate-50 hover:bg-white appearance-none cursor-pointer"
@@ -165,7 +164,7 @@ export default function App() {
                   <Box className="h-4 w-4 mr-1.5 text-slate-400" />
                   Material
                 </label>
-                <select 
+                <select
                   value={material}
                   onChange={(e) => setMaterial(e.target.value)}
                   className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none bg-slate-50 hover:bg-white appearance-none cursor-pointer"
@@ -175,7 +174,7 @@ export default function App() {
               </div>
 
               <div className="pt-4 border-t border-slate-100">
-                <button 
+                <button
                   onClick={() => {
                     setArmourType('All'); setSealingType('All'); setEnvironment('All'); setMaterial('All'); setCableOD(''); setSelectedGland(null);
                   }}
@@ -190,7 +189,7 @@ export default function App() {
 
         {/* --- MAIN CENTER: RESULTS TABLE --- */}
         <div className="flex-1 w-full space-y-6">
-          
+
           {/* Results Summary Bar */}
           <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-4 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2">
@@ -201,7 +200,7 @@ export default function App() {
                 {isLoading ? 'Searching database...' : <>Found <strong className="text-slate-900 text-lg">{filteredGlands.length}</strong> matching glands</>}
               </span>
             </div>
-            
+
             <div className="flex flex-wrap gap-2 justify-center">
                {cableOD && <span className="text-xs bg-blue-50 text-blue-700 border border-blue-100 px-2 py-1 rounded-md font-medium">OD: {cableOD}mm</span>}
                {armourType !== 'All' && <span className="text-xs bg-slate-100 text-slate-600 border border-slate-200 px-2 py-1 rounded-md">{armourType}</span>}
@@ -222,7 +221,7 @@ export default function App() {
                   </h3>
                   <p className="text-slate-500 font-medium">{selectedGland.manufacturer} {selectedGland.gland_model} Series</p>
                 </div>
-                <button 
+                <button
                   onClick={() => setSelectedGland(null)}
                   className="text-slate-400 hover:text-slate-600 transition-colors"
                 >
@@ -294,8 +293,8 @@ export default function App() {
                     </tr>
                   ) : filteredGlands.length > 0 ? (
                     filteredGlands.map((gland, idx) => (
-                      <tr 
-                        key={idx} 
+                      <tr
+                        key={idx}
                         className={`hover:bg-blue-50 transition-colors cursor-pointer ${selectedGland?.ordering_reference === gland.ordering_reference ? 'bg-blue-50' : ''}`}
                         onClick={() => setSelectedGland(gland)}
                       >
@@ -318,7 +317,7 @@ export default function App() {
                           {gland.material}
                         </td>
                         <td className="px-4 py-3 text-right">
-                          <button 
+                          <button
                             className="text-blue-600 hover:text-blue-800 font-semibold text-xs uppercase tracking-wide bg-blue-50 hover:bg-blue-100 px-3 py-1.5 rounded-lg transition-colors"
                             onClick={(e) => {
                                 e.stopPropagation();
