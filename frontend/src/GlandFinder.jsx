@@ -10,6 +10,16 @@ export default function GlandFinder() {
   const [cableOD, setCableOD] = useState('');
   const [selectedGland, setSelectedGland] = useState(null);
 
+  const handleCableODChange = (value) => {
+    setCableOD(value);
+    if (value && thread !== 'All') setThread('All');
+  };
+
+  const handleThreadChange = (value) => {
+    setThread(value);
+    if (value !== 'All' && cableOD) setCableOD('');
+  };
+
   const [filteredGlands, setFilteredGlands] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -100,12 +110,16 @@ export default function GlandFinder() {
                 <input
                   type="number"
                   value={cableOD}
-                  onChange={(e) => setCableOD(e.target.value)}
-                  placeholder="e.g. 14.5"
-                  className="w-full pl-4 pr-10 py-2.5 rounded-sm border border-line focus:ring-2 focus:ring-red focus:border-red transition-all outline-none bg-panel-2 focus:bg-white"
+                  onChange={(e) => handleCableODChange(e.target.value)}
+                  disabled={thread !== 'All'}
+                  placeholder={thread !== 'All' ? 'Disabled (thread set)' : 'e.g. 14.5'}
+                  className="w-full pl-4 pr-10 py-2.5 rounded-sm border border-line focus:ring-2 focus:ring-red focus:border-red transition-all outline-none bg-panel-2 focus:bg-white disabled:opacity-50 disabled:cursor-not-allowed disabled:bg-panel-2"
                 />
                 <span className="absolute right-3 top-1/2 -translate-y-1/2 text-ink-faint text-sm font-medium">mm</span>
               </div>
+              {thread !== 'All' && (
+                <p className="text-xs text-ink-faint mt-1">Clear Entry Thread to filter by OD instead.</p>
+              )}
             </div>
 
             <div>
@@ -129,11 +143,15 @@ export default function GlandFinder() {
               </label>
               <select
                 value={thread}
-                onChange={(e) => setThread(e.target.value)}
-                className="w-full px-4 py-2.5 rounded-sm border border-line focus:ring-2 focus:ring-red focus:border-red transition-all outline-none bg-panel-2 hover:bg-white cursor-pointer"
+                onChange={(e) => handleThreadChange(e.target.value)}
+                disabled={!!cableOD}
+                className="w-full px-4 py-2.5 rounded-sm border border-line focus:ring-2 focus:ring-red focus:border-red transition-all outline-none bg-panel-2 hover:bg-white cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-panel-2"
               >
                 {threadOptions.map(opt => <option key={opt} value={opt}>{opt}</option>)}
               </select>
+              {!!cableOD && (
+                <p className="text-xs text-ink-faint mt-1">Clear Cable OD to filter by thread instead.</p>
+              )}
             </div>
 
             <div>

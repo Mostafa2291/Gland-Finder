@@ -72,3 +72,25 @@ h1, h2, h3, .display {
 .eyebrow::before {
   content: "\2014 ";
 }
+
+/* Global clickable cursor: any button, select, link, or explicitly
+   interactive element gets a pointer on hover — current and future ones
+   included — while disabled elements stay non-interactive. */
+button:not(:disabled),
+select:not(:disabled),
+a,
+[role="button"],
+[onclick],
+.cursor-pointer,
+input[type="checkbox"]:not(:disabled),
+input[type="radio"]:not(:disabled),
+input[type="submit"]:not(:disabled),
+input[type="button"]:not(:disabled) {
+  cursor: pointer;
+}
+
+button:disabled,
+select:disabled,
+input:disabled {
+  cursor: not-allowed;
+}
