@@ -287,6 +287,12 @@ export default function GlandFinder() {
                 <span className="text-ink-faint font-medium">Environment</span>
                 <span className="font-semibold text-ink text-right">{selectedGland.environment}</span>
               </div>
+              <div className="flex justify-between border-b border-line-soft pb-2">
+                <span className="text-ink-faint font-medium">Price</span>
+                <span className="font-semibold text-red text-right">
+                  {selectedGland.price != null ? `$${selectedGland.price.toLocaleString()}` : 'Not set'}
+                </span>
+              </div>
             </div>
           </div>
         )}
@@ -303,13 +309,14 @@ export default function GlandFinder() {
                   <th className="px-4 py-3 hidden sm:table-cell">Armour</th>
                   <th className="px-4 py-3 hidden lg:table-cell">Seal</th>
                   <th className="px-4 py-3 hidden md:table-cell">Material</th>
+                  <th className="px-4 py-3 text-right">Price</th>
                   <th className="px-4 py-3 text-right">Action</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-line-soft text-sm">
                 {isLoading ? (
                   <tr>
-                    <td colSpan="8" className="px-4 py-16 text-center">
+                    <td colSpan="9" className="px-4 py-16 text-center">
                       <div className="flex flex-col items-center justify-center text-ink-faint">
                         <Loader2 className="h-10 w-10 mb-3 animate-spin text-red" />
                         <p className="text-lg font-medium text-ink-soft">Querying Supabase...</p>
@@ -345,6 +352,9 @@ export default function GlandFinder() {
                       <td className="px-4 py-3 hidden sm:table-cell text-ink-soft">{gland.armour_compatibility}</td>
                       <td className="px-4 py-3 hidden lg:table-cell text-ink-soft">{gland.sealing_type}</td>
                       <td className="px-4 py-3 hidden md:table-cell text-ink-soft">{gland.material}</td>
+                      <td className="px-4 py-3 text-right font-semibold text-ink whitespace-nowrap">
+                        {gland.price != null ? `$${gland.price.toLocaleString()}` : '—'}
+                      </td>
                       <td className="px-4 py-3 text-right">
                         <button
                           className="text-red hover:text-red-dim font-semibold text-xs uppercase tracking-wide bg-red/5 hover:bg-red/10 px-3 py-1.5 rounded-sm transition-colors mono"
@@ -357,7 +367,7 @@ export default function GlandFinder() {
                   ))
                 ) : (
                   <tr>
-                    <td colSpan="8" className="px-4 py-12 text-center">
+                    <td colSpan="9" className="px-4 py-12 text-center">
                       <div className="flex flex-col items-center justify-center text-ink-faint">
                         <Search className="h-10 w-10 mb-3 opacity-20" />
                         <p className="text-lg font-medium text-ink-soft">No glands found</p>

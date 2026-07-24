@@ -35,6 +35,7 @@ class CableGland(Base):
     material = Column(String)
     min_cable_dia_mm = Column(Float)
     max_cable_dia_mm = Column(Float)
+    price = Column(Float)
 
 class Fixture(Base):
     __tablename__ = "fixtures"
@@ -134,6 +135,7 @@ def search_glands(
             "material": g.material,
             "min_cable_dia_mm": g.min_cable_dia_mm,
             "max_cable_dia_mm": g.max_cable_dia_mm,
+            "price": g.price,
         }
         for g in results
     ]
