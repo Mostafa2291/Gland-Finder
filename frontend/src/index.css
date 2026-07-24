@@ -1,7 +1,70 @@
 @import "tailwindcss";
 @config "../tailwind.config.js";
 
+@theme {
+  --color-paper: #FAF8F3;
+  --color-panel: #FFFFFF;
+  --color-panel-2: #F3F0E8;
+  --color-line: #E1DDD1;
+  --color-line-soft: #EDEAE1;
+  --color-red: #C81E2C;
+  --color-red-dim: #8f1219;
+  --color-steel: #55514A;
+  --color-ink: #17140F;
+  --color-ink-soft: #57534A;
+  --color-ink-faint: #6E6A5D;
+
+  --font-display: 'Oswald', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --font-sans: 'Inter', sans-serif;
+}
+
 body {
   margin: 0;
-  background-color: #f8fafc;
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .display {
+  font-family: var(--font-display);
+  letter-spacing: 0.01em;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+::selection {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.hazard-bar {
+  height: 7px;
+  background-image: repeating-linear-gradient(135deg, var(--color-ink) 0 9px, var(--color-paper) 9px 18px);
+  border-top: 1px solid var(--color-red);
+  border-bottom: 1px solid var(--color-red);
+}
+
+.hazard-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 14px;
+  border: 1px solid var(--color-ink);
+  background-image: repeating-linear-gradient(135deg, var(--color-ink) 0 4px, #fff 4px 8px);
+  border-radius: 1px;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: var(--color-red);
+  font-weight: 500;
+}
+.eyebrow::before {
+  content: "\2014 ";
 }
