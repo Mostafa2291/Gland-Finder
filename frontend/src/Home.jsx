@@ -53,10 +53,7 @@ export default function Home({ onSelect }) {
             <div className="hazard-tag" />
             <div className="h-40 flex items-center justify-center bg-panel-2 border-b border-line">
               {c.img ? (
-                <img src={c.img} alt={c.label} className="w-full h-full object-cover" style={{
-                  maskImage: 'radial-gradient(circle at 50% 50%, black 55%, transparent 88%)',
-                  WebkitMaskImage: 'radial-gradient(circle at 50% 50%, black 55%, transparent 88%)',
-                }} />
+                <img src={c.img} alt={c.label} className="w-full h-full object-cover" />
               ) : (
                 <span className="text-5xl font-bold text-ink-faint display">CG</span>
               )}
