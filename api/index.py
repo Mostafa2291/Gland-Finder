@@ -1,9 +1,14 @@
-from fastapi import FastAPI, Depends, Query
+from fastapi import FastAPI, Depends, Query, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy import create_engine, Column, String, Float, Integer, ARRAY
 from sqlalchemy.orm import declarative_base, sessionmaker, Session
 from sqlalchemy.pool import NullPool
 from urllib.parse import quote_plus
+import os
+import re
+import json
+import tempfile
+from google import genai
 
 # --- 1. Database Configuration ---
 DB_USER = "postgres.beluqoyvuchhoiyhbcfe"
@@ -18,6 +23,12 @@ SQLALCHEMY_DATABASE_URL = f"postgresql://{DB_USER}:{encoded_password}@{DB_HOST}:
 engine = create_engine(SQLALCHEMY_DATABASE_URL, poolclass=NullPool)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
+
+# --- RFQ Analyzer (Gemini) configuration ---
+# Set GEMINI_API_KEY in your Vercel project's Environment Variables (Settings ->
+# Environment Variables) and redeploy. Never hardcode the key here.
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
+gemini_client = genai.Client(api_key=GEMINI_API_KEY) if GEMINI_API_KEY else None
 
 # --- 2. Database Model ---
 class CableGland(Base):
@@ -249,6 +260,201 @@ def search_fixtures(
 @app.get("/api/health")
 def health_check():
     return {"status": "ok", "message": "Vercel API is running!"}
+
+
+# --- RFQ Analyzer ---
+
+RFQ_EXTRACTION_PROMPT = """You are a technical engineer in the Oil & Gas sector at Elsewedy Electric.
+Analyze the following RFQ text and extract every distinct product line item requested.
+Return ONLY a JSON array (no prose, no markdown fences) where each element is an object with:
+- "product_category": one of "Cable Glands", "Lighting Fixtures", "Junction Boxes", "Cables", "Other"
+
+If product_category is "Cable Glands", also include:
+- "material" (e.g. Brass, Nickel Plated Brass, Stainless Steel, Aluminium)
+- "armor" (e.g. SWA, steel wire armour, unarmoured)
+- "seal" (e.g. Single Seal, Double Seal)
+- "size" (overall/entry thread size or cable outer diameter, e.g. "M20" or "14.5mm")
+
+If product_category is "Lighting Fixtures", also include:
+- "type" (Linear, Highbay, Lowbay, Floodlight)
+- "temperature" (CCT, e.g. "5000K")
+- "power" (Wattage, e.g. "30W")
+- "luminous" (Lumens or lm/W, e.g. "1200LM")
+
+Always include if mentioned, else null:
+- "part_number"
+- "voltage"
+- "certificates" (e.g. ATEX, IECEx, Zone 1, Zone 2, Ex db)
+- "quantity"
+
+RFQ Text:
+{rfq_text}
+"""
+
+
+def _extract_number(text):
+    if not text:
+        return None
+    m = re.search(r"(\d+(?:\.\d+)?)", str(text))
+    return float(m.group(1)) if m else None
+
+
+def _extract_zone(text):
+    if not text:
+        return None
+    m = re.search(r"zone\s*([12])", str(text), re.IGNORECASE)
+    return int(m.group(1)) if m else None
+
+
+def _map_armour(text):
+    if not text:
+        return None
+    t = str(text).lower()
+    if any(k in t for k in ["swa", "sta", "armour", "armor"]) and "un" not in t:
+        return "Armoured"
+    if "unarmoured" in t or "unarmored" in t:
+        return "Unarmoured"
+    return None
+
+
+def _map_fixture_category(type_text):
+    if not type_text:
+        return None
+    t = str(type_text).lower()
+    if "linear" in t:
+        return "linear"
+    if "bay" in t or "high" in t or "low" in t:
+        return "baylight"
+    if "flood" in t:
+        return "floodlight"
+    return None
+
+
+def _gland_to_cart_item(g: CableGland):
+    return {
+        "ordering_reference": g.ordering_reference,
+        "manufacturer": g.manufacturer,
+        "gland_model": g.gland_model,
+        "gland_size": g.gland_size,
+        "entry_thread": g.entry_thread,
+        "sealing_type": g.sealing_type,
+        "armour_compatibility": g.armour_compatibility,
+        "environment": g.environment,
+        "material": g.material,
+        "min_cable_dia_mm": g.min_cable_dia_mm,
+        "max_cable_dia_mm": g.max_cable_dia_mm,
+        "price": g.price,
+    }
+
+
+@app.post("/api/rfq/analyze")
+async def analyze_rfq(file: UploadFile = File(...), db: Session = Depends(get_db)):
+    if not gemini_client:
+        return {"error": "GEMINI_API_KEY is not configured on the server."}
+
+    suffix = os.path.splitext(file.filename or "")[1] or ".bin"
+    with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as tmp:
+        tmp.write(await file.read())
+        tmp_path = tmp.name
+
+    uploaded = None
+    try:
+        uploaded = gemini_client.files.upload(file=tmp_path)
+
+        transcript_resp = gemini_client.models.generate_content(
+            model="gemini-3.5-flash",
+            contents=["Transcribe all text from this file exactly as it appears.", uploaded],
+        )
+        rfq_text = transcript_resp.text or ""
+
+        extract_resp = gemini_client.models.generate_content(
+            model="gemini-3.5-flash",
+            contents=RFQ_EXTRACTION_PROMPT.format(rfq_text=rfq_text),
+            config={"response_mime_type": "application/json"},
+        )
+
+        try:
+            products = json.loads(extract_resp.text)
+            if not isinstance(products, list):
+                products = [products]
+        except (json.JSONDecodeError, TypeError):
+            return {"error": "Could not parse structured data from the RFQ.", "raw": extract_resp.text}
+
+        results = []
+        for prod in products:
+            category = (prod.get("product_category") or "").lower()
+
+            if "gland" in category:
+                armour = _map_armour(prod.get("armor"))
+                sealing = prod.get("seal")
+                material = prod.get("material")
+                cable_od = _extract_number(prod.get("size"))
+
+                q = db.query(CableGland)
+                if armour:
+                    q = q.filter(CableGland.armour_compatibility.ilike(f"%{armour}%"))
+                if sealing:
+                    q = q.filter(CableGland.sealing_type.ilike(f"%{sealing}%"))
+                if material:
+                    q = q.filter(CableGland.material.ilike(f"%{material}%"))
+                if cable_od is not None:
+                    q = q.filter(
+                        CableGland.min_cable_dia_mm <= cable_od,
+                        CableGland.max_cable_dia_mm >= cable_od,
+                    )
+                match = q.first()
+
+                results.append({
+                    "requested": prod,
+                    "type": "gland",
+                    "matched": match is not None,
+                    "item": _gland_to_cart_item(match) if match else None,
+                    "reason": None if match else "no gland in the database matches these specs",
+                })
+
+            elif "light" in category or "fixture" in category:
+                fx_category = _map_fixture_category(prod.get("type"))
+                lumen = _extract_number(prod.get("luminous"))
+                zone = _extract_zone(prod.get("certificates"))
+
+                if not fx_category or lumen is None or zone is None:
+                    results.append({
+                        "requested": prod, "type": "fixture", "matched": False, "item": None,
+                        "reason": "not enough specs extracted to search (need fixture type, lumen output, and zone)",
+                    })
+                    continue
+
+                fixtures = db.query(Fixture).filter(Fixture.category == fx_category).all()
+                viable = [p for p in fixtures if zone in (p.zones or [])]
+                if not viable:
+                    results.append({
+                        "requested": prod, "type": "fixture", "matched": False, "item": None,
+                        "reason": f"no {fx_category} fixture certified for zone {zone}",
+                    })
+                    continue
+
+                viable.sort(key=lambda p: abs((p.lumens or 0) - lumen))
+                best = viable[0]
+                results.append({
+                    "requested": prod, "type": "fixture", "matched": True,
+                    "item": _f_to_dict(best), "reason": None,
+                })
+
+            else:
+                results.append({
+                    "requested": prod, "type": "other", "matched": False, "item": None,
+                    "reason": f"category '{prod.get('product_category')}' isn't searchable on this site yet",
+                })
+
+        return {"products": results}
+    finally:
+        if uploaded:
+            try:
+                gemini_client.files.delete(name=uploaded.name)
+            except Exception:
+                pass
+        if os.path.exists(tmp_path):
+            os.remove(tmp_path)
 
 
 if __name__ == "__main__":

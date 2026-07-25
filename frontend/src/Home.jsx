@@ -7,6 +7,7 @@ const CARDS = [
     sub: 'CMP database',
     tag: '00',
     img: '/fixtures/gland.jpg',
+    icon: 'CG',
   },
   {
     key: 'linear',
@@ -14,6 +15,7 @@ const CARDS = [
     sub: 'LifEx-M series',
     tag: '01',
     img: '/fixtures/linear.png',
+    icon: 'LN',
   },
   {
     key: 'baylight',
@@ -21,6 +23,7 @@ const CARDS = [
     sub: 'FlowEx / EVML series',
     tag: '02',
     img: '/fixtures/baylight.png',
+    icon: 'HB',
   },
   {
     key: 'floodlight',
@@ -28,6 +31,15 @@ const CARDS = [
     sub: 'EVL / EVNL / SLED / STREETEX series',
     tag: '03',
     img: '/fixtures/floodlight.png',
+    icon: 'FL',
+  },
+  {
+    key: 'rfq',
+    label: 'Upload RFQ',
+    sub: 'AI-powered part finder',
+    tag: '04',
+    img: null,
+    icon: 'RFQ',
   },
 ];
 
@@ -55,7 +67,7 @@ export default function Home({ onSelect }) {
               {c.img ? (
                 <img src={c.img} alt={c.label} className="w-full h-full object-cover" />
               ) : (
-                <span className="text-5xl font-bold text-ink-faint display">CG</span>
+                <span className="text-5xl font-bold text-ink-faint display">{c.icon}</span>
               )}
             </div>
             <div className="px-4 py-4 border-t-2 border-red flex items-center justify-between">
