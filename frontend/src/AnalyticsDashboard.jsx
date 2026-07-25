@@ -60,9 +60,6 @@ export default function AnalyticsDashboard({ open, onClose }) {
           <div className="flex items-center gap-2">
             <BarChart3 className="h-5 w-5 text-red" />
             <h3 className="text-lg font-semibold text-ink display">Data Analytics</h3>
-            <span className="text-xs bg-panel-2 border border-line px-2 py-0.5 rounded-sm mono text-ink-soft">
-              static snapshot
-            </span>
           </div>
           <button onClick={onClose} className="text-ink-faint hover:text-ink">
             <X className="h-5 w-5" />
@@ -193,10 +190,6 @@ export default function AnalyticsDashboard({ open, onClose }) {
               ))}
             </div>
           </section>
-
-          <p className="text-[11px] text-ink-faint mono pb-2">
-            Snapshot generated from Project_Dashboard.xlsx. Regenerate analyticsData.js to refresh.
-          </p>
         </div>
       </div>
     </div>
