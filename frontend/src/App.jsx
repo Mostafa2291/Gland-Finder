@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ShoppingCart, BarChart3 } from 'lucide-react';
+import { ShoppingCart, BarChart3, Sun, Moon } from 'lucide-react';
 import Home from './Home';
 import GlandFinder from './GlandFinder';
 import FixtureFinder from './FixtureFinder';
@@ -9,6 +9,30 @@ import { CartProvider, useCart } from './CartContext';
 import CartDrawer from './CartDrawer';
 import CartToasts from './CartToasts';
 import AnalyticsDashboard from './AnalyticsDashboard';
+
+function ThemeToggle() {
+  const [dark, setDark] = useState(() => {
+    if (typeof window === 'undefined') return false;
+    const saved = localStorage.getItem('theme');
+    if (saved) return saved === 'dark';
+    return window.matchMedia?.('(prefers-color-scheme: dark)').matches ?? false;
+  });
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', dark);
+    localStorage.setItem('theme', dark ? 'dark' : 'light');
+  }, [dark]);
+
+  return (
+    <button
+      onClick={() => setDark((d) => !d)}
+      title={dark ? 'Switch to light mode' : 'Switch to dark mode'}
+      className="flex items-center justify-center h-9 w-9 rounded-sm border border-line text-ink-soft hover:text-red hover:border-red transition-colors cursor-pointer"
+    >
+      {dark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+    </button>
+  );
+}
 
 function CartButton({ onClick }) {
   const { count, bump } = useCart();
@@ -48,6 +72,7 @@ function AppShell() {
           <img src="/fixtures/logo-elsewedy.png" alt="Logo" className="h-10 w-auto" />
         </button>
         <div className="flex items-center gap-5">
+          <ThemeToggle />
           <RFQScanButton />
           <CartButton onClick={() => setCartOpen(true)} />
         </div>

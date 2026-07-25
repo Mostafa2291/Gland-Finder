@@ -23,11 +23,27 @@
   color-scheme: light;
 }
 
+.dark {
+  color-scheme: dark;
+  --color-paper: #15130F;
+  --color-panel: #1D1A15;
+  --color-panel-2: #26221B;
+  --color-line: #3A362C;
+  --color-line-soft: #2C2822;
+  --color-red: #E14550;
+  --color-red-dim: #B3242E;
+  --color-steel: #9A9587;
+  --color-ink: #F3EFE6;
+  --color-ink-soft: #C9C4B5;
+  --color-ink-faint: #8F897A;
+}
+
 body {
   margin: 0;
   background-color: var(--color-paper);
   color: var(--color-ink);
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 h1, h2, h3, .display {
