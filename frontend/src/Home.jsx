@@ -6,7 +6,7 @@ const CARDS = [
     label: 'Cable Glands',
     sub: 'CMP database',
     tag: '00',
-    img: null,
+    img: '/fixtures/gland.jpg',
   },
   {
     key: 'linear',

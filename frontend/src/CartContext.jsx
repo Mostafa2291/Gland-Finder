@@ -14,6 +14,8 @@ function loadInitial() {
 
 export function CartProvider({ children }) {
   const [items, setItems] = useState(loadInitial);
+  const [toasts, setToasts] = useState([]);
+  const [bump, setBump] = useState(0);
 
   useEffect(() => {
     try {
@@ -22,6 +24,14 @@ export function CartProvider({ children }) {
       // storage unavailable — cart just won't persist across reloads
     }
   }, [items]);
+
+  const pushToast = (message) => {
+    const id = Date.now() + Math.random();
+    setToasts((prev) => [...prev, { id, message }]);
+    setTimeout(() => {
+      setToasts((prev) => prev.filter((t) => t.id !== id));
+    }, 2200);
+  };
 
   const addItem = (item) => {
     // item: { id, type: 'gland' | 'fixture', reference, description, price, raw }
@@ -32,6 +42,8 @@ export function CartProvider({ children }) {
       }
       return [...prev, { ...item, qty: item.qty || 1 }];
     });
+    pushToast(`Added ${item.reference} to cart`);
+    setBump((b) => b + 1);
   };
 
   const removeItem = (id) => setItems((prev) => prev.filter((i) => i.id !== id));
@@ -46,7 +58,7 @@ export function CartProvider({ children }) {
   const count = useMemo(() => items.reduce((sum, i) => sum + i.qty, 0), [items]);
 
   return (
-    <CartContext.Provider value={{ items, addItem, removeItem, updateQty, clearCart, count }}>
+    <CartContext.Provider value={{ items, addItem, removeItem, updateQty, clearCart, count, toasts, bump }}>
       {children}
     </CartContext.Provider>
   );

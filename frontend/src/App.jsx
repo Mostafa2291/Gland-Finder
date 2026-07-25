@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ShoppingCart } from 'lucide-react';
 import Home from './Home';
 import GlandFinder from './GlandFinder';
@@ -6,14 +6,24 @@ import FixtureFinder from './FixtureFinder';
 import Footer from './Footer';
 import { CartProvider, useCart } from './CartContext';
 import CartDrawer from './CartDrawer';
+import CartToasts from './CartToasts';
 
 function CartButton({ onClick }) {
-  const { count } = useCart();
+  const { count, bump } = useCart();
+  const [pulse, setPulse] = useState(false);
+
+  useEffect(() => {
+    if (bump === 0) return;
+    setPulse(true);
+    const t = setTimeout(() => setPulse(false), 400);
+    return () => clearTimeout(t);
+  }, [bump]);
+
   return (
     <button onClick={onClick} className="relative flex items-center gap-2 text-ink hover:text-red transition-colors cursor-pointer">
-      <ShoppingCart className="h-6 w-6" />
+      <ShoppingCart className={`h-6 w-6 ${pulse ? 'cart-badge-pulse' : ''}`} />
       {count > 0 && (
-        <span className="absolute -top-2 -right-2 bg-red text-white text-[10px] font-bold rounded-full h-5 w-5 flex items-center justify-center mono">
+        <span className={`absolute -top-2 -right-2 bg-red text-white text-[10px] font-bold rounded-full h-5 w-5 flex items-center justify-center mono ${pulse ? 'cart-badge-pulse' : ''}`}>
           {count > 99 ? '99+' : count}
         </span>
       )}
@@ -49,6 +59,7 @@ function AppShell() {
       <Footer />
 
       <CartDrawer open={cartOpen} onClose={() => setCartOpen(false)} />
+      <CartToasts />
     </div>
   );
 }
