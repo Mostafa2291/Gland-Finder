@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ShoppingCart } from 'lucide-react';
+import { ShoppingCart, BarChart3 } from 'lucide-react';
 import Home from './Home';
 import GlandFinder from './GlandFinder';
 import FixtureFinder from './FixtureFinder';
@@ -8,6 +8,7 @@ import Footer from './Footer';
 import { CartProvider, useCart } from './CartContext';
 import CartDrawer from './CartDrawer';
 import CartToasts from './CartToasts';
+import AnalyticsDashboard from './AnalyticsDashboard';
 
 function CartButton({ onClick }) {
   const { count, bump } = useCart();
@@ -35,6 +36,7 @@ function CartButton({ onClick }) {
 function AppShell() {
   const [view, setView] = useState('home'); // 'home' | 'glands' | 'linear' | 'baylight' | 'floodlight'
   const [cartOpen, setCartOpen] = useState(false);
+  const [analyticsOpen, setAnalyticsOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-paper text-ink font-sans selection:bg-ink selection:text-paper flex flex-col">
@@ -64,6 +66,15 @@ function AppShell() {
 
       <CartDrawer open={cartOpen} onClose={() => setCartOpen(false)} />
       <CartToasts />
+
+      <button
+        onClick={() => setAnalyticsOpen(true)}
+        title="Data Analytics"
+        className="fixed bottom-5 right-5 z-40 flex items-center justify-center h-12 w-12 rounded-full bg-ink text-paper border border-ink shadow-lg hover:bg-red hover:border-red transition-colors cursor-pointer"
+      >
+        <BarChart3 className="h-5 w-5" />
+      </button>
+      <AnalyticsDashboard open={analyticsOpen} onClose={() => setAnalyticsOpen(false)} />
     </div>
   );
 }
