@@ -33,14 +33,6 @@ const CARDS = [
     img: '/fixtures/floodlight.png',
     icon: 'FL',
   },
-  {
-    key: 'rfq',
-    label: 'Upload RFQ',
-    sub: 'AI-powered part finder',
-    tag: '04',
-    img: null,
-    icon: 'RFQ',
-  },
 ];
 
 export default function Home({ onSelect }) {

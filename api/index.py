@@ -325,7 +325,7 @@ def _map_fixture_category(type_text):
         return "linear"
     if "bay" in t or "high" in t or "low" in t:
         return "baylight"
-    if "flood" in t:
+    if "flood" in t or "street" in t:
         return "floodlight"
     return None
 
@@ -345,6 +345,44 @@ def _gland_to_cart_item(g: CableGland):
         "max_cable_dia_mm": g.max_cable_dia_mm,
         "price": g.price,
     }
+
+
+def _score_gland(g, armour, sealing, material, cable_od):
+    """Every known spec adds to the score; nothing is a hard requirement.
+    Returns (score, max_possible_score) so callers can gauge confidence."""
+    score, max_score = 0, 0
+    if armour:
+        max_score += 3
+        if g.armour_compatibility and armour.lower() in g.armour_compatibility.lower():
+            score += 3
+    if sealing:
+        max_score += 3
+        if g.sealing_type and sealing.lower() in g.sealing_type.lower():
+            score += 3
+    if material:
+        max_score += 2
+        if g.material and material.lower() in g.material.lower():
+            score += 2
+    if cable_od is not None:
+        max_score += 4
+        if g.min_cable_dia_mm is not None and g.max_cable_dia_mm is not None:
+            if g.min_cable_dia_mm <= cable_od <= g.max_cable_dia_mm:
+                score += 4
+            else:
+                dist = min(abs(cable_od - g.min_cable_dia_mm), abs(cable_od - g.max_cable_dia_mm))
+                score -= min(dist * 0.5, 4)  # nearby misses cost a little, not everything
+    return score, max_score
+
+
+def _confidence_label(score, max_score):
+    if max_score == 0:
+        return "low"  # nothing usable was extracted at all
+    ratio = score / max_score
+    if ratio >= 0.85:
+        return "high"
+    if ratio >= 0.4:
+        return "medium"
+    return "low"
 
 
 @app.post("/api/rfq/analyze")
@@ -390,26 +428,25 @@ async def analyze_rfq(file: UploadFile = File(...), db: Session = Depends(get_db
                 material = prod.get("material")
                 cable_od = _extract_number(prod.get("size"))
 
-                q = db.query(CableGland)
-                if armour:
-                    q = q.filter(CableGland.armour_compatibility.ilike(f"%{armour}%"))
-                if sealing:
-                    q = q.filter(CableGland.sealing_type.ilike(f"%{sealing}%"))
-                if material:
-                    q = q.filter(CableGland.material.ilike(f"%{material}%"))
-                if cable_od is not None:
-                    q = q.filter(
-                        CableGland.min_cable_dia_mm <= cable_od,
-                        CableGland.max_cable_dia_mm >= cable_od,
-                    )
-                match = q.first()
+                all_glands = db.query(CableGland).all()
+                if not all_glands:
+                    results.append({
+                        "requested": prod, "type": "gland", "matched": False, "item": None,
+                        "confidence": "low", "reason": "gland database is empty",
+                    })
+                    continue
+
+                scored = [(_score_gland(g, armour, sealing, material, cable_od), g) for g in all_glands]
+                scored.sort(key=lambda x: -x[0][0])
+                (best_score, max_score), best = scored[0]
 
                 results.append({
                     "requested": prod,
                     "type": "gland",
-                    "matched": match is not None,
-                    "item": _gland_to_cart_item(match) if match else None,
-                    "reason": None if match else "no gland in the database matches these specs",
+                    "matched": True,
+                    "item": _gland_to_cart_item(best),
+                    "confidence": _confidence_label(best_score, max_score),
+                    "reason": None,
                 })
 
             elif "light" in category or "fixture" in category:
@@ -417,32 +454,51 @@ async def analyze_rfq(file: UploadFile = File(...), db: Session = Depends(get_db
                 lumen = _extract_number(prod.get("luminous"))
                 zone = _extract_zone(prod.get("certificates"))
 
-                if not fx_category or lumen is None or zone is None:
+                candidates = db.query(Fixture)
+                if fx_category:
+                    candidates = candidates.filter(Fixture.category == fx_category)
+                candidates = candidates.all()
+
+                if not candidates:
                     results.append({
                         "requested": prod, "type": "fixture", "matched": False, "item": None,
-                        "reason": "not enough specs extracted to search (need fixture type, lumen output, and zone)",
+                        "confidence": "low", "reason": "no fixtures in the database at all",
                     })
                     continue
 
-                fixtures = db.query(Fixture).filter(Fixture.category == fx_category).all()
-                viable = [p for p in fixtures if zone in (p.zones or [])]
-                if not viable:
-                    results.append({
-                        "requested": prod, "type": "fixture", "matched": False, "item": None,
-                        "reason": f"no {fx_category} fixture certified for zone {zone}",
-                    })
-                    continue
+                def _fx_score(p):
+                    score, max_score = 0, 0
+                    if zone is not None:
+                        max_score += 4
+                        if zone in (p.zones or []):
+                            score += 4
+                    if lumen is not None:
+                        max_score += 4
+                        plumens = p.lumens or 0
+                        gap_ratio = abs(plumens - lumen) / lumen if lumen else 1
+                        score += max(4 - gap_ratio * 4, -2)  # closer lumen match scores higher
+                    if fx_category:
+                        max_score += 2
+                        score += 2  # already filtered to this category above
+                    return score, max_score
 
-                viable.sort(key=lambda p: abs((p.lumens or 0) - lumen))
-                best = viable[0]
+                scored = [(_fx_score(p), p) for p in candidates]
+                scored.sort(key=lambda x: -x[0][0])
+                (best_score, max_score), best = scored[0]
+
                 results.append({
-                    "requested": prod, "type": "fixture", "matched": True,
-                    "item": _f_to_dict(best), "reason": None,
+                    "requested": prod,
+                    "type": "fixture",
+                    "matched": True,
+                    "item": _f_to_dict(best),
+                    "confidence": _confidence_label(best_score, max_score),
+                    "reason": None if fx_category else "fixture type wasn't recognized — showing closest match across all categories",
                 })
 
             else:
                 results.append({
                     "requested": prod, "type": "other", "matched": False, "item": None,
+                    "confidence": "low",
                     "reason": f"category '{prod.get('product_category')}' isn't searchable on this site yet",
                 })
 

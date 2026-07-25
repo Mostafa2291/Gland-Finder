@@ -3,7 +3,7 @@ import { ShoppingCart } from 'lucide-react';
 import Home from './Home';
 import GlandFinder from './GlandFinder';
 import FixtureFinder from './FixtureFinder';
-import RFQUpload from './RFQUpload';
+import RFQScanButton from './RFQScanButton';
 import Footer from './Footer';
 import { CartProvider, useCart } from './CartContext';
 import CartDrawer from './CartDrawer';
@@ -45,14 +45,16 @@ function AppShell() {
         >
           <img src="/fixtures/logo-elsewedy.png" alt="Logo" className="h-10 w-auto" />
         </button>
-        <CartButton onClick={() => setCartOpen(true)} />
+        <div className="flex items-center gap-5">
+          <RFQScanButton />
+          <CartButton onClick={() => setCartOpen(true)} />
+        </div>
       </header>
       <div className="hazard-bar" />
 
       <main className="max-w-7xl mx-auto px-6 sm:px-12 py-12 flex-1 w-full">
         {view === 'home' && <Home onSelect={setView} />}
         {view === 'glands' && <GlandFinder />}
-        {view === 'rfq' && <RFQUpload onBack={() => setView('home')} />}
         {['linear', 'baylight', 'floodlight'].includes(view) && (
           <FixtureFinder category={view} onBack={() => setView('home')} />
         )}
