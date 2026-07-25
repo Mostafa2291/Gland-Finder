@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Loader2, ChevronDown, ChevronUp, ArrowLeft, AlertTriangle, X } from 'lucide-react';
+import { Loader2, ChevronDown, ChevronUp, ArrowLeft, AlertTriangle, X, ShoppingCart } from 'lucide-react';
 import { familyPhoto } from './familyPhoto';
 import { exportSrSheet } from './srExport';
+import { useCart } from './CartContext';
 
 const CATEGORY_LABEL = {
   linear: 'Linear',
@@ -107,6 +108,7 @@ function SpecTable({ rows }) {
 }
 
 export default function FixtureFinder({ category, onBack }) {
+  const { addItem } = useCart();
   const [lumen, setLumen] = useState('');
   const [zone, setZone] = useState('');
   const [optionalOpen, setOptionalOpen] = useState(false);
@@ -159,6 +161,17 @@ export default function FixtureFinder({ category, onBack }) {
       return { ...prev, best: alt, alternates: rest.slice(0, 2), meets_lumen: alt.lumens >= Number(lumen) };
     });
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const addFixtureToCart = (fixture) => {
+    addItem({
+      id: `fixture-${fixture.model}`,
+      type: 'fixture',
+      reference: fixture.model,
+      description: `${fixture.family || ''}${fixture.tagline ? ' · ' + fixture.tagline : ''}`,
+      price: fixture.price ?? null,
+      raw: fixture,
+    });
   };
 
   const opt = { watt: watt ? parseFloat(watt) : null };
@@ -217,6 +230,13 @@ export default function FixtureFinder({ category, onBack }) {
             )}
             {p.marking && <div className="text-xs text-ink-faint mono mt-2 leading-relaxed">{p.marking}</div>}
 
+            <button
+              onClick={() => addFixtureToCart(p)}
+              className="mt-3 flex items-center gap-2 px-4 py-2 bg-ink text-white font-semibold rounded-sm hover:bg-red transition-colors mono text-xs uppercase tracking-wide"
+            >
+              <ShoppingCart className="h-3.5 w-3.5" /> Add to Cart
+            </button>
+
             <div className="text-xs font-semibold text-ink-faint uppercase mono mt-5 mb-1">Mandatory specs</div>
             <SpecTable rows={mandatoryRows} />
 
@@ -235,9 +255,8 @@ export default function FixtureFinder({ category, onBack }) {
             <div className="text-xs font-semibold text-ink-faint uppercase mono mb-3">Also worth a look</div>
             <div className="grid sm:grid-cols-2 gap-4 mb-10">
               {result.alternates.map((a) => (
-                <button
+                <div
                   key={a.model}
-                  onClick={() => promoteAlternate(a)}
                   className="text-left border border-line rounded-sm p-4 bg-panel hover:border-red transition-colors"
                 >
                   <div className="font-bold text-ink display">{a.model}</div>
@@ -246,8 +265,19 @@ export default function FixtureFinder({ category, onBack }) {
                     {a.watt} W · {a.lumens ? Math.round(a.lumens).toLocaleString() : '—'} lm · {a.tclass}
                     {a.price != null && <><br />Unit price: {a.price.toLocaleString()} USD</>}
                   </div>
-                  <div className="text-red text-xs font-semibold mono mt-2">View details →</div>
-                </button>
+                  <div className="flex items-center gap-3 mt-2">
+                    <button onClick={() => promoteAlternate(a)} className="text-red text-xs font-semibold mono cursor-pointer">
+                      View details →
+                    </button>
+                    <button
+                      title="Add to Cart"
+                      onClick={() => addFixtureToCart(a)}
+                      className="ml-auto text-ink hover:text-red bg-panel-2 hover:bg-red/10 p-1.5 rounded-sm transition-colors border border-line cursor-pointer"
+                    >
+                      <ShoppingCart className="h-3.5 w-3.5" />
+                    </button>
+                  </div>
+                </div>
               ))}
             </div>
           </>

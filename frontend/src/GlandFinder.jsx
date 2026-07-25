@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Search, Shield, Layers, Factory, Box, Ruler, CheckCircle2, XCircle, Settings2, Loader2 } from 'lucide-react';
+import { Search, Shield, Layers, Factory, Box, Ruler, CheckCircle2, XCircle, Settings2, Loader2, ShoppingCart } from 'lucide-react';
+import { useCart } from './CartContext';
 
 export default function GlandFinder() {
+  const { addItem } = useCart();
   const [armourType, setArmourType] = useState('All');
   const [sealingType, setSealingType] = useState('All');
   const [environment, setEnvironment] = useState('All');
@@ -88,6 +90,17 @@ export default function GlandFinder() {
   const envOptions = ['All', 'Industrial / Safe', 'Explosion Proof'];
   const materialOptions = ['All', 'Brass', 'Nickel Plated Brass', 'Stainless Steel', 'Aluminium'];
   const threadOptions = ['All', 'M16', 'M20', 'M25', 'M32', 'M40', 'M50', 'M63', 'M75', 'M90', 'M100', 'M115', 'M130'];
+
+  const addGlandToCart = (gland) => {
+    addItem({
+      id: `gland-${gland.ordering_reference}`,
+      type: 'gland',
+      reference: gland.ordering_reference,
+      description: `${gland.manufacturer} ${gland.gland_model} — ${gland.entry_thread} (${gland.gland_size}), ${gland.material}`,
+      price: gland.price ?? null,
+      raw: gland,
+    });
+  };
 
   return (
     <div className="flex flex-col lg:flex-row gap-8 items-start">
@@ -250,6 +263,13 @@ export default function GlandFinder() {
               </button>
             </div>
 
+            <button
+              onClick={() => addGlandToCart(selectedGland)}
+              className="mb-6 flex items-center gap-2 px-4 py-2 bg-ink text-white font-semibold rounded-sm hover:bg-red transition-colors mono text-xs uppercase tracking-wide"
+            >
+              <ShoppingCart className="h-3.5 w-3.5" /> Add to Cart
+            </button>
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
               <div className="bg-panel-2 rounded-sm p-3 border border-line">
                 <p className="text-xs text-ink-faint font-semibold mb-1 uppercase mono">Thread</p>
@@ -356,12 +376,21 @@ export default function GlandFinder() {
                         {gland.price != null ? `$${gland.price.toLocaleString()}` : '—'}
                       </td>
                       <td className="px-4 py-3 text-right">
-                        <button
-                          className="text-red hover:text-red-dim font-semibold text-xs uppercase tracking-wide bg-red/5 hover:bg-red/10 px-3 py-1.5 rounded-sm transition-colors mono"
-                          onClick={(e) => { e.stopPropagation(); setSelectedGland(gland); }}
-                        >
-                          View
-                        </button>
+                        <div className="flex items-center justify-end gap-1.5">
+                          <button
+                            title="Add to Cart"
+                            className="text-ink hover:text-red bg-panel-2 hover:bg-red/10 p-1.5 rounded-sm transition-colors border border-line"
+                            onClick={(e) => { e.stopPropagation(); addGlandToCart(gland); }}
+                          >
+                            <ShoppingCart className="h-3.5 w-3.5" />
+                          </button>
+                          <button
+                            className="text-red hover:text-red-dim font-semibold text-xs uppercase tracking-wide bg-red/5 hover:bg-red/10 px-3 py-1.5 rounded-sm transition-colors mono"
+                            onClick={(e) => { e.stopPropagation(); setSelectedGland(gland); }}
+                          >
+                            View
+                          </button>
+                        </div>
                       </td>
                     </tr>
                   ))
